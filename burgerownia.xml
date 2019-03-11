@@ -3,8 +3,8 @@
 <!DOCTYPE burgerownia SYSTEM "burgerownia.dtd">
 <!-- Enum: vege vegetarian mięsny|  -->
 <burgerownia>
-	<burger>
-		<nazwa mięsność="mięsny">CheeseBurger</nazwa>
+	<burger mięsność="mięsny">
+		<nazwa>CheeseBurger</nazwa>
 		<składniki>
 			<składnik>ser</składnik>
 			<składnik>mięso</składnik>
@@ -15,16 +15,16 @@
 		</alergeny>
 		<cena>12</cena>
 	</burger>
-	<burger>
-		<nazwa mięsność="mięsny">HamBurger</nazwa>
+	<burger  mięsność="mięsny">
+		<nazwa>HamBurger</nazwa>
 		<składniki>
 			<składnik>mięso</składnik>
 			<składnik>bułka</składnik>
 		</składniki>
 		<cena>10</cena>
 	</burger>
-	<burger>
-		<nazwa mięsność="wegański">TekturaBurger</nazwa>
+	<burger mięsność="wegański">
+		<nazwa>TekturaBurger</nazwa>
 		<składniki>
 			<składnik>bułka</składnik>
 		</składniki>

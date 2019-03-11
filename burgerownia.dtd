@@ -1,10 +1,10 @@
 <!ELEMENT burgerownia (burger*)>
 <!ATTLIST burgerownia waluta CDATA "zł">
-<!ELEMENT burger (nazwa, składnik*, alergen*)>
+<!ELEMENT burger (nazwa, składniki, alergeny*, cena)>
 <!ELEMENT nazwa (#PCDATA)>
-<!ELEMENT składniki (składnik+)
+<!ELEMENT składniki (składnik+)>
 <!ELEMENT składnik (#PCDATA)>
-<!ELEMENT alergeny (alergen*)
+<!ELEMENT alergeny (alergen*)>
 <!ELEMENT alergen (#PCDATA)>
 <!ELEMENT cena (#PCDATA)>
-<!ATTLIST burger mięsność (mięsny | wegetariański | wegański) mięsny>
+<!ATTLIST burger mięsność (mięsny | wegetariański | wegański) "mięsny">
