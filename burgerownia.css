@@ -10,15 +10,18 @@ burger {
 }
 
 nazwa {
+    display: block;
 	font-family: "Comic Sans MS", serif;
 	font-weight: bold;
 	text-align: center;	
 }
 
 składnik {
+    display: block;
 	font-family: 'Verdana', 'Arial', sans-serif;
 }
 
 alergen {
+    display: block;
 	font-style: italic;
 }
