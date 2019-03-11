@@ -3,4 +3,5 @@
 <!ELEMENT nazwa (#PCDATA)>
 <!ELEMENT składnik (#PCDATA)>
 <!ATTLIST składnik id ID #IMPLIED>
+<!ATTLIST składnik ref IDREF #IMPLIED>
 <!ELEMENT alergen (#PCDATA)>
