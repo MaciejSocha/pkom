@@ -1,10 +1,7 @@
-<!DOCTYPE burgerownia
-[
-<!ELEMENT burgery (burger*)>
+<!ELEMENT burgerownia (burger*)>
 
 <!ELEMENT burger (nazwa, składnik*, alergen*)>
 <!ELEMENT nazwa (#PCDATA)> 
 <!ELEMENT składnik (nazwa)>
 <!ATTLIST składnik pochodzenie CDATA "optional">
-<!ELEMENT alergen (nazwa)> 
-]>
+<!ELEMENT alergen (nazwa)>
