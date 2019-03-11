@@ -11,7 +11,7 @@
 	</burger>
 	<burger>
 		<nazwa>HamBurger</nazwa>
-		<składnik ref="mięso"/>
-		<składnik ref="bułka"/>
+		<składnik ref="mięso"></składnik>
+		<składnik ref="bułka"></składnik>
 	</burger>
 </burgerownia>
