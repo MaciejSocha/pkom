@@ -1,14 +1,24 @@
 burgerownia {
-	background-color: red;
+	background-color: white;
 	
 }
 
 burger {
-	background-color: blue;
+	display: block;
+	margin: 10% 10% 10% 10%;
+	background-color: #ffa9eb;
 }
 
 nazwa {
-	font-family: 'Verdana', 'Arial', sans-serif;
+	font-family: "Comic Sans MS", serif;
 	font-weight: bold;
 	text-align: center;	
+}
+
+składnik {
+	font-family: 'Verdana', 'Arial', sans-serif;
+}
+
+alergen {
+	font-style: italic;
 }
