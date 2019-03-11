@@ -3,5 +3,10 @@
 <!DOCTYPE burgerownia SYSTEM "burgerownia.dtd">
 
 <burgerownia>
-
+	<burger>
+		<nazwa>CheeseBurger</nazwa>
+	</burger>
+	<burger>
+		<nazwa>HamBurger</nazwa>
+	</burger>
 </burgerownia>
