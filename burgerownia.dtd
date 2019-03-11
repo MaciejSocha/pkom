@@ -1,7 +1,7 @@
 <!ELEMENT burgerownia (burger*)>
 <!ELEMENT burger (nazwa, składnik*, alergen*)>
 <!ELEMENT nazwa (#PCDATA)>
+<!ELEMENT składniki (składnik+)
 <!ELEMENT składnik (#PCDATA)>
-<!ATTLIST składnik id ID #IMPLIED>
-<!ATTLIST składnik ref IDREF #IMPLIED>
+<!ELEMENT alergeny (alergen*)
 <!ELEMENT alergen (#PCDATA)>

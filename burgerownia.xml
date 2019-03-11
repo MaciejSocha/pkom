@@ -5,13 +5,20 @@
 <burgerownia>
 	<burger>
 		<nazwa>CheeseBurger</nazwa>
-		<składnik id="ser">ser</składnik>
-		<składnik id="mięso">mięso</składnik>
-		<składnik id="bułka">bułka</składnik>
+		<składniki>
+			<składnik>ser</składnik>
+			<składnik>mięso</składnik>
+			<składnik>bułka</składnik>
+		</składniki>
+		<alergeny>
+			<alergen>laktoza</alergen>
+		</alergeny>
 	</burger>
 	<burger>
 		<nazwa>HamBurger</nazwa>
-		<składnik ref="mięso"></składnik>
-		<składnik ref="bułka"></składnik>
+		<składniki>
+			<składnik>mięso</składnik>
+			<składnik>bułka</składnik>
+		</składniki>
 	</burger>
 </burgerownia>
