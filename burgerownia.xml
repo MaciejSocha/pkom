@@ -5,8 +5,13 @@
 <burgerownia>
 	<burger>
 		<nazwa>CheeseBurger</nazwa>
+		<składnik id="ser">ser</składnik>
+		<składnik id="mięso">mięso</składnik>
+		<składnik id="bułka">bułka</składnik>
 	</burger>
 	<burger>
 		<nazwa>HamBurger</nazwa>
+		<składnik ref="mięso"/>
+		<składnik ref="bułka"/>
 	</burger>
 </burgerownia>
