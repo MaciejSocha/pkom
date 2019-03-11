@@ -1,3 +1,14 @@
 burgerownia {
 	background-color: red;
+	
+}
+
+burger {
+	background-color: blue;
+}
+
+nazwa {
+	font-family: 'Verdana', 'Arial', sans-serif;
+	font-weight: bold;
+	text-align: center;	
 }
