@@ -2,11 +2,14 @@
 
 <!ELEMENT burgerownia (metadane, burger*)>
 <!ATTLIST burgerownia waluta CDATA "zł">
+<!ELEMENT lista_składników (składnik*)>
 <!ELEMENT burger (nazwa, składniki, alergeny*, cena, kaloryczność)>
 <!ATTLIST burger data_wprowadzenia CDATA #IMPLIED>
+<!ATTLIST burger składniki IDREFS #REQUIRED>
 <!ELEMENT nazwa (#PCDATA)>
-<!ELEMENT składniki (składnik+)>
+<!ELEMENT składniki (składnik*)>
 <!ELEMENT składnik (#PCDATA)>
+<!ATTLIST składnik idSkładnika ID #IMPLIED>
 <!ELEMENT alergeny (alergen*)>
 <!ELEMENT alergen (#PCDATA)>
 <!ELEMENT cena (#PCDATA)>
