@@ -3,12 +3,18 @@ burgerownia {
 }
 
 metadane {
+	display: block;
 	margin: 5px;
 	text-align: center;
+	background-color: blue;
+	border-style: solid;
+	border-color: blueviolet;
+	border-width: 10px;
 }
 
 autor, korektor, data_modyfikacji {
 	display: block;
+
 }
 
 burger, nazwa, składnik, cena, kaloryczność {
