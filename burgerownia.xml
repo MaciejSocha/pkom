@@ -3,7 +3,7 @@
 <!DOCTYPE burgerownia SYSTEM "burgerownia.dtd">
 <!-- Enum: vege vegetarian mięsny|  -->
 <burgerownia>
-	<burger mięsność="mięsny", data_wprowadzenia="12.03.2018">
+	<burger mięsność="mięsny" data_wprowadzenia="12.03.2018">
 		<nazwa>CheeseBurger</nazwa>
 		<składniki>
 			<składnik>ser</składnik>
@@ -16,7 +16,7 @@
 		<cena>11.99</cena>
 		<kaloryczność>500</kaloryczność>
 	</burger>
-	<burger  mięsność="mięsny", data_wprowadzenia="10.03.2018">
+	<burger  mięsność="mięsny" data_wprowadzenia="10.03.2018">
 		<nazwa>HamBurger</nazwa>
 		<składniki>
 			<składnik>mięso</składnik>
@@ -25,7 +25,7 @@
 		<cena>9.99</cena>
 		<kaloryczność>450</kaloryczność>
 	</burger>
-	<burger mięsność="wegański", data_wprowadzenia="15.03.2018">
+	<burger mięsność="wegański" data_wprowadzenia="15.03.2018">
 		<nazwa>TekturaBurger</nazwa>
 		<składniki>
 			<składnik>bułka</składnik>
