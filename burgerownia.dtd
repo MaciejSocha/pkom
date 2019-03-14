@@ -1,4 +1,6 @@
-<!ELEMENT burgerownia (burger*)>
+<!-- Main part -->
+
+<!ELEMENT burgerownia (metadane, burger*)>
 <!ATTLIST burgerownia waluta CDATA "zł">
 <!ELEMENT burger (nazwa, składniki, alergeny*, cena, kaloryczność)>
 <!ATTLIST burger data_wprowadzenia CDATA #IMPLIED>
@@ -10,3 +12,12 @@
 <!ELEMENT cena (#PCDATA)>
 <!ELEMENT kaloryczność (#PCDATA)>
 <!ATTLIST burger mięsność (mięsny | wegetariański | wegański) "mięsny">
+
+<!-- Extra information -->
+
+<!ELEMENT metadane (autor+, korektor*, data_modyfikacji)>
+<!ELEMENT autor (imie, nazwisko)>
+<!ELEMENT imie (#PCDATA)>
+<!ELEMENT nazwisko (#PCDATA)>
+<!ELEMENT korektor (imie, nazwisko)>
+<!ELEMENT data_modyfikacji (#PCDATA)>

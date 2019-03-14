@@ -2,7 +2,20 @@
 <?xml-stylesheet href="burgerownia.css" type="text/css" ?>
 <!DOCTYPE burgerownia SYSTEM "burgerownia.dtd">
 <!-- Enum: vege vegetarian mięsny|  -->
+
 <burgerownia>
+	<metadane>
+		<autor>
+			<imie>Stanisław</imie>
+			<nazwisko>Zakrzewski</nazwisko>
+		</autor>
+		<autor>
+			<imie>Maciej</imie>
+			<nazwisko>Socha</nazwisko>
+		</autor>
+		<data_modyfikacji>14.03.2019</data_modyfikacji>
+	</metadane>
+
 	<burger mięsność="mięsny" data_wprowadzenia="12.03.2018">
 		<nazwa>CheeseBurger</nazwa>
 		<składniki>
