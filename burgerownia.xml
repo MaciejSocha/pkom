@@ -16,33 +16,27 @@
 		<data_modyfikacji>14.03.2019</data_modyfikacji>
 	</metadane>
 
-	<burger mięsność="mięsny" data_wprowadzenia="12.03.2018">
+	<lista_składników>
+		<składnik idSkładnika="ser">ser</składnik>
+		<składnik idSkładnika="mięso">mięso</składnik> 
+		<składnik idSkładnika="bułka">bułka</składnik> 
+	</lista_składników>
+
+	<burger mięsność="mięsny" data_wprowadzenia="12.03.2018" składniki="ser mięso bułka">
 		<nazwa>CheeseBurger</nazwa>
-		<składniki>
-			<składnik>ser</składnik>
-			<składnik>mięso</składnik>
-			<składnik>bułka</składnik>
-		</składniki>
 		<alergeny>
 			<alergen>laktoza</alergen>
 		</alergeny>
 		<cena>11.99</cena>
 		<kaloryczność>500</kaloryczność>
 	</burger>
-	<burger  mięsność="mięsny" data_wprowadzenia="10.03.2018">
+	<burger  mięsność="mięsny" data_wprowadzenia="10.03.2018" składniki="mięso bułka">
 		<nazwa>HamBurger</nazwa>
-		<składniki>
-			<składnik>mięso</składnik>
-			<składnik>bułka</składnik>
-		</składniki>
 		<cena>9.99</cena>
 		<kaloryczność>450</kaloryczność>
 	</burger>
-	<burger mięsność="wegański" data_wprowadzenia="15.03.2018">
+	<burger mięsność="wegański" data_wprowadzenia="15.03.2018" składniki="bułka">
 		<nazwa>TekturaBurger</nazwa>
-		<składniki>
-			<składnik>bułka</składnik>
-		</składniki>
 		<cena>29.99</cena>
 		<kaloryczność>100</kaloryczność>
 	</burger>
