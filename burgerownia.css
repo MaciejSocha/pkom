@@ -12,6 +12,10 @@ metadane {
 	border-width: 10px;
 }
 
+lista_składników {
+	display: none;
+}
+
 autor, korektor, data_modyfikacji {
 	display: block;
 
@@ -28,6 +32,10 @@ burger {
 
 składnik, alergen, cena, kaloryczność {
 	margin: 5px 3px 3px 3px;
+}
+
+[mięsność]:before {
+	content: attr(mięsność);
 }
 
 nazwa {
