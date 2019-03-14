@@ -25,6 +25,7 @@
 		</składniki>
 		<alergeny>
 			<alergen>laktoza</alergen>
+			<alergen>gluten</alergen>
 		</alergeny>
 		<cena>11.99</cena>
 		<kaloryczność>500</kaloryczność>

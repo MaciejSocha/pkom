@@ -1,27 +1,47 @@
 burgerownia {
 	background-color: white;
-	
+}
+
+metadane {
+	margin: 5px;
+	text-align: center;
+}
+
+autor, korektor, data_modyfikacji {
+	display: block;
+}
+
+burger, nazwa, składnik, cena, kaloryczność {
+	display: block;
 }
 
 burger {
-	display: block;
 	margin: 10% 10% 10% 10%;
 	background-color: #ffa9eb;
 }
 
+składnik, alergen, cena, kaloryczność {
+	margin: 5px 3px 3px 3px;
+}
+
 nazwa {
-    display: block;
 	font-family: "Comic Sans MS", serif;
 	font-weight: bold;
 	text-align: center;	
 }
 
 składnik {
-    display: block;
 	font-family: 'Verdana', 'Arial', sans-serif;
 }
 
 alergen {
-    display: block;
 	font-style: italic;
+}
+
+cena {
+	font-weight: bold;
+}
+
+kaloryczność {
+
 }
