@@ -13,32 +13,76 @@
 			<imie>Maciej</imie>
 			<nazwisko>Socha</nazwisko>
 		</autor>
-		<data_modyfikacji>14.03.2019</data_modyfikacji>
+		<data_modyfikacji>15.03.2019</data_modyfikacji>
 	</metadane>
 
+	<lista_alergenów>
+		<alergen idAlergenu="gluten">gluten</alergen>
+		<alergen idAlergenu="laktoza">laktoza</alergen>
+		<alergen idAlergenu="sezam">sezam</alergen>
+		<alergen idAlergenu="jaja">jaja</alergen>
+		<alergen idAlergenu="ryby">tyby</alergen>
+		<alergen idAlergenu="ożech">ożech</alergen>
+		<alergen idAlergenu="skorupiak">skorupiak</alergen>
+		<alergen idAlergenu="gorczyca">gorczyca</alergen>
+		<alergen idAlergenu="soja">soja</alergen>
+	</lista_alergenów>
+
 	<lista_składników>
-		<składnik idSkładnika="ser">ser</składnik>
-		<składnik idSkładnika="mięso">mięso</składnik> 
-		<składnik idSkładnika="bułka">bułka</składnik> 
+		<składnik idSkładnika="ser" alergeny="laktoza">ser</składnik>
+		<składnik idSkładnika="mięso-wieprzowe">mięso wieprzowe</składnik> 
+		<składnik idSkładnika="mięso-wołowe">mięso wołowe</składnik>
+		<składnik idSkładnika="mięso-drobiowe">mięso drobione</składnik>
+		<składnik idSkładnika="bułka-pszenna-sezam" alergeny="gluten sezam">bułka pszenna z sezamem</składnik> 
+		<składnik idSkładnika="bułka-pszenna" alergeny="gluten">bułka pszenna</składnik>
+		<składnik idSkładnika="bułka-rzytnia">bułka rzytnia</składnik>
+		<składnik idSkładnika="sałata">stałata</składnik>
+		<składnik idSkładnika="pomidor">pomidor</składnik>
+		<składnik idSkładnika="ogurek">ogórek</składnik>
+		<składnik idSkładnika="ketchup">ketchup</składnik>
+		<składnik idSkładnika="łosoś" alergeny="ryby">łosoś</składnik>
+		<składnik idSkładnika="cebula">cebula</składnik>
+		<składnik idSkładnika="papryka">papryka</składnik>
+		<składnik idSkładnika="falafel">falafel</składnik>
+		<składnik idSkładnika="piri-piri">piri-piri</składnik>
+		<składnik idSkładnika="majonez">majonez</składnik>
+		<składnik idSkładnika="rukola">rukola</składnik>
+		<składnik idSkładnika="jajko" alergeny="jaja">jajko</składnik>
+		<składnik idSkładnika="prażone-ożechy" alergeny="ożech">prażone ożechy</składnik>
+		<składnik idSkładnika="krewetki" alergeny="skorupiak">krewetki</składnik>
+		<składnik idSkładnika="musztarda" alergeny="gorczyca">musztarda</składnik>
+		<składnik idSkładnika="sos-sojowy" alergeny="soja">sos sojowy</składnik>
+		<składnik idSkładnika="sos-serowy-chili" alergeny="laktoza">sos serowy chili</składnik>
+		<składnik idSkładnika="chili">chili</składnik>
 	</lista_składników>
 
-	<burger mięsność="mięsny" data_wprowadzenia="12.03.2018" składniki="ser mięso bułka">
+	<burger mięsność="mięsny" 
+			data_wprowadzenia="12.03.2018" 
+			składniki="ser mięso-wołowe bułka-pszenna-sezam ogórek cebula sos-serowy-chili">
 		<nazwa>CheeseBurger</nazwa>
-		<alergeny>
-			<alergen>laktoza</alergen>
-			<alergen>gluten</alergen>
-		</alergeny>
-		<cena>11.99</cena>
-		<kaloryczność>500</kaloryczność>
+		<cena waluta="zł">11.99</cena>
+		<kaloryczność jednostka="kcal">500</kaloryczność>
 	</burger>
-	<burger  mięsność="mięsny" data_wprowadzenia="10.03.2018" składniki="mięso bułka">
+	<burger mięsność="mięsny"
+			data_wprowadzenia="10.03.2018"
+			składniki="mięso-wołowe bułka-pszenna cebula ketchup sałata">
 		<nazwa>HamBurger</nazwa>
-		<cena>9.99</cena>
-		<kaloryczność>450</kaloryczność>
+		<cena waluta="zł">9.99</cena>
+		<kaloryczność jednostka="kcal">450</kaloryczność>
 	</burger>
-	<burger mięsność="wegański" data_wprowadzenia="15.03.2018" składniki="bułka">
+	<burger mięsność="wegański"
+			data_wprowadzenia="15.03.2018"
+			składniki="bułka-rzytnia">
 		<nazwa>TekturaBurger</nazwa>
-		<cena>29.99</cena>
-		<kaloryczność>100</kaloryczność>
+		<cena waluta="zł">29.99</cena>
+		<kaloryczność jednostka="kcal">100</kaloryczność>
 	</burger>
+	<burger mięsność="wegetariański"
+			data_wprowadzenia="15.03.2018"
+			składniki="bułka-rzytnia falafel pomidor ogórek rukola prażone-ożechy musztarda">
+		<nazwa>WgetariańskiBurger</nazwa>
+		<cena waluta="zł">14.99</cena>
+		<kaloryczność jednostka="kcal">380</kaloryczność>
+	</burger>
+
 </burgerownia>

@@ -1,20 +1,27 @@
 <!-- Main part -->
 
-<!ELEMENT burgerownia (metadane, lista_składników, burger*)>
-<!ATTLIST burgerownia waluta CDATA "zł">
+<!ELEMENT burgerownia (metadane, lista_alergenów, lista_składników, burger*)>
+
+<!ELEMENT lista_alergenów (alergen*)>
+<!ELEMENT alergen (#PCDATA)>
+<!ATTLIST alergen idAlergenu ID #REQUIRED>
+
 <!ELEMENT lista_składników (składnik*)>
-<!ELEMENT burger (nazwa, alergeny*, cena, kaloryczność)>
+<!ELEMENT składnik (#PCDATA)>
+<!ATTLIST składnik alergeny IDREFS #IMPLIED>
+<!ATTLIST składnik idSkładnika ID #REQUIRED>
+
+<!ELEMENT burger (nazwa, cena, kaloryczność)>
+<!ATTLIST burger mięsność (mięsny | wegetariański | wegański) "mięsny">
 <!ATTLIST burger data_wprowadzenia CDATA #IMPLIED>
 <!ATTLIST burger składniki IDREFS #REQUIRED>
 <!ELEMENT nazwa (#PCDATA)>
-<!ELEMENT składniki (składnik*)>
-<!ELEMENT składnik (#PCDATA)>
-<!ATTLIST składnik idSkładnika ID #IMPLIED>
-<!ELEMENT alergeny (alergen*)>
-<!ELEMENT alergen (#PCDATA)>
+
 <!ELEMENT cena (#PCDATA)>
+<!ATTLIST cena waluta CDATA "zł">
+
 <!ELEMENT kaloryczność (#PCDATA)>
-<!ATTLIST burger mięsność (mięsny | wegetariański | wegański) "mięsny">
+<!ATTLIST kaloryczność jednostka CDATA "kcal">
 
 <!-- Extra information -->
 

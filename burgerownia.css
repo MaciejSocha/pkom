@@ -12,7 +12,7 @@ metadane {
 	border-width: 10px;
 }
 
-lista_składników {
+lista_alergenów, lista_składników {
 	display: none;
 }
 
@@ -21,20 +21,22 @@ autor, korektor, data_modyfikacji {
 
 }
 
-burger, nazwa, składnik, cena, kaloryczność {
+burger, nazwa, cena, kaloryczność {
 	display: block;
 }
 
 burger {
 	margin: 10% 10% 10% 10%;
 	background-color: #ffa9eb;
+	
 }
 
-składnik, alergen, cena, kaloryczność {
+cena, kaloryczność {
 	margin: 5px 3px 3px 3px;
 }
 
-[mięsność]:before {
+burger:after {
+	margin: 5px, 3px, 3px, 3px;
 	content: attr(mięsność);
 }
 
@@ -44,18 +46,26 @@ nazwa {
 	text-align: center;	
 }
 
-składnik {
-	font-family: 'Verdana', 'Arial', sans-serif;
-}
-
 alergen {
 	font-style: italic;
+}
+
+cena:before {
+	content: "Cena: ";
 }
 
 cena {
 	font-weight: bold;
 }
 
-kaloryczność {
+cena:after {
+	content: " "attr(waluta);
+}
 
+kaloryczność:after {
+	content: " "attr(jednostka);
+}
+
+kaloryczność:before {
+	content: "Kaloryczność: ";
 }
