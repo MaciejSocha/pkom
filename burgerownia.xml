@@ -58,7 +58,7 @@
 
 	<burger mięsność="mięsny" 
 			data_wprowadzenia="12.03.2018" 
-			składniki="ser mięso-wołowe bułka-pszenna-sezam ogórek cebula sos-serowy-chili">
+			składniki="ser mięso-wołowe bułka-pszenna-sezam ogurek cebula sos-serowy-chili">
 		<nazwa>CheeseBurger</nazwa>
 		<cena waluta="zł">11.99</cena>
 		<kaloryczność jednostka="kcal">500</kaloryczność>
@@ -79,7 +79,7 @@
 	</burger>
 	<burger mięsność="wegetariański"
 			data_wprowadzenia="15.03.2018"
-			składniki="bułka-rzytnia falafel pomidor ogórek rukola prażone-ożechy musztarda">
+			składniki="bułka-rzytnia falafel pomidor ogurek rukola prażone-ożechy musztarda">
 		<nazwa>WgetariańskiBurger</nazwa>
 		<cena waluta="zł">14.99</cena>
 		<kaloryczność jednostka="kcal">380</kaloryczność>
