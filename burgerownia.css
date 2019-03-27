@@ -37,7 +37,7 @@ cena, kaloryczność {
 
 burger:after {
 	margin: 5px, 3px, 3px, 3px;
-	content: attr(mięsność);
+	content: "Status mięsa: " attr(mięsność);
 }
 
 nazwa {
