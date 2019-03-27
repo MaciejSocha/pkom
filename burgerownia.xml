@@ -80,7 +80,7 @@
 	</burger>
 	<burger mięsność="wegetariański"
 			data_wprowadzenia="15.03.2018"
-			składniki="bułka-rzytnia falafel pomidor ogórek rukola prażone-orzechy musztarda">
+			składniki="bułka-żytnia falafel pomidor ogórek rukola prażone-orzechy musztarda">
 		<nazwa>WgetariańskiBurger</nazwa>
 		<cena waluta="zł">14.99</cena>
 		<kaloryczność jednostka="kcal">380</kaloryczność>
