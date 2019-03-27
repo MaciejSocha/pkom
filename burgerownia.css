@@ -1,15 +1,14 @@
 burgerownia {
-	background-color: white;
+	background-color: #2E2E2E;
 }
 
 metadane {
 	display: block;
 	margin: 5px;
 	text-align: center;
-	background-color: blue;
 	border-style: solid;
-	border-color: blueviolet;
-	border-width: 10px;
+	border-color: white;
+	border-width: 2px;
 }
 
 lista_alergenów, lista_składników {
@@ -18,7 +17,8 @@ lista_alergenów, lista_składników {
 
 autor, korektor, data_modyfikacji {
 	display: block;
-
+	font-weight: bold;
+	color: #FEE501;
 }
 
 burger, nazwa, cena, kaloryczność {
@@ -26,22 +26,26 @@ burger, nazwa, cena, kaloryczność {
 }
 
 burger {
-	margin: 10% 10% 10% 10%;
-	background-color: #ffa9eb;
+	margin: 5% 10% 5% 10%;
+	border-style: solid;
+	border-color: white;
+	border-width: 1px;
 	
 }
 
 cena, kaloryczność {
-	margin: 5px 3px 3px 3px;
+	margin: 5px 3px 3px 3px;	
+	color: white;
 }
 
 burger:after {
 	margin: 5px, 3px, 3px, 3px;
+	color: white;
 	content: "Status mięsa: " attr(mięsność);
 }
 
 nazwa {
-	font-family: "Comic Sans MS", serif;
+	color: #FEE501;
 	font-weight: bold;
 	text-align: center;	
 }
@@ -52,20 +56,25 @@ alergen {
 
 cena:before {
 	content: "Cena: ";
+	color: white;
 }
 
 cena {
 	font-weight: bold;
+	color: white;
 }
 
 cena:after {
 	content: " "attr(waluta);
+	color: white;
 }
 
 kaloryczność:after {
 	content: " "attr(jednostka);
+	color: white;
 }
 
 kaloryczność:before {
 	content: "Kaloryczność: ";
+	color: white;
 }
