@@ -73,85 +73,85 @@
 	</burger>
 	<burger mięsność="wegański"
 			data_wprowadzenia="15.03.2018"
-			składniki="bułka-żytnia">
-		<nazwa>TekturaBurger</nazwa>
+			składniki="bułka-żytnia, falafel, ogórek, pomidor">
+		<nazwa>FalafelBurger</nazwa>
 		<cena waluta="zł">29.99</cena>
 		<kaloryczność jednostka="kcal">100</kaloryczność>
 	</burger>
-	<burger mięsność="wegetariański"
+	<burger mięsność="wegański"
 			data_wprowadzenia="15.03.2018"
 			składniki="bułka-żytnia falafel pomidor ogórek rukola prażone-orzechy musztarda">
-		<nazwa>WgetariańskiBurger</nazwa>
+		<nazwa>FalafelBurger de Luxe</nazwa>
 		<cena waluta="zł">14.99</cena>
 		<kaloryczność jednostka="kcal">380</kaloryczność>
 	</burger>
 	<burger mięsność="mięsny" 
 			data_wprowadzenia="11.07.2018" 
 			składniki="ser jajko cebula boczek musztarda pomidor">
-		<nazwa>AngielskieŚniadankoBurger</nazwa>
+		<nazwa>Angielskie Śniadanko</nazwa>
 		<cena waluta="zł">13.99</cena>
 		<kaloryczność jednostka="kcal">680</kaloryczność>
 	</burger>
 	<burger mięsność="mięsny" 
 			data_wprowadzenia="12.08.2018" 
 			składniki="bułka-pszenna-sezam mięso-drobiowe krewetki sos-sojowy">
-		<nazwa>ZłotyKurczakBurger</nazwa>
+		<nazwa>Złoty Kurczak</nazwa>
 		<cena waluta="zł">11.99</cena>
 		<kaloryczność jednostka="kcal">480</kaloryczność>
 	</burger>
 	<burger mięsność="mięsny" 
 			data_wprowadzenia="12.08.2018" 
 			składniki="bułka-pszenna-sezam mięso-drobiowe krewetki sos-sojowy piri-piri">
-		<nazwa>KurczakPikantnyBurger</nazwa>
+		<nazwa>Kurczak Pikantny</nazwa>
 		<cena waluta="zł">12.99</cena>
 		<kaloryczność jednostka="kcal">490</kaloryczność>
 	</burger>
 	<burger mięsność="mięsny" 
 			data_wprowadzenia="15.11.2018" 
 			składniki="bułka-pszenna pomidor mięso-wołowe rukola ser">
-		<nazwa>WłoskiBurger</nazwa>
+		<nazwa>Włoski</nazwa>
 		<cena waluta="zł">13.99</cena>
 		<kaloryczność jednostka="kcal">540</kaloryczność>
 	</burger>
 	<burger mięsność="mięsny" 
 			data_wprowadzenia="05.08.2018" 
 			składniki="bułka-żytnia mięso-wieprzowe pomidor ogórek sałata jajko">
-		<nazwa>ProwincjaBurger</nazwa>
+		<nazwa>Prowincjonalny</nazwa>
 		<cena waluta="zł">14.99</cena>
 		<kaloryczność jednostka="kcal">630</kaloryczność>
 	</burger>
 	<burger mięsność="mięsny" 
 			data_wprowadzenia="12.10.2018" 
 			składniki="bułka-pszenna mięso-wołowe sos-serowy-chili sos-sojowy ketchup majonez musztarda">
-		<nazwa>BurgerPięciuSmaków</nazwa>
+		<nazwa>Burger Pięciu  Smaków</nazwa>
 		<cena waluta="zł">13.99</cena>
 		<kaloryczność jednostka="kcal">550</kaloryczność>
 	</burger>
 	<burger mięsność="wegetariański" 
 			data_wprowadzenia="14.10.2018" 
 			składniki="bułka-żytnia jajko sałata pomidor ogórek cebula">
-		<nazwa>JajeczkoZWarzywkamiBurger</nazwa>
+		<nazwa>Jajeczko Z Warzywkami</nazwa>
 		<cena waluta="zł">12.99</cena>
 		<kaloryczność jednostka="kcal">520</kaloryczność>
 	</burger>
 	<burger mięsność="mięsny" 
 			data_wprowadzenia="11.11.2018" 
 			składniki="bułka-pszenna-sezam mięso-wołowe ser pomidor sałata piri-piri chili">
-		<nazwa>BorutaBurger</nazwa>
+		<nazwa>Boruta Burger</nazwa>
 		<cena waluta="zł">15.99</cena>
 		<kaloryczność jednostka="kcal">710</kaloryczność>
 	</burger>
 	<burger mięsność="mięsny" 
 			data_wprowadzenia="09.08.2018" 
 			składniki="bułka-pszenna-sezam mięso-wołowe mięso-wołowe ser pomidor sałata ogórek ketchup">
-		<nazwa>DwieKrowyBurger</nazwa>
+		<nazwa>Dwie Krowy</nazwa>
 		<cena waluta="zł">17.99</cena>
 		<kaloryczność jednostka="kcal">810</kaloryczność>
 	</burger>
 	<burger mięsność="wegański" 
 			data_wprowadzenia="10.11.2018" 
 			składniki="bułka-żytnia falafel pomidor sałata rukola prażone-orzechy papryka ketchup ogórek">
-		<nazwa>FalafelZBukietemSałatBurger</nazwa>
+		<nazwa>Falafel Z Bukietem Sałat</nazwa>
 		<cena waluta="zł">15.99</cena>
 		<kaloryczność jednostka="kcal">370</kaloryczność>
 	</burger>
@@ -165,7 +165,7 @@
 	<burger mięsność="mięsny" 
 			data_wprowadzenia="12.06.2018" 
 			składniki="bułka-pszenna mięso-wieprzowe mięso-wieprzowe mięso-wieprzowe ser ser pomidor sałata cebula ogórek ketchup">
-		<nazwa>TrzyŚwinkiBurger</nazwa>
+		<nazwa>Trzy Świnki</nazwa>
 		<cena waluta="zł">19.99</cena>
 		<kaloryczność jednostka="kcal">1100</kaloryczność>
 	</burger>
@@ -179,14 +179,14 @@
 	<burger mięsność="mięsny" 
 			data_wprowadzenia="31.08.2018" 
 			składniki="bułka-żytnia ser ser pomidor sałata ogórek cebula rukola ketchup">
-		<nazwa>SerIWarzywaBurger</nazwa>
+		<nazwa>Ser I Warzywa</nazwa>
 		<cena waluta="zł">14.99</cena>
 		<kaloryczność jednostka="kcal">430</kaloryczność>
 	</burger>
 	<burger mięsność="mięsny" 
 			data_wprowadzenia="21.03.2018" 
 			składniki="bułka-pszenna-sezam mięso-drobiowe mięso-drobiowe pomidor ketchup ser cebula">
-		<nazwa>DoubleKurczakBurger</nazwa>
+		<nazwa>Double KurczakBurger</nazwa>
 		<cena waluta="zł">12.99</cena>
 		<kaloryczność jednostka="kcal">610</kaloryczność>
 	</burger>
@@ -200,21 +200,21 @@
 	<burger mięsność="mięsny" 
 			data_wprowadzenia="25.05.2018" 
 			składniki="bułka-pszenna-sezam mięso-wołowe krewetki rukola prażone-orzechy">
-		<nazwa>EgzotycznyBurger</nazwa>
+		<nazwa>Egzotyczny Burger</nazwa>
 		<cena waluta="zł">15.99</cena>
 		<kaloryczność jednostka="kcal">570</kaloryczność>
 	</burger>
 	<burger mięsność="mięsny" 
 			data_wprowadzenia="26.12.2018" 
 			składniki="bułka-żytnia krewetki rukola pomidor ogórek papryka">
-		<nazwa>SałatkaOwoceMożaBurger</nazwa>
+		<nazwa>Sałatka "Owoce Morza"</nazwa>
 		<cena waluta="zł">15.99</cena>
 		<kaloryczność jednostka="kcal">480</kaloryczność>
 	</burger>
 	<burger mięsność="mięsny" 
 			data_wprowadzenia="27.11.2018" 
 			składniki="bułka-pszenna ser boczek ketchup majonez">
-		<nazwa>SerBoczekBurger</nazwa>
+		<nazwa>Ser-Boczek</nazwa>
 		<cena waluta="zł">10.99</cena>
 		<kaloryczność jednostka="kcal">510</kaloryczność>
 	</burger>
