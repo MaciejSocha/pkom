@@ -73,7 +73,7 @@
 	</burger>
 	<burger mięsność="wegański"
 			data_wprowadzenia="15.03.2018"
-			składniki="bułka-żytnia, falafel, ogórek, pomidor">
+			składniki="bułka-żytnia falafel ogórek pomidor">
 		<nazwa>FalafelBurger</nazwa>
 		<cena waluta="zł">29.99</cena>
 		<kaloryczność jednostka="kcal">100</kaloryczność>
