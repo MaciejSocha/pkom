@@ -14,8 +14,33 @@ metadane {
 	border-width: 2px;
 }
 
-lista_alergenów, lista_składników {
+lista_składników {
 	display: none;
+}
+
+lista_alergenów::before {
+	color: white;
+	margin-bottom: 5px;
+	content: "Alergeny występujące w burgerach:"
+}
+
+lista_alergenów {
+	background-color: #404040;
+	margin: 5% 10% 5% 10%;
+	border-style: solid;
+	border-color: white;
+	border-width: 1px;
+	display: block;
+}
+
+alergen {
+	color: white;
+	margin-top:5px;
+	margin-bottom: 5px;
+	display: list-item;
+	list-style: decimal;
+	padding-left:10px;
+	margin-left:30px;
 }
 
 autor, korektor, data_modyfikacji {
