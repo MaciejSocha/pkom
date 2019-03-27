@@ -1,9 +1,12 @@
 burgerownia {
 	background-color: #2E2E2E;
+    font-family: Lato, serif;
 }
 
 metadane {
+    background-color: #8C8C8C;
 	display: block;
+    font-family: Lucida Console, monaco, monospace;
 	margin: 5px;
 	text-align: center;
 	border-style: solid;
@@ -26,6 +29,7 @@ burger, nazwa, cena, kaloryczność {
 }
 
 burger {
+    background-color: #404040;
 	margin: 5% 10% 5% 10%;
 	border-style: solid;
 	border-color: white;
@@ -39,15 +43,16 @@ cena, kaloryczność {
 }
 
 burger:after {
-	margin: 5px, 3px, 3px, 3px;
+	margin: 5px 3px 3px 3px;
 	color: white;
 	content: "Status mięsa: " attr(mięsność);
 }
 
 nazwa {
 	color: #FEE501;
-	font-weight: bold;
-	text-align: center;	
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    line-height: 20px;
+	text-align: center;
 }
 
 alergen {
