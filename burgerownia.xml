@@ -32,10 +32,11 @@
 		<składnik idSkładnika="ser" alergeny="laktoza">ser</składnik>
 		<składnik idSkładnika="mięso-wieprzowe">mięso wieprzowe</składnik> 
 		<składnik idSkładnika="mięso-wołowe">mięso wołowe</składnik>
-		<składnik idSkładnika="mięso-drobiowe">mięso drobione</składnik>
+		<składnik idSkładnika="mięso-drobiowe">mięso drobiowe</składnik>
+		<składnik idSkładnika="boczek">boczek</składnik>
 		<składnik idSkładnika="bułka-pszenna-sezam" alergeny="gluten sezam">bułka pszenna z sezamem</składnik> 
 		<składnik idSkładnika="bułka-pszenna" alergeny="gluten">bułka pszenna</składnik>
-		<składnik idSkładnika="bułka-rzytnia">bułka rzytnia</składnik>
+		<składnik idSkładnika="bułka-żytnia">bułka żytnia</składnik>
 		<składnik idSkładnika="sałata">stałata</składnik>
 		<składnik idSkładnika="pomidor">pomidor</składnik>
 		<składnik idSkładnika="ogórek">ogórek</składnik>
@@ -72,7 +73,7 @@
 	</burger>
 	<burger mięsność="wegański"
 			data_wprowadzenia="15.03.2018"
-			składniki="bułka-rzytnia">
+			składniki="bułka-żytnia">
 		<nazwa>TekturaBurger</nazwa>
 		<cena waluta="zł">29.99</cena>
 		<kaloryczność jednostka="kcal">100</kaloryczność>
@@ -84,5 +85,137 @@
 		<cena waluta="zł">14.99</cena>
 		<kaloryczność jednostka="kcal">380</kaloryczność>
 	</burger>
-
+	<burger mięsność="mięsny" 
+			data_wprowadzenia="11.07.2018" 
+			składniki="ser, jajko, cebula, boczek, musztarda, pomidor">
+		<nazwa>AngielskieŚniadankoBurger</nazwa>
+		<cena waluta="zł">13.99</cena>
+		<kaloryczność jednostka="kcal">680</kaloryczność>
+	</burger>
+	<burger mięsność="mięsny" 
+			data_wprowadzenia="12.08.2018" 
+			składniki="bułka-pszenna-sezam, mięso-drobiowe, krewetki, sos-sojowy">
+		<nazwa>ZłotyKurczakBurger</nazwa>
+		<cena waluta="zł">11.99</cena>
+		<kaloryczność jednostka="kcal">480</kaloryczność>
+	</burger>
+	<burger mięsność="mięsny" 
+			data_wprowadzenia="12.08.2018" 
+			składniki="bułka-pszenna-sezam, mięso-drobiowe, krewetki, sos-sojowy, piri-piri">
+		<nazwa>KurczakPikantnyBurger</nazwa>
+		<cena waluta="zł">12.99</cena>
+		<kaloryczność jednostka="kcal">490</kaloryczność>
+	</burger>
+	<burger mięsność="mięsny" 
+			data_wprowadzenia="15.11.2018" 
+			składniki="bułka-pszenna, pomidor, mięso-wołowe, rukola, ser">
+		<nazwa>WłoskiBurger</nazwa>
+		<cena waluta="zł">13.99</cena>
+		<kaloryczność jednostka="kcal">540</kaloryczność>
+	</burger>
+	<burger mięsność="mięsny" 
+			data_wprowadzenia="05.08.2018" 
+			składniki="bułka-żytnia, mięso-wieprzowe, pomidor, ogórek, sałata, jajko">
+		<nazwa>ProwincjaBurger</nazwa>
+		<cena waluta="zł">14.99</cena>
+		<kaloryczność jednostka="kcal">630</kaloryczność>
+	</burger>
+	<burger mięsność="mięsny" 
+			data_wprowadzenia="12.10.2018" 
+			składniki="bułka-pszenna, mięso-wołowe, sos-serowy-chili, sos-sojowy, ketchup, majonez, musztarda">
+		<nazwa>BurgerPięciuSmaków</nazwa>
+		<cena waluta="zł">13.99</cena>
+		<kaloryczność jednostka="kcal">550</kaloryczność>
+	</burger>
+	<burger mięsność="wegetariański" 
+			data_wprowadzenia="14.10.2018" 
+			składniki="bułka-żytnia, jajko, sałata, pomidor, ogórek, cebula">
+		<nazwa>JajeczkoZWarzywkamiBurger</nazwa>
+		<cena waluta="zł">12.99</cena>
+		<kaloryczność jednostka="kcal">520</kaloryczność>
+	</burger>
+	<burger mięsność="mięsny" 
+			data_wprowadzenia="11.11.2018" 
+			składniki="bułka-pszenna-sezam, mięso-wołowe, ser, pomidor, sałata, piri-piri, chili">
+		<nazwa>BorutaBurger</nazwa>
+		<cena waluta="zł">15.99</cena>
+		<kaloryczność jednostka="kcal">710</kaloryczność>
+	</burger>
+	<burger mięsność="mięsny" 
+			data_wprowadzenia="09.08.2018" 
+			składniki="bułka-pszenna-sezam, mięso-wołowe, mięso-wołowe, ser, pomidor, sałata, ogórek, ketchup">
+		<nazwa>DwieKrowyBurger</nazwa>
+		<cena waluta="zł">17.99</cena>
+		<kaloryczność jednostka="kcal">810</kaloryczność>
+	</burger>
+	<burger mięsność="mięsny" 
+			data_wprowadzenia="..2018" 
+			składniki="">
+		<nazwa></nazwa>
+		<cena waluta="zł"></cena>
+		<kaloryczność jednostka="kcal"></kaloryczność>
+	</burger>
+	<burger mięsność="mięsny" 
+			data_wprowadzenia="..2018" 
+			składniki="">
+		<nazwa></nazwa>
+		<cena waluta="zł"></cena>
+		<kaloryczność jednostka="kcal"></kaloryczność>
+	</burger>
+	<burger mięsność="mięsny" 
+			data_wprowadzenia="..2018" 
+			składniki="">
+		<nazwa></nazwa>
+		<cena waluta="zł"></cena>
+		<kaloryczność jednostka="kcal"></kaloryczność>
+	</burger>
+	<burger mięsność="mięsny" 
+			data_wprowadzenia="..2018" 
+			składniki="">
+		<nazwa></nazwa>
+		<cena waluta="zł"></cena>
+		<kaloryczność jednostka="kcal"></kaloryczność>
+	</burger>
+	<burger mięsność="mięsny" 
+			data_wprowadzenia="..2018" 
+			składniki="">
+		<nazwa></nazwa>
+		<cena waluta="zł"></cena>
+		<kaloryczność jednostka="kcal"></kaloryczność>
+	</burger>
+	<burger mięsność="mięsny" 
+			data_wprowadzenia="..2018" 
+			składniki="">
+		<nazwa></nazwa>
+		<cena waluta="zł"></cena>
+		<kaloryczność jednostka="kcal"></kaloryczność>
+	</burger>
+	<burger mięsność="mięsny" 
+			data_wprowadzenia="..2018" 
+			składniki="">
+		<nazwa></nazwa>
+		<cena waluta="zł"></cena>
+		<kaloryczność jednostka="kcal"></kaloryczność>
+	</burger>
+	<burger mięsność="mięsny" 
+			data_wprowadzenia="..2018" 
+			składniki="">
+		<nazwa></nazwa>
+		<cena waluta="zł"></cena>
+		<kaloryczność jednostka="kcal"></kaloryczność>
+	</burger>
+	<burger mięsność="mięsny" 
+			data_wprowadzenia="..2018" 
+			składniki="">
+		<nazwa></nazwa>
+		<cena waluta="zł"></cena>
+		<kaloryczność jednostka="kcal"></kaloryczność>
+	</burger>
+	<burger mięsność="mięsny" 
+			data_wprowadzenia="..2018" 
+			składniki="">
+		<nazwa></nazwa>
+		<cena waluta="zł"></cena>
+		<kaloryczność jednostka="kcal"></kaloryczność>
+	</burger>
 </burgerownia>
