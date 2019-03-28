@@ -3,6 +3,13 @@ burgerownia {
     font-family: Lato, serif;
 }
 
+metadane::before {
+    content: "Autorzy:";
+    display: block;
+    color: #FEE501;
+    font-weight: bolder;
+}
+
 metadane {
     background-color: #8C8C8C;
 	display: block;
@@ -12,6 +19,25 @@ metadane {
 	border-style: solid;
 	border-color: white;
 	border-width: 2px;
+}
+
+ol::before {
+	color: #FEE501;
+}
+
+autor {
+    font-size: large;
+}
+
+autor, korektor, data_modyfikacji, nazwa_projektu {
+    display: block;
+    font-weight: bold;
+    color: #FEE501;
+}
+
+data_modyfikacji::before {
+    display: inline;
+    content: "Data ostatniej modyfikacji: ";
 }
 
 lista_składników {
@@ -41,12 +67,6 @@ alergen {
 	list-style: decimal;
 	padding-left:10px;
 	margin-left:30px;
-}
-
-autor, korektor, data_modyfikacji {
-	display: block;
-	font-weight: bold;
-	color: #FEE501;
 }
 
 burger, nazwa, cena, kaloryczność {

@@ -25,9 +25,10 @@
 
 <!-- Extra information -->
 
-<!ELEMENT metadane (autor+, korektor*, data_modyfikacji)>
+<!ELEMENT metadane (autor+, korektor*, data_modyfikacji, nazwa_projektu)>
 <!ELEMENT autor (imie, nazwisko)>
+<!ELEMENT korektor (imie, nazwisko)>
 <!ELEMENT imie (#PCDATA)>
 <!ELEMENT nazwisko (#PCDATA)>
-<!ELEMENT korektor (imie, nazwisko)>
 <!ELEMENT data_modyfikacji (#PCDATA)>
+<!ELEMENT nazwa_projektu (#PCDATA)>
