@@ -21,10 +21,6 @@ metadane {
 	border-width: 2px;
 }
 
-ol::before {
-	color: #FEE501;
-}
-
 autor {
     font-size: large;
 }
