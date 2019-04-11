@@ -59,7 +59,7 @@
           </xs:restriction>
         </xs:simpleType>
       </xs:attribute>
-      <xs:attribute name="data_wprowadzenia" type="xs:string" /> <!-- TODO date -->
+      <xs:attribute name="data_wprowadzenia" type="xs:date" />
       <xs:attribute name="składniki" type="xs:IDREFS" use="required" />
     </xs:complexType>
   </xs:element>
@@ -110,6 +110,6 @@
   </xs:element>
   <xs:element name="imie" type="xs:string" />
   <xs:element name="nazwisko" type="xs:string" />
-  <xs:element name="data_modyfikacji" type="xs:string" /> <!-- TODO date -->
+  <xs:element name="data_modyfikacji" type="xs:date" />
   <xs:element name="nazwa_projektu" type="xs:string" />
 </xs:schema>
