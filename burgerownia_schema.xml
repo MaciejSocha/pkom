@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns="http://tempuri.org/burgerownia" elementFormDefault="qualified" targetNamespace="http://tempuri.org/burgerownia" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="burgerownia">
     <xs:complexType>
       <xs:sequence>
         <xs:element ref="metadane" />
         <xs:element ref="lista_alergenów" />
         <xs:element ref="lista_składników" />
-        <xs:element minOccurs="0" maxOccurs="unbounded" ref="burger" />
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="burger" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -59,7 +59,7 @@
           </xs:restriction>
         </xs:simpleType>
       </xs:attribute>
-      <xs:attribute name="data_wprowadzenia" type="xs:string" />
+      <xs:attribute name="data_wprowadzenia" type="xs:date" />
       <xs:attribute name="składniki" type="xs:IDREFS" use="required" />
     </xs:complexType>
   </xs:element>
@@ -67,7 +67,7 @@
   <xs:element name="cena">
     <xs:complexType>
       <xs:simpleContent>
-        <xs:extension base="xs:string">
+        <xs:extension base="xs:decimal">
           <xs:attribute default="zł" name="waluta" type="xs:string" />
         </xs:extension>
       </xs:simpleContent>
@@ -76,7 +76,7 @@
   <xs:element name="kaloryczność">
     <xs:complexType>
       <xs:simpleContent>
-        <xs:extension base="xs:string">
+        <xs:extension base="xs:integer">
           <xs:attribute default="kcal" name="jednostka" type="xs:string" />
         </xs:extension>
       </xs:simpleContent>
