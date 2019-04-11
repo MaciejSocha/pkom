@@ -10,6 +10,22 @@
         <xs:element minOccurs="1" maxOccurs="unbounded" ref="burger" />
       </xs:sequence>
     </xs:complexType>
+    <xs:key name="idAl">
+      <xs:selector xpath="lista_alergenów/akergen"/>
+      <xs:field xpath="idAlergenu"/>
+    </xs:key>
+    <xs:keyref name="refAl" refer="idAl">
+      <xs:selector xpath="lista_składników/składnikGroup"/>
+      <xs:field xpath="alergeny"/>
+    </xs:keyref>
+    <xs:key name="idSk">
+      <xs:selector xpath="lista_składników/składnikGroup"/>
+      <xs:field xpath="idSkładnika"/>
+    </xs:key>
+    <xs:keyref name="refSk" refer="idSk">
+      <xs:selector xpath="burgerArrtibuteGroup"/>
+      <xs:field xpath="składniki"/>
+    </xs:keyref>
   </xs:element>
 
   <!-- ALERGEN -->
@@ -18,7 +34,7 @@
     <xs:complexType>
       <xs:simpleContent>
         <xs:extension base="xs:string">
-          <xs:attribute name="idAlergenu" type="xs:ID" use="required" />
+          <xs:attribute name="idAlergenu" type="xs:string" use="required" />
         </xs:extension>
       </xs:simpleContent>
     </xs:complexType>
@@ -35,8 +51,8 @@
   <!-- SKŁADNIK -->
   <!-- Zgrupowane atrybuty na potrzeby pojedynczego składnika -->
   <xs:attributeGroup name="składnikGroup">
-    <xs:attribute name="alergeny" type="xs:IDREFS" />
-    <xs:attribute name="idSkładnika" type="xs:ID" use="required" />
+    <xs:attribute name="alergeny" type="xs:string" />
+    <xs:attribute name="idSkładnika" type="xs:string" use="required" />
   </xs:attributeGroup>
   <!-- Pojedynczy składnik-->
   <xs:element name="składnik">
@@ -70,7 +86,7 @@
   <xs:attributeGroup name="burgerArrtibuteGroup">
     <xs:attribute default="mięsny" name="mięsność" type="miesnoscBase"/>
     <xs:attribute name="data_wprowadzenia" type="xs:date" use="optional"/>
-    <xs:attribute name="składniki" type="xs:IDREFS" use="required" />
+    <xs:attribute name="składniki" type="xs:string" use="required" />
   </xs:attributeGroup>
   <!-- Nazwa burgera -->
   <xs:element name="nazwa" type="xs:string" />  
