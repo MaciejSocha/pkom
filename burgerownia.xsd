@@ -33,16 +33,31 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:attributeGroup name="składnikGroup">
+    <xs:attribute name="alergeny" type="xs:IDREFS" />
+    <xs:attribute name="idSkładnika" type="xs:ID" use="required" />
+  </xs:attributeGroup>
   <xs:element name="składnik">
     <xs:complexType>
       <xs:simpleContent>
         <xs:extension base="xs:string">
-          <xs:attribute name="alergeny" type="xs:IDREFS" />
-          <xs:attribute name="idSkładnika" type="xs:ID" use="required" />
+          <xs:attributeGroup ref = "składnikGroup"/>
         </xs:extension>
       </xs:simpleContent>
     </xs:complexType>
   </xs:element>
+  <xs:simpleType name="miesnoscBase">
+    <xs:restriction base="xs:NMTOKEN">
+      <xs:enumeration value="mięsny" />
+      <xs:enumeration value="wegetariański" />
+      <xs:enumeration value="wegański" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:attributeGroup name="burgerArrtibuteGroup">
+    <xs:attribute default="mięsny" name="mięsność" type="miesnoscBase"/>
+    <xs:attribute name="data_wprowadzenia" type="xs:date" use="optional"/>
+    <xs:attribute name="składniki" type="xs:IDREFS" use="required" />
+  </xs:attributeGroup>
   <xs:element name="burger">
     <xs:complexType>
       <xs:sequence>
@@ -50,17 +65,7 @@
         <xs:element ref="cena" />
         <xs:element ref="kaloryczność" />
       </xs:sequence>
-      <xs:attribute default="mięsny" name="mięsność">
-        <xs:simpleType>
-          <xs:restriction base="xs:NMTOKEN">
-            <xs:enumeration value="mięsny" />
-            <xs:enumeration value="wegetariański" />
-            <xs:enumeration value="wegański" />
-          </xs:restriction>
-        </xs:simpleType>
-      </xs:attribute>
-      <xs:attribute name="data_wprowadzenia" type="xs:date" use="optional"/>
-      <xs:attribute name="składniki" type="xs:IDREFS" use="required" />
+      <xs:attributeGroup ref="burgerArrtibuteGroup"/>
     </xs:complexType>
   </xs:element>
   <xs:simpleType name="cenaBase">  
