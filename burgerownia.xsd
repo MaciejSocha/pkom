@@ -11,20 +11,20 @@
       </xs:sequence>
     </xs:complexType>
     <xs:key name="idAl">
-      <xs:selector xpath="lista_alergenów/akergen"/>
-      <xs:field xpath="idAlergenu"/>
+      <xs:selector xpath="lista_alergenów/alergen"/>
+      <xs:field xpath="@idAlergenu"/>
     </xs:key>
     <xs:keyref name="refAl" refer="idAl">
       <xs:selector xpath="lista_składników/składnikGroup"/>
-      <xs:field xpath="alergeny"/>
+      <xs:field xpath="@alergeny"/>
     </xs:keyref>
     <xs:key name="idSk">
       <xs:selector xpath="lista_składników/składnikGroup"/>
-      <xs:field xpath="idSkładnika"/>
+      <xs:field xpath="@idSkładnika"/>
     </xs:key>
     <xs:keyref name="refSk" refer="idSk">
       <xs:selector xpath="burgerArrtibuteGroup"/>
-      <xs:field xpath="składniki"/>
+      <xs:field xpath="@składniki"/>
     </xs:keyref>
   </xs:element>
 
