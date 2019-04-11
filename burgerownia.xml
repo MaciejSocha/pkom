@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet href="burgerownia.css" type="text/css" ?>
-<!DOCTYPE burgerownia SYSTEM "burgerownia.dtd">
 
-<burgerownia>
+<burgerownia xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="burgerownia.xsd" xs:schemaLocation="burgerownia.xsd">
 	<metadane>
 		<autor>
 			<imie>Stanisław</imie>
