@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <!-- Element burgerownia jest podstawą naszego dokumentu xml -->
   <xs:element name="burgerownia">
     <xs:complexType>
       <xs:sequence>
@@ -10,13 +11,9 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="lista_alergenów">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" maxOccurs="unbounded" ref="alergen"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
+
+  <!-- ALERGEN -->
+  <!-- Pojedynczy alergen-->
   <xs:element name="alergen">
     <xs:complexType>
       <xs:simpleContent>
@@ -26,17 +23,22 @@
       </xs:simpleContent>
     </xs:complexType>
   </xs:element>
-  <xs:element name="lista_składników">
+  <!-- Lista alergenów-->
+  <xs:element name="lista_alergenów">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" maxOccurs="unbounded" ref="składnik" />
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="alergen"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+
+  <!-- SKŁADNIK -->
+  <!-- Zgrupowane atrybuty na potrzeby pojedynczego składnika -->
   <xs:attributeGroup name="składnikGroup">
     <xs:attribute name="alergeny" type="xs:IDREFS" />
     <xs:attribute name="idSkładnika" type="xs:ID" use="required" />
   </xs:attributeGroup>
+  <!-- Pojedynczy składnik-->
   <xs:element name="składnik">
     <xs:complexType>
       <xs:simpleContent>
@@ -46,6 +48,17 @@
       </xs:simpleContent>
     </xs:complexType>
   </xs:element>
+  <!-- Lista składników-->
+  <xs:element name="lista_składników">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="składnik" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- BURGER -->
+  <!-- Typ enumeracyjny miesnosc -->
   <xs:simpleType name="miesnoscBase">
     <xs:restriction base="xs:NMTOKEN">
       <xs:enumeration value="mięsny" />
@@ -53,11 +66,41 @@
       <xs:enumeration value="wegański" />
     </xs:restriction>
   </xs:simpleType>
+  <!-- Zgrupowane atrybuty dla pojedynczego burgera -->
   <xs:attributeGroup name="burgerArrtibuteGroup">
     <xs:attribute default="mięsny" name="mięsność" type="miesnoscBase"/>
     <xs:attribute name="data_wprowadzenia" type="xs:date" use="optional"/>
     <xs:attribute name="składniki" type="xs:IDREFS" use="required" />
   </xs:attributeGroup>
+  <!-- Nazwa burgera -->
+  <xs:element name="nazwa" type="xs:string" />  
+  <!-- Typ "cenaBase" określający formatowanie za pomocą znacznika xs:pattern -->
+  <xs:simpleType name="cenaBase">  
+    <xs:restriction base="xs:string">  
+        <xs:pattern value="([0-9])*[.][0-9][0-9]"/>  
+    </xs:restriction>  
+  </xs:simpleType>
+  <!-- Pojedynczy element cena korzystający z "cenaBase" -->
+  <xs:element name="cena">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="cenaBase">       
+          <xs:attribute default="zł" name="waluta" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <!-- Pojedynczy element kaloryczność -->
+  <xs:element name="kaloryczność">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:integer">
+          <xs:attribute default="kcal" name="jednostka" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <!-- Pojedynczy burger -->
   <xs:element name="burger">
     <xs:complexType>
       <xs:sequence>
@@ -68,61 +111,35 @@
       <xs:attributeGroup ref="burgerArrtibuteGroup"/>
     </xs:complexType>
   </xs:element>
-  <xs:simpleType name="cenaBase">  
-    <xs:restriction base="xs:string">  
-        <xs:pattern value="([0-9])*[.][0-9][0-9]"/>  
-    </xs:restriction>  
-  </xs:simpleType>
-  <xs:element name="nazwa" type="xs:string" />
-  <xs:element name="cena">
+
+  <!-- METADANE -->
+  <!-- Elementy potrzebne do metadanych -->
+  <xs:group name="daneOsobowe">
+    <xs:sequence>
+      <xs:element name="imie" type="xs:string" />
+      <xs:element name="nazwisko" type="xs:string" />
+    </xs:sequence>
+  </xs:group>
+  <xs:element name="data_modyfikacji" type="xs:date" />
+  <xs:element name="nazwa_projektu" type="xs:string" />
+  <!-- Autor -->
+  <xs:element name="autor">
     <xs:complexType>
-      <xs:simpleContent>
-        <xs:extension base="cenaBase">       
-          <xs:attribute default="zł" name="waluta" type="xs:string" />
-        </xs:extension>
-      </xs:simpleContent>
+      <xs:group ref="daneOsobowe"/>
     </xs:complexType>
   </xs:element>
-  <xs:element name="kaloryczność">
-    <xs:complexType>
-      <xs:simpleContent>
-        <xs:extension base="xs:integer">
-          <xs:attribute default="kcal" name="jednostka" type="xs:string" />
-        </xs:extension>
-      </xs:simpleContent>
-    </xs:complexType>
-  </xs:element>
+  <!-- Zgrupowane elementy na potrzebę metadanych -->
   <xs:group name="metadaneGroup">
     <xs:sequence>
         <xs:element minOccurs="1" maxOccurs="unbounded" ref="autor" />
-        <xs:element minOccurs="0" maxOccurs="unbounded" ref="korektor" />
         <xs:element ref="data_modyfikacji" />
         <xs:element ref="nazwa_projektu" />
       </xs:sequence>
   </xs:group>
+  <!-- Element metadane z wykorzystaniem zgrupowanych elementów "metadaneGroup" -->
   <xs:element name="metadane">
     <xs:complexType>
       <xs:group ref="metadaneGroup"/>
     </xs:complexType>
   </xs:element>
-  <xs:element name="autor">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="imie" />
-        <xs:element ref="nazwisko" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="korektor">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="imie" />
-        <xs:element ref="nazwisko" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="imie" type="xs:string" />
-  <xs:element name="nazwisko" type="xs:string" />
-  <xs:element name="data_modyfikacji" type="xs:date" />
-  <xs:element name="nazwa_projektu" type="xs:string" />
 </xs:schema>
