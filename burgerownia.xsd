@@ -110,6 +110,6 @@
   </xs:element>
   <xs:element name="imie" type="xs:string" />
   <xs:element name="nazwisko" type="xs:string" />
-  <xs:element name="data_modyfikacji" type="xs:string" />
+  <xs:element name="data_modyfikacji" type="xs:string" /> <!-- TODO date -->
   <xs:element name="nazwa_projektu" type="xs:string" />
 </xs:schema>
