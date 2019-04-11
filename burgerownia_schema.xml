@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/burgerownia" elementFormDefault="qualified" targetNamespace="http://tempuri.org/burgerownia" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="burgerownia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="metadane" />
+        <xs:element ref="lista_alergenów" />
+        <xs:element ref="lista_składników" />
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="burger" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="lista_alergenów">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="alergen" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="alergen">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="idAlergenu" type="xs:ID" use="required" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="lista_składników">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="składnik" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="składnik">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="alergeny" type="xs:IDREFS" />
+          <xs:attribute name="idSkładnika" type="xs:ID" use="required" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="burger">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="nazwa" />
+        <xs:element ref="cena" />
+        <xs:element ref="kaloryczność" />
+      </xs:sequence>
+      <xs:attribute default="mięsny" name="mięsność">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="mięsny" />
+            <xs:enumeration value="wegetariański" />
+            <xs:enumeration value="wegański" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="data_wprowadzenia" type="xs:string" />
+      <xs:attribute name="składniki" type="xs:IDREFS" use="required" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nazwa" type="xs:string" />
+  <xs:element name="cena">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute default="zł" name="waluta" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="kaloryczność">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute default="kcal" name="jednostka" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="metadane">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="autor" />
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="korektor" />
+        <xs:element ref="data_modyfikacji" />
+        <xs:element ref="nazwa_projektu" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="autor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="imie" />
+        <xs:element ref="nazwisko" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="korektor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="imie" />
+        <xs:element ref="nazwisko" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="imie" type="xs:string" />
+  <xs:element name="nazwisko" type="xs:string" />
+  <xs:element name="data_modyfikacji" type="xs:string" />
+  <xs:element name="nazwa_projektu" type="xs:string" />
+</xs:schema>
