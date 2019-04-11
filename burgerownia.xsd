@@ -87,14 +87,17 @@
       </xs:simpleContent>
     </xs:complexType>
   </xs:element>
-  <xs:element name="metadane">
-    <xs:complexType>
-      <xs:sequence>
+  <xs:group name="metadaneGroup">
+    <xs:sequence>
         <xs:element minOccurs="1" maxOccurs="unbounded" ref="autor" />
         <xs:element minOccurs="0" maxOccurs="unbounded" ref="korektor" />
         <xs:element ref="data_modyfikacji" />
         <xs:element ref="nazwa_projektu" />
       </xs:sequence>
+  </xs:group>
+  <xs:element name="metadane">
+    <xs:complexType>
+      <xs:group ref="metadaneGroup"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="autor">
