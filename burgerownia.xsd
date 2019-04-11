@@ -13,7 +13,7 @@
   <xs:element name="lista_alergenów">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" maxOccurs="unbounded" ref="alergen" />
+        <xs:element minOccurs="1" maxOccurs="1" ref="alergen"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -29,7 +29,7 @@
   <xs:element name="lista_składników">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" maxOccurs="unbounded" ref="składnik" />
+        <xs:element minOccurs="1" maxOccurs="1" ref="składnik" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -50,7 +50,7 @@
         <xs:element ref="cena" />
         <xs:element ref="kaloryczność" />
       </xs:sequence>
-      <xs:attribute default="mięsny" name="mięsność">
+      <xs:attribute default="mięsny" name="mięsność" use="required">
         <xs:simpleType>
           <xs:restriction base="xs:NMTOKEN">
             <xs:enumeration value="mięsny" />
@@ -59,7 +59,7 @@
           </xs:restriction>
         </xs:simpleType>
       </xs:attribute>
-      <xs:attribute name="data_wprowadzenia" type="xs:date" />
+      <xs:attribute name="data_wprowadzenia" type="xs:date" use="optional"/>
       <xs:attribute name="składniki" type="xs:IDREFS" use="required" />
     </xs:complexType>
   </xs:element>
@@ -68,7 +68,7 @@
     <xs:complexType>
       <xs:simpleContent>
         <xs:extension base="xs:decimal">
-          <xs:attribute default="zł" name="waluta" type="xs:string" />
+          <xs:attribute default="zł" name="waluta" type="xs:decimal" />
         </xs:extension>
       </xs:simpleContent>
     </xs:complexType>
@@ -77,7 +77,7 @@
     <xs:complexType>
       <xs:simpleContent>
         <xs:extension base="xs:integer">
-          <xs:attribute default="kcal" name="jednostka" type="xs:string" />
+          <xs:attribute default="kcal" name="jednostka" type="xs:integer" />
         </xs:extension>
       </xs:simpleContent>
     </xs:complexType>
