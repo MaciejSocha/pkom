@@ -74,8 +74,16 @@ burger {
 	margin: 5% 10% 5% 10%;
 	border-style: solid;
 	border-color: white;
-	border-width: 1px;
-	
+	border-width: 3px;
+}
+
+burger:nth-child(3n) {
+	background-color: #707070;
+}
+
+burger[mięsność=wegetariański] {
+	border-color: green;
+	border-width: 3px;
 }
 
 cena, kaloryczność {

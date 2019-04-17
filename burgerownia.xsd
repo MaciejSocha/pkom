@@ -34,7 +34,13 @@
     <xs:complexType>
       <xs:simpleContent>
         <xs:extension base="xs:string">
-          <xs:attribute name="idAlergenu" type="xs:string" use="required" />
+          <xs:attribute name="idAlergenu" use="required">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:pattern value="([a-z,_])*"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
         </xs:extension>
       </xs:simpleContent>
     </xs:complexType>
@@ -52,7 +58,13 @@
   <!-- Zgrupowane atrybuty na potrzeby pojedynczego składnika -->
   <xs:attributeGroup name="składnikGroup">
     <xs:attribute name="alergeny" type="xs:string" />
-    <xs:attribute name="idSkładnika" type="xs:string" use="required" />
+    <xs:attribute name="idSkładnika" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value = "([a-z,_])*"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
   </xs:attributeGroup>
   <!-- Pojedynczy składnik-->
   <xs:element name="składnik">
@@ -68,7 +80,7 @@
   <xs:element name="lista_składników">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" maxOccurs="unbounded" ref="składnik" />
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="składnik" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -89,10 +101,16 @@
     <xs:attribute name="składniki" type="xs:string" use="required" />
   </xs:attributeGroup>
   <!-- Nazwa burgera -->
-  <xs:element name="nazwa" type="xs:string" />  
+  <xs:element name="nazwa">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:pattern value="([A-Z,a-z,ę, ,-,Ś,ł,ó])*"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>  
   <!-- Typ "cenaBase" określający formatowanie za pomocą znacznika xs:pattern -->
   <xs:simpleType name="cenaBase">  
-    <xs:restriction base="xs:string">  
+    <xs:restriction base="xs:decimal">  
         <xs:pattern value="([0-9])*[.][0-9][0-9]"/>  
     </xs:restriction>  
   </xs:simpleType>
@@ -132,8 +150,20 @@
   <!-- Elementy potrzebne do metadanych -->
   <xs:group name="daneOsobowe">
     <xs:sequence>
-      <xs:element name="imie" type="xs:string" />
-      <xs:element name="nazwisko" type="xs:string" />
+      <xs:element name="imie">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z]([a-z, ł])*"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="nazwisko">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z]([a-z])*[-]?([A-Z]([a-z])*)?"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
     </xs:sequence>
   </xs:group>
   <xs:element name="data_modyfikacji" type="xs:date" />
