@@ -10,20 +10,22 @@
         <xs:element minOccurs="1" maxOccurs="unbounded" ref="burger" />
       </xs:sequence>
     </xs:complexType>
+
     <xs:key name="idAl">
       <xs:selector xpath="lista_alergenów/alergen"/>
       <xs:field xpath="@idAlergenu"/>
     </xs:key>
     <xs:keyref name="refAl" refer="idAl">
-      <xs:selector xpath="lista_składników/składnikGroup"/>
+      <xs:selector xpath="lista_składników/składnik"/>
       <xs:field xpath="@alergeny"/>
     </xs:keyref>
+
     <xs:key name="idSk">
-      <xs:selector xpath="lista_składników/składnikGroup"/>
+      <xs:selector xpath="lista_składników/składnik"/>
       <xs:field xpath="@idSkładnika"/>
     </xs:key>
     <xs:keyref name="refSk" refer="idSk">
-      <xs:selector xpath="burgerArrtibuteGroup"/>
+      <xs:selector xpath="burger"/>
       <xs:field xpath="@składniki"/>
     </xs:keyref>
   </xs:element>
