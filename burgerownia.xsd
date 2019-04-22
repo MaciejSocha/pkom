@@ -59,7 +59,7 @@
   <!-- SKŁADNIK -->
   <!-- Zgrupowane atrybuty na potrzeby pojedynczego składnika -->
   <xs:attributeGroup name="składnikGroup">
-    <xs:attribute name="alergeny" type="xs:string" />
+    <xs:attribute name="alergen" type="xs:string" />
     <xs:attribute name="idSkładnika" use="required">
       <xs:simpleType>
         <xs:restriction base="xs:string">
@@ -69,7 +69,7 @@
     </xs:attribute>
   </xs:attributeGroup>
   <!-- Pojedynczy składnik-->
-  <xs:element name="składnik">
+  <xs:element name="składnik" >
     <xs:complexType>
       <xs:simpleContent>
         <xs:extension base="xs:string">
@@ -100,7 +100,7 @@
   <xs:attributeGroup name="burgerArrtibuteGroup">
     <xs:attribute default="mięsny" name="mięsność" type="miesnoscBase"/>
     <xs:attribute name="data_wprowadzenia" type="xs:date" use="optional"/>
-    <xs:attribute name="składniki" type="xs:string" use="required" />
+    <xs:attribute name="skladnik" type="xs:string" use="required" />
   </xs:attributeGroup>
   <!-- Nazwa burgera -->
   <xs:element name="nazwa">
