@@ -37,7 +37,7 @@
           <xs:attribute name="idAlergenu" use="required">
             <xs:simpleType>
               <xs:restriction base="xs:string">
-                <xs:pattern value="([a-z,_])*"/>
+                <xs:pattern value="([\p{L},_])*"/>
               </xs:restriction>
             </xs:simpleType>
           </xs:attribute>
@@ -61,7 +61,7 @@
     <xs:attribute name="idSkładnika" use="required">
       <xs:simpleType>
         <xs:restriction base="xs:string">
-          <xs:pattern value = "([a-z,_])*"/>
+          <xs:pattern value = "([\p{L},_])*"/>
         </xs:restriction>
       </xs:simpleType>
     </xs:attribute>
@@ -104,7 +104,7 @@
   <xs:element name="nazwa">
     <xs:simpleType>
       <xs:restriction base="xs:string">
-        <xs:pattern value="([A-Z,a-z,ę, ,-,Ś,ł,ó])*"/>
+        <xs:pattern value="([\p{L}, ])*"/>
       </xs:restriction>
     </xs:simpleType>
   </xs:element>  
@@ -153,14 +153,14 @@
       <xs:element name="imie">
         <xs:simpleType>
           <xs:restriction base="xs:string">
-            <xs:pattern value="[A-Z]([a-z, ł])*"/>
+            <xs:pattern value="(\p{L})*"/>
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
       <xs:element name="nazwisko">
         <xs:simpleType>
           <xs:restriction base="xs:string">
-            <xs:pattern value="[A-Z]([a-z])*[-]?([A-Z]([a-z])*)?"/>
+            <xs:pattern value="(\p{L})*[-]?((\p{L})*)?"/>
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
