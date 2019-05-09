@@ -28,191 +28,191 @@
 	</lista_alergenów>
 
 	<lista_składników>
-		<składnik idSkładnika="ser" alergeny="laktoza">ser</składnik>
+		<składnik idSkładnika="ser" alergen="laktoza">ser</składnik>
 		<składnik idSkładnika="mieso_wieprzowe">mięso wieprzowe</składnik> 
 		<składnik idSkładnika="mieso_wolowe">mięso wołowe</składnik>
 		<składnik idSkładnika="mieso_drobiowe">mięso drobiowe</składnik>
 		<składnik idSkładnika="boczek">boczek</składnik>
-		<składnik idSkładnika="bulka_pszenna_sezam" alergeny="gluten sezam">bułka pszenna z sezamem</składnik> 
-		<składnik idSkładnika="bulka_pszenna" alergeny="gluten">bułka pszenna</składnik>
+		<składnik idSkładnika="bulka_pszenna_sezam" alergen="gluten sezam">bułka pszenna z sezamem</składnik>
+		<składnik idSkładnika="bulka_pszenna" alergen="gluten">bułka pszenna</składnik>
 		<składnik idSkładnika="bulka_zytnia">bułka żytnia</składnik>
 		<składnik idSkładnika="salata">sałata</składnik>
 		<składnik idSkładnika="pomidor">pomidor</składnik>
 		<składnik idSkładnika="ogorek">ogórek</składnik>
 		<składnik idSkładnika="ketchup">ketchup</składnik>
-		<składnik idSkładnika="losos" alergeny="ryby">łosoś</składnik>
+		<składnik idSkładnika="losos" alergen="ryby">łosoś</składnik>
 		<składnik idSkładnika="cebula">cebula</składnik>
 		<składnik idSkładnika="papryka">papryka</składnik>
 		<składnik idSkładnika="falafel">falafel</składnik>
 		<składnik idSkładnika="piri_piri">piri-piri</składnik>
 		<składnik idSkładnika="majonez">majonez</składnik>
 		<składnik idSkładnika="rukola">rukola</składnik>
-		<składnik idSkładnika="jajko" alergeny="jaja">jajko</składnik>
-		<składnik idSkładnika="prazone_orzechy" alergeny="orzech">prażone orzechy</składnik>
-		<składnik idSkładnika="krewetki" alergeny="skorupiak">krewetki</składnik>
-		<składnik idSkładnika="musztarda" alergeny="gorczyca">musztarda</składnik>
-		<składnik idSkładnika="sos_sojowy" alergeny="soja">sos sojowy</składnik>
-		<składnik idSkładnika="sos_serowy_chili" alergeny="laktoza">sos serowy chili</składnik>
+		<składnik idSkładnika="jajko" alergen="jaja">jajko</składnik>
+		<składnik idSkładnika="prazone_orzechy" alergen="orzech">prażone orzechy</składnik>
+		<składnik idSkładnika="krewetki" alergen="skorupiak">krewetki</składnik>
+		<składnik idSkładnika="musztarda" alergen="gorczyca">musztarda</składnik>
+		<składnik idSkładnika="sos_sojowy" alergen="soja">sos sojowy</składnik>
+		<składnik idSkładnika="sos_serowy_chili" alergen="laktoza">sos serowy chili</składnik>
 		<składnik idSkładnika="chili">chili</składnik>
 	</lista_składników>
 
-	<burger mięsność="mięsny" 
+	<burger mięsność="mięsny"
 			data_wprowadzenia="2018-03-12"
-			składniki="ser mieso_wolowe bulka_pszenna_sezam ogorek cebula sos_serowy_chili">
+			skladnik="ser mieso_wolowe bulka_pszenna_sezam ogorek cebula sos_serowy_chili">
 		<nazwa>CheeseBurger</nazwa>
 		<cena waluta="zł">11.99</cena>
 		<kaloryczność jednostka="kcal">500</kaloryczność>
 	</burger>
 	<burger mięsność="mięsny"
 			data_wprowadzenia="2018-03-10"
-			składniki="mieso_wolowe bulka_pszenna cebula ketchup salata">
+			skladnik="mieso_wolowe bulka_pszenna cebula ketchup salata">
 		<nazwa>HamBurger</nazwa>
 		<cena waluta="zł">9.99</cena>
 		<kaloryczność jednostka="kcal">450</kaloryczność>
 	</burger>
 	<burger mięsność="wegański"
 			data_wprowadzenia="2018-03-15"
-			składniki="bulka_zytnia falafel ogorek pomidor">
+			skladnik="bulka_zytnia falafel ogorek pomidor">
 		<nazwa>FalafelBurger</nazwa>
 		<cena waluta="zł">29.99</cena>
 		<kaloryczność jednostka="kcal">100</kaloryczność>
 	</burger>
 	<burger mięsność="wegański"
 			data_wprowadzenia="2018-03-15"
-			składniki="bulka_zytnia falafel pomidor ogorek rukola prazone_orzechy musztarda">
+			skladnik="bulka_zytnia falafel pomidor ogorek rukola prazone_orzechy musztarda">
 		<nazwa>Falafel Burger de Luxe</nazwa>
 		<cena waluta="zł">14.99</cena>
 		<kaloryczność jednostka="kcal">380</kaloryczność>
 	</burger>
-	<burger mięsność="mięsny" 
+	<burger mięsność="mięsny"
 			data_wprowadzenia="2018-07-11"
-			składniki="ser jajko cebula boczek musztarda pomidor">
+			skladnik="ser jajko cebula boczek musztarda pomidor">
 		<nazwa>Angielskie Śniadanko</nazwa>
 		<cena waluta="zł">13.99</cena>
 		<kaloryczność jednostka="kcal">680</kaloryczność>
 	</burger>
-	<burger mięsność="mięsny" 
+	<burger mięsność="mięsny"
 			data_wprowadzenia="2018-08-12"
-			składniki="bulka_pszenna_sezam mieso_drobiowe krewetki sos_sojowy">
+			skladnik="bulka_pszenna_sezam mieso_drobiowe krewetki sos_sojowy">
 		<nazwa>Złoty Kurczak</nazwa>
 		<cena waluta="zł">11.99</cena>
 		<kaloryczność jednostka="kcal">480</kaloryczność>
 	</burger>
-	<burger mięsność="mięsny" 
+	<burger mięsność="mięsny"
 			data_wprowadzenia="2018-08-12"
-			składniki="bulka_pszenna_sezam mieso_drobiowe krewetki sos_sojowy piri_piri">
+			skladnik="bulka_pszenna_sezam mieso_drobiowe krewetki sos_sojowy piri_piri">
 		<nazwa>Kurczak Pikantny</nazwa>
 		<cena waluta="zł">12.99</cena>
 		<kaloryczność jednostka="kcal">490</kaloryczność>
 	</burger>
-	<burger mięsność="mięsny" 
+	<burger mięsność="mięsny"
 			data_wprowadzenia="2018-11-15"
-			składniki="bulka_pszenna pomidor mieso_wolowe rukola ser">
+			skladnik="bulka_pszenna pomidor mieso_wolowe rukola ser">
 		<nazwa>Włoski</nazwa>
 		<cena waluta="zł">13.99</cena>
 		<kaloryczność jednostka="kcal">540</kaloryczność>
 	</burger>
-	<burger mięsność="mięsny" 
+	<burger mięsność="mięsny"
 			data_wprowadzenia="2018-08-05"
-			składniki="bulka_zytnia mieso_wieprzowe pomidor ogorek salata jajko">
+			skladnik="bulka_zytnia mieso_wieprzowe pomidor ogorek salata jajko">
 		<nazwa>Prowincjonalny</nazwa>
 		<cena waluta="zł">14.99</cena>
 		<kaloryczność jednostka="kcal">630</kaloryczność>
 	</burger>
-	<burger mięsność="mięsny" 
+	<burger mięsność="mięsny"
 			data_wprowadzenia="2018-10-12"
-			składniki="bulka_pszenna mieso_wolowe sos_serowy_chili sos_sojowy ketchup majonez musztarda">
+			skladnik="bulka_pszenna mieso_wolowe sos_serowy_chili sos_sojowy ketchup majonez musztarda">
 		<nazwa>Burger Pięciu  Smaków</nazwa>
 		<cena waluta="zł">13.99</cena>
 		<kaloryczność jednostka="kcal">550</kaloryczność>
 	</burger>
-	<burger mięsność="wegetariański" 
+	<burger mięsność="wegetariański"
 			data_wprowadzenia="2018-10-14"
-			składniki="bulka_zytnia jajko salata pomidor ogorek cebula">
+			skladnik="bulka_zytnia jajko salata pomidor ogorek cebula">
 		<nazwa>Jajeczko Z Warzywkami</nazwa>
 		<cena waluta="zł">12.99</cena>
 		<kaloryczność jednostka="kcal">520</kaloryczność>
 	</burger>
-	<burger mięsność="mięsny" 
+	<burger mięsność="mięsny"
 			data_wprowadzenia="2018-11-11"
-			składniki="bulka_pszenna_sezam mieso_wolowe ser pomidor salata piri_piri chili">
+			skladnik="bulka_pszenna_sezam mieso_wolowe ser pomidor salata piri_piri chili">
 		<nazwa>Boruta Burger</nazwa>
 		<cena waluta="zł">15.99</cena>
 		<kaloryczność jednostka="kcal">710</kaloryczność>
 	</burger>
-	<burger mięsność="mięsny" 
+	<burger mięsność="mięsny"
 			data_wprowadzenia="2018-08-09"
-			składniki="bulka_pszenna_sezam mieso_wolowe mieso_wolowe ser pomidor salata ogorek ketchup">
+			skladnik="bulka_pszenna_sezam mieso_wolowe mieso_wolowe ser pomidor salata ogorek ketchup">
 		<nazwa>Dwie Krowy</nazwa>
 		<cena waluta="zł">17.99</cena>
 		<kaloryczność jednostka="kcal">810</kaloryczność>
 	</burger>
-	<burger mięsność="wegański" 
+	<burger mięsność="wegański"
 			data_wprowadzenia="2018-11-10"
-			składniki="bulka_zytnia falafel pomidor salata rukola prazone_orzechy papryka ketchup ogorek">
+			skladnik="bulka_zytnia falafel pomidor salata rukola prazone_orzechy papryka ketchup ogorek">
 		<nazwa>Falafel Z Bukietem Sałat</nazwa>
 		<cena waluta="zł">15.99</cena>
 		<kaloryczność jednostka="kcal">370</kaloryczność>
 	</burger>
-	<burger mięsność="mięsny" 
+	<burger mięsność="mięsny"
 			data_wprowadzenia="2018-05-07"
-			składniki="bulka_zytnia losos rukola prazone_orzechy krewetki">
+			skladnik="bulka_zytnia losos rukola prazone_orzechy krewetki">
 		<nazwa>RypkaBurger</nazwa>
 		<cena waluta="zł">16.99</cena>
 		<kaloryczność jednostka="kcal">550</kaloryczność>
 	</burger>
-	<burger mięsność="mięsny" 
+	<burger mięsność="mięsny"
 			data_wprowadzenia="2018-06-12"
-			składniki="bulka_pszenna mieso_wieprzowe mieso_wieprzowe mieso_wieprzowe ser ser pomidor salata cebula ogorek ketchup">
+			skladnik="bulka_pszenna mieso_wieprzowe mieso_wieprzowe mieso_wieprzowe ser ser pomidor salata cebula ogorek ketchup">
 		<nazwa>Trzy Świnki</nazwa>
 		<cena waluta="zł">19.99</cena>
 		<kaloryczność jednostka="kcal">1100</kaloryczność>
 	</burger>
-	<burger mięsność="mięsny" 
+	<burger mięsność="mięsny"
 			data_wprowadzenia="2018-10-02"
-			składniki="bulka_pszenna mieso_wolowe mieso_wieprzowe mieso_drobiowe boczek ketchup ser cebula">
+			skladnik="bulka_pszenna mieso_wolowe mieso_wieprzowe mieso_drobiowe boczek ketchup ser cebula">
 		<nazwa>CzteryMięsaBurger</nazwa>
 		<cena waluta="zł">19.99</cena>
 		<kaloryczność jednostka="kcal">1200</kaloryczność>
 	</burger>
-	<burger mięsność="mięsny" 
+	<burger mięsność="mięsny"
 			data_wprowadzenia="2018-08-31"
-			składniki="bulka_zytnia ser ser pomidor salata ogorek cebula rukola ketchup">
+			skladnik="bulka_zytnia ser ser pomidor salata ogorek cebula rukola ketchup">
 		<nazwa>Ser I Warzywa</nazwa>
 		<cena waluta="zł">14.99</cena>
 		<kaloryczność jednostka="kcal">430</kaloryczność>
 	</burger>
-	<burger mięsność="mięsny" 
+	<burger mięsność="mięsny"
 			data_wprowadzenia="2018-03-21"
-			składniki="bulka_pszenna_sezam mieso_drobiowe mieso_drobiowe pomidor ketchup ser cebula">
+			skladnik="bulka_pszenna_sezam mieso_drobiowe mieso_drobiowe pomidor ketchup ser cebula">
 		<nazwa>Double KurczakBurger</nazwa>
 		<cena waluta="zł">12.99</cena>
 		<kaloryczność jednostka="kcal">610</kaloryczność>
 	</burger>
-	<burger mięsność="wegetariański" 
+	<burger mięsność="wegetariański"
 			data_wprowadzenia="2018-06-24"
-			składniki="bulka_pszenna jajko jajko cebula salata pomidor">
+			skladnik="bulka_pszenna jajko jajko cebula salata pomidor">
 		<nazwa>JajecznicaBurger</nazwa>
 		<cena waluta="zł">11.99</cena>
 		<kaloryczność jednostka="kcal">520</kaloryczność>
 	</burger>
-	<burger mięsność="mięsny" 
+	<burger mięsność="mięsny"
 			data_wprowadzenia="2018-05-25"
-			składniki="bulka_pszenna_sezam mieso_wolowe krewetki rukola prazone_orzechy">
+			skladnik="bulka_pszenna_sezam mieso_wolowe krewetki rukola prazone_orzechy">
 		<nazwa>Egzotyczny Burger</nazwa>
 		<cena waluta="zł">15.99</cena>
 		<kaloryczność jednostka="kcal">570</kaloryczność>
 	</burger>
-	<burger mięsność="mięsny" 
+	<burger mięsność="mięsny"
 			data_wprowadzenia="2018-12-26"
-			składniki="bulka_zytnia krewetki rukola pomidor ogorek papryka">
+			skladnik="bulka_zytnia krewetki rukola pomidor ogorek papryka">
 		<nazwa>Sałatka Owoce Morza</nazwa>
 		<cena waluta="zł">15.99</cena>
 		<kaloryczność jednostka="kcal">480</kaloryczność>
 	</burger>
-	<burger mięsność="mięsny" 
+	<burger mięsność="mięsny"
 			data_wprowadzenia="2018-11-27"
-			składniki="bulka_pszenna ser boczek ketchup majonez">
+			skladnik="bulka_pszenna ser boczek ketchup majonez">
 		<nazwa>Ser Boczek</nazwa>
 		<cena waluta="zł">10.99</cena>
 		<kaloryczność jednostka="kcal">510</kaloryczność>
