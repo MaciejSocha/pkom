@@ -33,7 +33,7 @@
 		<składnik idSkładnika="mieso_wolowe">mięso wołowe</składnik>
 		<składnik idSkładnika="mieso_drobiowe">mięso drobiowe</składnik>
 		<składnik idSkładnika="boczek">boczek</składnik>
-		<składnik idSkładnika="bulka_pszenna_sezam" alergen="gluten sezam">bułka pszenna z sezamem</składnik>
+		<składnik idSkładnika="bulka_pszenna_sezam" alergen="gluten">bułka pszenna z sezamem</składnik>
 		<składnik idSkładnika="bulka_pszenna" alergen="gluten">bułka pszenna</składnik>
 		<składnik idSkładnika="bulka_zytnia">bułka żytnia</składnik>
 		<składnik idSkładnika="salata">sałata</składnik>
@@ -58,161 +58,280 @@
 
 	<burger mięsność="mięsny"
 			data_wprowadzenia="2018-03-12"
-			skladnik="ser mieso_wolowe bulka_pszenna_sezam ogorek cebula sos_serowy_chili">
+			skladnik1="ser"
+			skladnik2="mieso_wolowe"
+			skladnik3="bulka_pszenna_sezam"
+			skladnik4="ogorek"
+			skladnik5="cebula"
+			skladnik6="sos_serowy_chili">
 		<nazwa>CheeseBurger</nazwa>
 		<cena waluta="zł">11.99</cena>
 		<kaloryczność jednostka="kcal">500</kaloryczność>
 	</burger>
 	<burger mięsność="mięsny"
 			data_wprowadzenia="2018-03-10"
-			skladnik="mieso_wolowe bulka_pszenna cebula ketchup salata">
+			skladnik1="mieso_wolowe"
+			skladnik2="bulka_pszenna"
+			skladnik3="cebula"
+			skladnik4="ketchup"
+			skladnik5="salata">
 		<nazwa>HamBurger</nazwa>
 		<cena waluta="zł">9.99</cena>
 		<kaloryczność jednostka="kcal">450</kaloryczność>
 	</burger>
 	<burger mięsność="wegański"
 			data_wprowadzenia="2018-03-15"
-			skladnik="bulka_zytnia falafel ogorek pomidor">
+			skladnik1="bulka_zytnia"
+			skladnik2="falafel"
+			skladnik3="ogorek"
+			skladnik4="pomidor">
 		<nazwa>FalafelBurger</nazwa>
 		<cena waluta="zł">29.99</cena>
 		<kaloryczność jednostka="kcal">100</kaloryczność>
 	</burger>
 	<burger mięsność="wegański"
 			data_wprowadzenia="2018-03-15"
-			skladnik="bulka_zytnia falafel pomidor ogorek rukola prazone_orzechy musztarda">
+			skladnik1="bulka_zytnia"
+			skladnik2="falafel"
+			skladnik3="pomidor"
+			skladnik4="ogorek"
+			skladnik5="rukola"
+			skladnik6="prazone_orzechy"
+			skladnik7="musztarda">
 		<nazwa>Falafel Burger de Luxe</nazwa>
 		<cena waluta="zł">14.99</cena>
 		<kaloryczność jednostka="kcal">380</kaloryczność>
 	</burger>
 	<burger mięsność="mięsny"
 			data_wprowadzenia="2018-07-11"
-			skladnik="ser jajko cebula boczek musztarda pomidor">
+			skladnik1="ser"
+			skladnik2="jajko"
+			skladnik3="cebula"
+			skladnik4="boczek"
+			skladnik5="musztarda"
+			skladnik6="pomidor">
 		<nazwa>Angielskie Śniadanko</nazwa>
 		<cena waluta="zł">13.99</cena>
 		<kaloryczność jednostka="kcal">680</kaloryczność>
 	</burger>
 	<burger mięsność="mięsny"
 			data_wprowadzenia="2018-08-12"
-			skladnik="bulka_pszenna_sezam mieso_drobiowe krewetki sos_sojowy">
+			skladnik1="bulka_pszenna_sezam"
+			skladnik2="mieso_drobiowe"
+			skladnik3="krewetki"
+			skladnik4="sos_sojowy">
 		<nazwa>Złoty Kurczak</nazwa>
 		<cena waluta="zł">11.99</cena>
 		<kaloryczność jednostka="kcal">480</kaloryczność>
 	</burger>
 	<burger mięsność="mięsny"
 			data_wprowadzenia="2018-08-12"
-			skladnik="bulka_pszenna_sezam mieso_drobiowe krewetki sos_sojowy piri_piri">
+			skladnik1="bulka_pszenna_sezam"
+			skladnik2="mieso_drobiowe"
+			skladnik3="krewetki"
+			skladnik4="sos_sojowy"
+			skladnik5="piri_piri">
 		<nazwa>Kurczak Pikantny</nazwa>
 		<cena waluta="zł">12.99</cena>
 		<kaloryczność jednostka="kcal">490</kaloryczność>
 	</burger>
 	<burger mięsność="mięsny"
 			data_wprowadzenia="2018-11-15"
-			skladnik="bulka_pszenna pomidor mieso_wolowe rukola ser">
+			skladnik1="bulka_pszenna"
+			skladnik2="pomidor"
+			skladnik3="mieso_wolowe"
+			skladnik4="rukola"
+			skladnik5="ser">
 		<nazwa>Włoski</nazwa>
 		<cena waluta="zł">13.99</cena>
 		<kaloryczność jednostka="kcal">540</kaloryczność>
 	</burger>
 	<burger mięsność="mięsny"
 			data_wprowadzenia="2018-08-05"
-			skladnik="bulka_zytnia mieso_wieprzowe pomidor ogorek salata jajko">
+			skladnik1="bulka_zytnia"
+			skladnik2="mieso_wieprzowe"
+			skladnik3="pomidor"
+			skladnik4="ogorek"
+			skladnik5="salata"
+			skladnik6="jajko">
 		<nazwa>Prowincjonalny</nazwa>
 		<cena waluta="zł">14.99</cena>
 		<kaloryczność jednostka="kcal">630</kaloryczność>
 	</burger>
 	<burger mięsność="mięsny"
 			data_wprowadzenia="2018-10-12"
-			skladnik="bulka_pszenna mieso_wolowe sos_serowy_chili sos_sojowy ketchup majonez musztarda">
+			skladnik1="bulka_pszenna"
+			skladnik2="mieso_wolowe"
+			skladnik3="sos_serowy_chili"
+			skladnik4="sos_sojowy"
+			skladnik5="ketchup"
+			skladnik6="majonez"
+			skladnik7="musztarda">
 		<nazwa>Burger Pięciu  Smaków</nazwa>
 		<cena waluta="zł">13.99</cena>
 		<kaloryczność jednostka="kcal">550</kaloryczność>
 	</burger>
 	<burger mięsność="wegetariański"
 			data_wprowadzenia="2018-10-14"
-			skladnik="bulka_zytnia jajko salata pomidor ogorek cebula">
+			skladnik1="bulka_zytnia"
+			skladnik2="jajko"
+			skladnik3="salata"
+			skladnik4="pomidor"
+			skladnik5="ogorek"
+			skladnik6="cebula">
 		<nazwa>Jajeczko Z Warzywkami</nazwa>
 		<cena waluta="zł">12.99</cena>
 		<kaloryczność jednostka="kcal">520</kaloryczność>
 	</burger>
 	<burger mięsność="mięsny"
 			data_wprowadzenia="2018-11-11"
-			skladnik="bulka_pszenna_sezam mieso_wolowe ser pomidor salata piri_piri chili">
+			skladnik1="bulka_pszenna_sezam"
+			skladnik2="mieso_wolowe"
+			skladnik3="ser"
+			skladnik4="pomidor"
+			skladnik5="salata"
+			skladnik6="piri_piri"
+			skladnik7="chili">
 		<nazwa>Boruta Burger</nazwa>
 		<cena waluta="zł">15.99</cena>
 		<kaloryczność jednostka="kcal">710</kaloryczność>
 	</burger>
 	<burger mięsność="mięsny"
 			data_wprowadzenia="2018-08-09"
-			skladnik="bulka_pszenna_sezam mieso_wolowe mieso_wolowe ser pomidor salata ogorek ketchup">
+			skladnik1="bulka_pszenna_sezam"
+			skladnik2="mieso_wolowe"
+			skladnik3="mieso_wolowe"
+			skladnik4="ser"
+			skladnik5="pomidor"
+			skladnik6="salata"
+			skladnik7="ogorek"
+			skladnik8="ketchup">
 		<nazwa>Dwie Krowy</nazwa>
 		<cena waluta="zł">17.99</cena>
 		<kaloryczność jednostka="kcal">810</kaloryczność>
 	</burger>
 	<burger mięsność="wegański"
 			data_wprowadzenia="2018-11-10"
-			skladnik="bulka_zytnia falafel pomidor salata rukola prazone_orzechy papryka ketchup ogorek">
+			skladnik1="bulka_zytnia"
+			skladnik2="falafel"
+			skladnik3="pomidor"
+			skladnik4="salata"
+			skladnik5="rukola"
+			skladnik6="prazone_orzechy"
+			skladnik7="papryka"
+			skladnik8="ketchup">
 		<nazwa>Falafel Z Bukietem Sałat</nazwa>
 		<cena waluta="zł">15.99</cena>
 		<kaloryczność jednostka="kcal">370</kaloryczność>
 	</burger>
 	<burger mięsność="mięsny"
 			data_wprowadzenia="2018-05-07"
-			skladnik="bulka_zytnia losos rukola prazone_orzechy krewetki">
+			skladnik1="bulka_zytnia"
+			skladnik2="losos"
+			skladnik3="rukola"
+			skladnik4="prazone_orzechy"
+			skladnik5="krewetki">
 		<nazwa>RypkaBurger</nazwa>
 		<cena waluta="zł">16.99</cena>
 		<kaloryczność jednostka="kcal">550</kaloryczność>
 	</burger>
 	<burger mięsność="mięsny"
 			data_wprowadzenia="2018-06-12"
-			skladnik="bulka_pszenna mieso_wieprzowe mieso_wieprzowe mieso_wieprzowe ser ser pomidor salata cebula ogorek ketchup">
+			skladnik1="bulka_pszenna"
+			skladnik2="mieso_wieprzowe"
+			skladnik3="mieso_wieprzowe"
+			skladnik4="mieso_wieprzowe"
+			skladnik5="ser"
+			skladnik6="ser"
+			skladnik7="pomidor"
+			skladnik8="salata">
 		<nazwa>Trzy Świnki</nazwa>
 		<cena waluta="zł">19.99</cena>
 		<kaloryczność jednostka="kcal">1100</kaloryczność>
 	</burger>
 	<burger mięsność="mięsny"
 			data_wprowadzenia="2018-10-02"
-			skladnik="bulka_pszenna mieso_wolowe mieso_wieprzowe mieso_drobiowe boczek ketchup ser cebula">
+			skladnik1="bulka_pszenna"
+			skladnik2="mieso_wolowe"
+			skladnik3="mieso_wieprzowe"
+			skladnik4="mieso_drobiowe"
+			skladnik5="boczek"
+			skladnik6="ketchup"
+			skladnik7="ser"
+			skladnik8="cebula">
 		<nazwa>CzteryMięsaBurger</nazwa>
 		<cena waluta="zł">19.99</cena>
 		<kaloryczność jednostka="kcal">1200</kaloryczność>
 	</burger>
 	<burger mięsność="mięsny"
 			data_wprowadzenia="2018-08-31"
-			skladnik="bulka_zytnia ser ser pomidor salata ogorek cebula rukola ketchup">
+			skladnik1="bulka_zytnia"
+			skladnik2="ser"
+			skladnik3="ser"
+			skladnik4="pomidor"
+			skladnik5="salata"
+			skladnik6="ogorek"
+			skladnik7="cebula"
+			skladnik8="rukola">
 		<nazwa>Ser I Warzywa</nazwa>
 		<cena waluta="zł">14.99</cena>
 		<kaloryczność jednostka="kcal">430</kaloryczność>
 	</burger>
 	<burger mięsność="mięsny"
 			data_wprowadzenia="2018-03-21"
-			skladnik="bulka_pszenna_sezam mieso_drobiowe mieso_drobiowe pomidor ketchup ser cebula">
+			skladnik1="bulka_pszenna_sezam"
+			skladnik2="mieso_drobiowe"
+			skladnik3="mieso_drobiowe"
+			skladnik4="pomidor"
+			skladnik5="ketchup"
+			skladnik6="ser"
+			skladnik7="cebula">
 		<nazwa>Double KurczakBurger</nazwa>
 		<cena waluta="zł">12.99</cena>
 		<kaloryczność jednostka="kcal">610</kaloryczność>
 	</burger>
 	<burger mięsność="wegetariański"
 			data_wprowadzenia="2018-06-24"
-			skladnik="bulka_pszenna jajko jajko cebula salata pomidor">
+			skladnik1="bulka_pszenna"
+			skladnik2="jajko"
+			skladnik3="jajko"
+			skladnik4="cebula"
+			skladnik5="salata"
+			skladnik6="pomidor">
 		<nazwa>JajecznicaBurger</nazwa>
 		<cena waluta="zł">11.99</cena>
 		<kaloryczność jednostka="kcal">520</kaloryczność>
 	</burger>
 	<burger mięsność="mięsny"
 			data_wprowadzenia="2018-05-25"
-			skladnik="bulka_pszenna_sezam mieso_wolowe krewetki rukola prazone_orzechy">
+			skladnik1="bulka_pszenna_sezam"
+			skladnik2="mieso_wolowe"
+			skladnik3="krewetki"
+			skladnik4="rukola"
+			skladnik5="prazone_orzechy">
 		<nazwa>Egzotyczny Burger</nazwa>
 		<cena waluta="zł">15.99</cena>
 		<kaloryczność jednostka="kcal">570</kaloryczność>
 	</burger>
 	<burger mięsność="mięsny"
 			data_wprowadzenia="2018-12-26"
-			skladnik="bulka_zytnia krewetki rukola pomidor ogorek papryka">
+			skladnik1="bulka_zytnia"
+			skladnik2="krewetki"
+			skladnik3="rukola"
+			skladnik4="pomidor"
+			skladnik5="ogorek"
+			skladnik6="papryka">
 		<nazwa>Sałatka Owoce Morza</nazwa>
 		<cena waluta="zł">15.99</cena>
 		<kaloryczność jednostka="kcal">480</kaloryczność>
 	</burger>
 	<burger mięsność="mięsny"
 			data_wprowadzenia="2018-11-27"
-			skladnik="bulka_pszenna ser boczek ketchup majonez">
+			skladnik1="bulka_pszenna"
+			skladnik2="ser"
+			skladnik3="boczek"
+			skladnik4="ketchup"
+			skladnik5="majonez">
 		<nazwa>Ser Boczek</nazwa>
 		<cena waluta="zł">10.99</cena>
 		<kaloryczność jednostka="kcal">510</kaloryczność>
