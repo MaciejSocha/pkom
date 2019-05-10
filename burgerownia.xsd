@@ -17,16 +17,44 @@
     </xs:key>
     <xs:keyref name="refAl" refer="idAl">
       <xs:selector xpath="lista_składników/składnik"/>
-      <xs:field xpath="@alergeny"/>
+      <xs:field xpath="@alergen"/>
     </xs:keyref>
 
     <xs:key name="idSk">
       <xs:selector xpath="lista_składników/składnik"/>
       <xs:field xpath="@idSkładnika"/>
     </xs:key>
-    <xs:keyref name="refSk" refer="idSk">
+    <xs:keyref name="refSk1" refer="idSk">
       <xs:selector xpath="burger"/>
-      <xs:field xpath="@składniki"/>
+      <xs:field xpath="@skladnik1"/>
+    </xs:keyref>
+    <xs:keyref name="refSk2" refer="idSk">
+      <xs:selector xpath="burger"/>
+      <xs:field xpath="@skladnik2"/>
+    </xs:keyref>
+    <xs:keyref name="refSk3" refer="idSk">
+      <xs:selector xpath="burger"/>
+      <xs:field xpath="@skladnik3"/>
+    </xs:keyref>
+    <xs:keyref name="refSk4" refer="idSk">
+      <xs:selector xpath="burger"/>
+      <xs:field xpath="@skladnik4"/>
+    </xs:keyref>
+    <xs:keyref name="refSk5" refer="idSk">
+      <xs:selector xpath="burger"/>
+      <xs:field xpath="@skladnik5"/>
+    </xs:keyref>
+    <xs:keyref name="refSk6" refer="idSk">
+      <xs:selector xpath="burger"/>
+      <xs:field xpath="@skladnik6"/>
+    </xs:keyref>
+    <xs:keyref name="refSk7" refer="idSk">
+      <xs:selector xpath="burger"/>
+      <xs:field xpath="@skladnik7"/>
+    </xs:keyref>
+    <xs:keyref name="refSk8" refer="idSk">
+      <xs:selector xpath="burger"/>
+      <xs:field xpath="@skladnik8"/>
     </xs:keyref>
   </xs:element>
 
@@ -100,7 +128,14 @@
   <xs:attributeGroup name="burgerArrtibuteGroup">
     <xs:attribute default="mięsny" name="mięsność" type="miesnoscBase"/>
     <xs:attribute name="data_wprowadzenia" type="xs:date" use="optional"/>
-    <xs:attribute name="skladnik" type="xs:string" use="required" />
+    <xs:attribute name="skladnik1" type="xs:string" use="optional" />
+    <xs:attribute name="skladnik2" type="xs:string" use="optional" />
+    <xs:attribute name="skladnik3" type="xs:string" use="optional" />
+    <xs:attribute name="skladnik4" type="xs:string" use="optional" />
+    <xs:attribute name="skladnik5" type="xs:string" use="optional" />
+    <xs:attribute name="skladnik6" type="xs:string" use="optional" />
+    <xs:attribute name="skladnik7" type="xs:string" use="optional" />
+    <xs:attribute name="skladnik8" type="xs:string" use="optional" />
   </xs:attributeGroup>
   <!-- Nazwa burgera -->
   <xs:element name="nazwa">
