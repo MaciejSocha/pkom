@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet href="burgerownia.css" type="text/css" ?>
 
+<?xml-stylesheet type="text/xsl" href="burgerownia.xsl"?>
 <burgerownia xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="burgerownia.xsd" xs:schemaLocation="burgerownia.xsd">
 	<metadane>
 		<autor>
@@ -20,7 +20,7 @@
 		<alergen idAlergenu="laktoza">laktoza</alergen>
 		<alergen idAlergenu="sezam">sezam</alergen>
 		<alergen idAlergenu="jaja">jaja</alergen>
-		<alergen idAlergenu="ryby">tyby</alergen>
+		<alergen idAlergenu="ryby">ryby</alergen>
 		<alergen idAlergenu="orzech">orzech</alergen>
 		<alergen idAlergenu="skorupiak">skorupiak</alergen>
 		<alergen idAlergenu="gorczyca">gorczyca</alergen>
