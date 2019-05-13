@@ -3,10 +3,14 @@
 <xsl:stylesheet version="1.0"
 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
+	<xsl:output method="xml" indent="yes"/>
+
 	<xsl:template match="/">
 		<html>
+			<title>
+				Burgerownia
+			</title>
 			<body>
-				Hello
 				<h1>metadane</h1>
 				<xsl:for-each select="burgerownia/metadane/autor">
 					<h2>autor</h2>
