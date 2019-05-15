@@ -12,7 +12,7 @@
     </xsl:template>
 
 
- 	<xsl:template name="Menu" match="menu">
+ 	<xsl:template name="Burgerownia" match="burgerownia">
         <xsl:apply-templates select="burger">
             <xsl:sort select="nazwa" />
         </xsl:apply-templates>
@@ -26,6 +26,7 @@
         <xsl:element name="nazwa">
             <xsl:value-of select="." />
         </xsl:element>
+    </xsl:template>
 
 
 </xsl:stylesheet>
