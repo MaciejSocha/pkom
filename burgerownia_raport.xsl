@@ -5,12 +5,56 @@
 
     <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
 
+
     <xsl:template name="BurgerMenu" match="/burgerownia">
     	<xsl:element name="burgerMenu">
+            <xsl:call-template name="Raport" />
     		<xsl:apply-templates select="lista_burgerów" />
     	</xsl:element>
     </xsl:template>
 
+    <xsl:template name="Raport">
+        <xsl:element name="informacje">
+            <xsl:element name="dane">
+                <xsl:element name="liczbaSkładników">
+                    <xsl:value-of select="count(lista_składników/składnik)"/>
+                </xsl:element>
+                <xsl:element name="liczbaAlergenów">
+                    <xsl:value-of select="count(lista_alergenów/alergen)"/>
+                </xsl:element>
+                <xsl:element name="liczbaBurgerów">
+                    <xsl:value-of select="count(lista_burgerów/burger)"/>
+                </xsl:element>
+                <xsl:element name="liczbaBurgerówMięsnych">
+                    <xsl:value-of select="count(lista_burgerów/burger[@mięsność = 'mięsny'])"/>
+                </xsl:element>
+                <xsl:element name="liczbaBurgerówWegetariańskich">
+                    <xsl:value-of select="count(lista_burgerów/burger[@mięsność = 'wegetariański'])"/>
+                </xsl:element>
+                <xsl:element name="liczbaBurgerówWegańskich">
+                    <xsl:value-of select="count(lista_burgerów/burger[@mięsność = 'wegański'])"/>
+                </xsl:element>
+                <!--
+                <xsl:element name="najdroższyBurger">
+                    <xsl:variable name="najwyższaCena" select="max(lista_burgerów/burger/cena)" />
+                    <xsl:value-of select="concat($najwyższaCena, ' ', lista_burgerów/burger[cena=$najwyższaCena]/cena/@waluta)" />
+                </xsl:element>
+                <xsl:element name="natańszyBurger">
+                    <xsl:variable name="najniższaCena" select="min(lista_burgerów/burger/cena)" />
+                    <xsl:value-of select="concat($najniższaCena, ' ', lista_burgerów/burger[cena=$najniższaCena]/cena/@waluta)" />
+                </xsl:element>
+                -->
+ 
+            </xsl:element>
+            <xsl:element name="autorzy">
+                <xsl:for-each select="metadane/autor">
+                    <xsl:element name="autor">
+                        <xsl:value-of select="concat(imie, ' ', nazwisko)"/>
+                    </xsl:element>
+                </xsl:for-each>
+            </xsl:element>
+        </xsl:element>
+    </xsl:template>
 
  	<xsl:template name="Burgerownia" match="lista_burgerów">
         <xsl:apply-templates select="burger">
@@ -22,6 +66,7 @@
             <xsl:apply-templates select="nazwa"/>
             <xsl:apply-templates select="cena"/>
             <xsl:apply-templates select="kaloryczność"/>
+            <xsl:apply-templates select="@data_wprowadzenia" />
             <xsl:apply-templates select="@mięsność" />
             <xsl:apply-templates select="@skladnik1" />
             <xsl:apply-templates select="@skladnik2" />
@@ -48,6 +93,13 @@
     <xsl:template name="Kaloryczność" match="kaloryczność">
         <xsl:element name="kaloryczność">
             <xsl:value-of select="concat(. , ' ', ./@jednostka)" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template name="data_wprowadzenia" match="@data_wprowadzenia">
+        <xsl:element name="data_wprowadzenia">
+            <xsl:variable name="data_wprowadzenia" select="." />
+            <xsl:value-of select="/burgerownia/lista_burgerów/burger[@data_wprowadzenia = $data_wprowadzenia]/@data_wprowadzenia" />
         </xsl:element>
     </xsl:template>
 
