@@ -7,7 +7,7 @@
         <xs:element ref="metadane" />
         <xs:element ref="lista_alergenów" />
         <xs:element ref="lista_składników" />
-        <xs:element minOccurs="1" maxOccurs="unbounded" ref="burger" />
+        <xs:element ref="lista_burgerów" />
       </xs:sequence>
     </xs:complexType>
 
@@ -25,35 +25,35 @@
       <xs:field xpath="@idSkładnika"/>
     </xs:key>
     <xs:keyref name="refSk1" refer="idSk">
-      <xs:selector xpath="burger"/>
+      <xs:selector xpath="lista_burgerów/burger"/>
       <xs:field xpath="@skladnik1"/>
     </xs:keyref>
     <xs:keyref name="refSk2" refer="idSk">
-      <xs:selector xpath="burger"/>
+      <xs:selector xpath="lista_burgerów/burger"/>
       <xs:field xpath="@skladnik2"/>
     </xs:keyref>
     <xs:keyref name="refSk3" refer="idSk">
-      <xs:selector xpath="burger"/>
+      <xs:selector xpath="lista_burgerów/burger"/>
       <xs:field xpath="@skladnik3"/>
     </xs:keyref>
     <xs:keyref name="refSk4" refer="idSk">
-      <xs:selector xpath="burger"/>
+      <xs:selector xpath="lista_burgerów/burger"/>
       <xs:field xpath="@skladnik4"/>
     </xs:keyref>
     <xs:keyref name="refSk5" refer="idSk">
-      <xs:selector xpath="burger"/>
+      <xs:selector xpath="lista_burgerów/burger"/>
       <xs:field xpath="@skladnik5"/>
     </xs:keyref>
     <xs:keyref name="refSk6" refer="idSk">
-      <xs:selector xpath="burger"/>
+      <xs:selector xpath="lista_burgerów/burger"/>
       <xs:field xpath="@skladnik6"/>
     </xs:keyref>
     <xs:keyref name="refSk7" refer="idSk">
-      <xs:selector xpath="burger"/>
+      <xs:selector xpath="lista_burgerów/burger"/>
       <xs:field xpath="@skladnik7"/>
     </xs:keyref>
     <xs:keyref name="refSk8" refer="idSk">
-      <xs:selector xpath="burger"/>
+      <xs:selector xpath="lista_burgerów/burger"/>
       <xs:field xpath="@skladnik8"/>
     </xs:keyref>
   </xs:element>
@@ -116,6 +116,14 @@
   </xs:element>
 
   <!-- BURGER -->
+  <!-- Lista burgerów-->
+  <xs:element name="lista_burgerów">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="burger" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <!-- Typ enumeracyjny miesnosc -->
   <xs:simpleType name="miesnoscBase">
     <xs:restriction base="xs:NMTOKEN">

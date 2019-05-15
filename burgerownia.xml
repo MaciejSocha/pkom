@@ -56,6 +56,7 @@
 		<składnik idSkładnika="chili">chili</składnik>
 	</lista_składników>
 
+	<lista_burgerów>
 	<burger mięsność="mięsny"
 			data_wprowadzenia="2018-03-12"
 			skladnik1="ser"
@@ -336,4 +337,5 @@
 		<cena waluta="zł">10.99</cena>
 		<kaloryczność jednostka="kcal">510</kaloryczność>
 	</burger>
+	</lista_burgerów>
 </burgerownia>
