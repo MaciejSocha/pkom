@@ -6,8 +6,7 @@
     <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
     <xsl:template name="BurgerMenu" match="/burgerownia">
     	<xsl:element name="burgerMenu">
-    		<xsl:call-template name="Report" />
-    		<xsl:apply-templates select="lista_burgerów/" />
+    		<xsl:apply-templates select="lista_burgerów" />
     	</xsl:element>
     </xsl:template>
 
