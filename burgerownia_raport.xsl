@@ -8,9 +8,16 @@
 
     <xsl:template name="BurgerMenu" match="/burgerownia">
     	<xsl:element name="burgerMenu">
-            <xsl:call-template name="Raport" />
+            
     		<xsl:apply-templates select="lista_burgerów" />
+            <xsl:call-template name="Raport" />
     	</xsl:element>
+    </xsl:template>
+
+    <xsl:template name="Burgerownia" match="lista_burgerów">
+        <xsl:apply-templates select="burger">
+            <xsl:sort select="nazwa" />
+        </xsl:apply-templates>
     </xsl:template>
 
     <xsl:template name="Raport">
@@ -56,11 +63,7 @@
         </xsl:element>
     </xsl:template>
 
- 	<xsl:template name="Burgerownia" match="lista_burgerów">
-        <xsl:apply-templates select="burger">
-            <xsl:sort select="nazwa" />
-        </xsl:apply-templates>
-    </xsl:template>
+
     <xsl:template name="Burger" match="burger">
         <xsl:element name="burger">
             <xsl:apply-templates select="nazwa"/>
