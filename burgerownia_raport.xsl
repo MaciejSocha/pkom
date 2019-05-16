@@ -34,16 +34,16 @@
                 <xsl:element name="liczbaBurgerówWegańskich">
                     <xsl:value-of select="count(lista_burgerów/burger[@mięsność = 'wegański'])"/>
                 </xsl:element>
-                <!--
+
                 <xsl:element name="najdroższyBurger">
                     <xsl:variable name="najwyższaCena" select="max(lista_burgerów/burger/cena)" />
                     <xsl:value-of select="concat($najwyższaCena, ' ', lista_burgerów/burger[cena=$najwyższaCena]/cena/@waluta)" />
                 </xsl:element>
+        
                 <xsl:element name="natańszyBurger">
                     <xsl:variable name="najniższaCena" select="min(lista_burgerów/burger/cena)" />
                     <xsl:value-of select="concat($najniższaCena, ' ', lista_burgerów/burger[cena=$najniższaCena]/cena/@waluta)" />
                 </xsl:element>
-                -->
  
             </xsl:element>
             <xsl:element name="autorzy">

@@ -4,7 +4,7 @@ Programowanie Komunikacji Człowiek-Komputer (XML)
 ---
 XML --(xslt)--> pomocniczy XML
 
-    xsltproc burgerownia_raport.xsl burgerownia.xml > raport.xml
+    java -jar saxon9he.jar -s:burgerownia.xml -xsl:burgerownia_raport.xsl -o:raport.xml
 
 pomocniczy XML --(xslt)--> XHTML
 
