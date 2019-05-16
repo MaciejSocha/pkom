@@ -32,7 +32,7 @@
 					<div class="pure-u-3-5">
 						<h2>Burgery</h2>
 						<xsl:for-each select="burgerMenu/burger">
-							<table class="pure-table">
+							<table class="pure-table" width="300">
   								<tr>
     								<th colspan="2"  align="center" style="font-weight:bold">
     									<xsl:value-of select="nazwa"/>
