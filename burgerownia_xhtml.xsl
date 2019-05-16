@@ -14,7 +14,7 @@
 			</head>
 
 			<body>
-				<div class="pure-g" align="center">
+				<div class="pure-g">
 
 					<div class="pure-u-3-5">
 						<h2>Autorzy</h2>
