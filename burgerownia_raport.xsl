@@ -53,6 +53,9 @@
                     </xsl:element>
                 </xsl:for-each>
             </xsl:element>
+            <xsl:element name="dataUtworzenia">
+                    <xsl:value-of select="format-dateTime(current-dateTime(), '[D01].[M01].[Y0001] [H01]:[m01]')" />
+            </xsl:element>
         </xsl:element>
     </xsl:template>
 

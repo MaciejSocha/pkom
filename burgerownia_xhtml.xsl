@@ -17,13 +17,17 @@
 				<div class="pure-g">
 					<div class="pure-u-3-5">
 						<h2>Autorzy</h2>
-							<xsl:for-each select="burgerMenu/informacje/autorzy/autor">
-								<p>
-									<xsl:value-of select="." />
-								</p>
-							</xsl:for-each>
-						</div>
+						<xsl:for-each select="burgerMenu/informacje/autorzy/autor">
+							<p>
+								<xsl:value-of select="." />
+							</p>
+						</xsl:for-each>
+						<h2>Data utworzenia</h2>
+						<p>
+								<xsl:value-of select="burgerMenu/informacje/dataUtworzenia" />
+						</p>
 					</div>
+				</div>
 				<h1>TEST</h1>
 			</body>
 		</html>
