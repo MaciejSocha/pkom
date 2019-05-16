@@ -51,6 +51,31 @@
                     <xsl:variable name="najniższaCena" select="min(lista_burgerów/burger/cena)" />
                     <xsl:value-of select="concat($najniższaCena, ' ', lista_burgerów/burger[cena=$najniższaCena]/cena/@waluta)" />
                 </xsl:element>
+
+                <xsl:element name="średniaCena">
+                    <xsl:if test="lista_burgerów/burger/cena/@waluta = 'zł'">
+                        <xsl:variable name="średniaCena" select="avg(lista_burgerów/burger/cena)" />
+                        <xsl:value-of select="concat(round($średniaCena*100) div 100, ' zł')" />
+                    </xsl:if>
+                </xsl:element>
+
+                <xsl:element name="najbardziejKaloryczny">
+                    <xsl:variable name="najwięcejKalori" select="max(lista_burgerów/burger/kaloryczność)" />
+                    <xsl:value-of select="concat($najwięcejKalori, ' ', lista_burgerów/burger[kaloryczność=$najwięcejKalori]/kaloryczność/@jednostka)" />
+                </xsl:element>
+        
+                <xsl:element name="najmniejKaloryczny">
+                    <xsl:variable name="najmniejKalori" select="min(lista_burgerów/burger/kaloryczność)" />
+                    <xsl:value-of select="concat($najmniejKalori, ' ', lista_burgerów/burger[kaloryczność=$najmniejKalori]/kaloryczność/@jednostka)" />
+                </xsl:element>
+
+                <xsl:element name="średniaKaloryczność">
+                    <xsl:if test="lista_burgerów/burger/kaloryczność/@jednostka = 'kcal'">
+                        <xsl:variable name="średnioKalori" select="avg(lista_burgerów/burger/kaloryczność)" />
+                        <xsl:value-of select="concat(round($średnioKalori*100) div 100, ' kcal')" />
+                    </xsl:if>
+                </xsl:element>
+            
  
             </xsl:element>
             <xsl:element name="autorzy">

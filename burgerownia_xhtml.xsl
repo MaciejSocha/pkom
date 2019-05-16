@@ -5,6 +5,7 @@
 	<xsl:output method="xhtml" doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" indent="yes"/>
 
     <xsl:template name="burgerMenu" match="/">
+
 		<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pl" lang="pl">
 			<head>
 				<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -13,7 +14,8 @@
 			</head>
 
 			<body>
-				<div class="pure-g">
+				<div class="pure-g" align="center">
+
 					<div class="pure-u-3-5">
 						<h2>Autorzy</h2>
 						<xsl:for-each select="burgerMenu/informacje/autorzy/autor">
@@ -26,6 +28,7 @@
 								<xsl:value-of select="burgerMenu/informacje/dataUtworzenia" />
 						</p>
 					</div>
+
 					<div class="pure-u-3-5">
 						<h2>Burgery</h2>
 						<xsl:for-each select="burgerMenu/burger">
@@ -127,6 +130,7 @@
 							</table>
 						</xsl:for-each>
 					</div>
+
 					<div class="pure-u-3-5">
 						<h1>Statystyki</h1>
 						<p>	Łączna liczba składników: <xsl:value-of select="burgerMenu/informacje/dane/liczbaSkładników"/>
@@ -152,7 +156,20 @@
 
 						<p>	Natańszy burger: <xsl:value-of select="burgerMenu/informacje/dane/natańszyBurger"/>
 						</p>
+
+						<p>	Średnia cena burgera: <xsl:value-of select="burgerMenu/informacje/dane/średniaCena"/>
+						</p>
+
+						<p>	Bomba kaloryczna burger: <xsl:value-of select="burgerMenu/informacje/dane/najbardziejKaloryczny"/>
+						</p>
+
+						<p>	Najbardziej fit burger: <xsl:value-of select="burgerMenu/informacje/dane/najmniejKaloryczny"/>
+						</p>
+
+						<p>	Średnia kaloryczność burgera: <xsl:value-of select="burgerMenu/informacje/dane/średniaKaloryczność"/>
+						</p>
 					</div>
+
 				</div>
 			</body>
 		</html>
