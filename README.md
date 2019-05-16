@@ -1,7 +1,11 @@
 # pkom
 Programowanie Komunikacji Człowiek-Komputer (XML)
 
-Aby uzyskać xml z xslt:
-xsltproc -o outxml.xml burgerownia.xml
+---
+XML --(xslt)--> pomocniczy XML
 
-Oczywiście Linux; opcja -o oznacza nazwę pliku wynikowego
+    xsltproc burgerownia_raport.xsl burgerownia.xml > raport.xml
+
+pomocniczy XML --(xslt)--> XHTML
+
+    java -jar saxon9he.jar -s:raport.xml -xsl:burgerownia_xhtml.xsl -o:raport.xhtml
