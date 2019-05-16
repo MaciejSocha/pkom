@@ -26,8 +26,108 @@
 								<xsl:value-of select="burgerMenu/informacje/dataUtworzenia" />
 						</p>
 					</div>
+					<div class="pure-u-3-5">
+						<h2>Burgery</h2>
+						<xsl:for-each select="burgerMenu/burger">
+							<table class="pure-table">
+  								<tr>
+    								<th colspan="2"  align="center" style="font-weight:bold">
+    									<xsl:value-of select="nazwa"/>
+    								</th>
+  								</tr>
+
+  								<tr>
+    								<td>Cena:</td>
+    								<td>
+    									<xsl:value-of select="cena"/>
+    								</td>
+  								</tr>
+
+  								<tr>
+    								<td>Kaloryczność:</td>
+    								<td>
+    									<xsl:value-of select="kaloryczność"/>
+    								</td>
+  								</tr>
+
+  								<tr>
+    								<td>Mięsność:</td>
+    								<td>
+    									<xsl:value-of select="mięsność"/>
+    								</td>
+  								</tr>
+
+  								<tr>
+    								<td colspan="2"  align="center" style="font-weight:bold">Składniki:</td>
+  								</tr>
+
+  								<xsl:if test="skladnik1">
+  								<tr>
+    								<td colspan="2" align="center">
+    									<xsl:value-of select="skladnik1"/>
+    								</td>
+  								</tr>
+  								</xsl:if>
+
+  								<xsl:if test="skladnik2">
+  									<tr>
+    									<td colspan="2" align="center">
+    										<xsl:value-of select="skladnik2"/>
+    									</td>
+  									</tr>
+  								</xsl:if>
+
+  								<xsl:if test="skladnik3">
+  									<tr>
+    									<td colspan="2" align="center">
+    										<xsl:value-of select="skladnik3"/>
+    									</td>
+  									</tr>
+  								</xsl:if>
+
+  								<xsl:if test="skladnik4">
+  									<tr>
+    									<td colspan="2" align="center">
+    										<xsl:value-of select="skladnik4"/>
+    									</td>
+  									</tr>
+  								</xsl:if>
+
+  								<xsl:if test="skladnik5">
+  									<tr>
+    									<td colspan="2" align="center">
+    										<xsl:value-of select="skladnik5"/>
+    									</td>
+  									</tr>
+  								</xsl:if>
+
+  								<xsl:if test="skladnik6">
+  									<tr>
+    									<td colspan="2" align="center">
+    										<xsl:value-of select="skladnik6"/>
+    									</td>
+  									</tr>
+  								</xsl:if>
+
+  								<xsl:if test="skladnik7">
+  									<tr>
+    									<td colspan="2" align="center">
+    										<xsl:value-of select="skladnik7"/>
+    									</td>
+  									</tr>
+  								</xsl:if>
+
+  								<xsl:if test="skladnik8">
+		  							<tr>
+    									<td colspan="2" align="center">
+    										<xsl:value-of select="skladnik8"/>
+    									</td>
+  								</tr>
+  								</xsl:if>
+							</table>
+						</xsl:for-each>
+					</div>
 				</div>
-				<h1>TEST</h1>
 			</body>
 		</html>
 	</xsl:template>    
