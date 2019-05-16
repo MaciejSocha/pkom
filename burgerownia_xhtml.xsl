@@ -127,6 +127,32 @@
 							</table>
 						</xsl:for-each>
 					</div>
+					<div class="pure-u-3-5">
+						<h1>Statystyki</h1>
+						<p>	Łączna liczba składników: <xsl:value-of select="burgerMenu/informacje/dane/liczbaSkładników"/>
+						</p>
+
+						<p> Łączna liczba alergenów: <xsl:value-of select="burgerMenu/informacje/dane/liczbaAlergenów"/>
+						</p>
+
+						<p>	Łączna liczba burgerów: <xsl:value-of select="burgerMenu/informacje/dane/liczbaBurgerów"/>
+						</p>
+
+						<p>	Łączna liczba burgerów mięsnych: <xsl:value-of select="burgerMenu/informacje/dane/liczbaBurgerówMięsnych"/>
+						</p>
+
+						<p>	Łączna liczba burgerów wegetariańskich: <xsl:value-of select="burgerMenu/informacje/dane/liczbaBurgerówWegetariańskich"/>
+						</p>
+
+						<p>	Łączna liczba burgerów wegańskich: <xsl:value-of select="burgerMenu/informacje/dane/liczbaBurgerówWegańskich"/>
+						</p>
+
+						<p>	Najdroższy burger: <xsl:value-of select="burgerMenu/informacje/dane/najdroższyBurger"/>
+						</p>
+
+						<p>	Natańszy burger: <xsl:value-of select="burgerMenu/informacje/dane/natańszyBurger"/>
+						</p>
+					</div>
 				</div>
 			</body>
 		</html>
