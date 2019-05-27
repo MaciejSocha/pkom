@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<tracks>
+	<track id="track 1">
+		<points>
+			<point x="100" y="350"/>
+			<point x="200" y="250"/>
+			<point x="320" y="420"/>
+			<point x="430" y="420"/>
+			<point x="400" y="250"/>
+		</points>
+	</track>
+	<track id="track 2">
+		<points>
+			<point x="190" y="140"/>
+			<point x="200" y="160"/>
+			<point x="220" y="130"/>
+			<point x="250" y="170"/>
+			<point x="300" y="90"/>
+		</points>
+	</track>
+	<track id="track 3">
+		<points>
+			<point x="400" y="200"/>
+			<point x="500" y="140"/>
+			<point x="520" y="140"/>
+			<point x="520" y="340"/>
+			<point x="430" y="250"/>
+		</points>
+	</track>
+</tracks>
