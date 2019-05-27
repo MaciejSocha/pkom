@@ -53,7 +53,6 @@
         </style>
 		
 		<xsl:for-each select="burgerMenu/burger">
-
             	<svg:rect class="control" cursor="pointer" x="30" y='{position()*35 + 40}' width="200" height="30" fill="#ff7d38" stroke="white"/>
 				<g class="info">
             		<svg:text text-anchor="middle" x="550" y="80" fill="black" font-size="30">

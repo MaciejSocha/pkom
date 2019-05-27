@@ -9,3 +9,6 @@ XML --(xslt)--> pomocniczy XML
 pomocniczy XML --(xslt)--> TXT
 
     java -jar saxon9he.jar -s:raport.xml -xsl:burgerownia_txt.xsl -o:raport.txt
+
+svg
+    xsltproc burgerownia_svg.xsl raport.xml > raport.svg
