@@ -23,9 +23,16 @@
 				<xsl:value-of select="informacje/dataUtworzenia/concat('Data utworzenia dokumentu: ', ., '&#xa;')" />
 			</xsl:element>
 			<xsl:element name="dane">
-				<xsl:for-each select="informacje/dane" >
-					<xsl:value-of select="." />
+				<xsl:variable name="nazwy" select="informacje/dane//name(.)" />
+
+				<xsl:for-each select="$nazwy" >
+					<xsl:value-of select="concat(. ,'&#xa;')" />
 				</xsl:for-each>
+
+				<xsl:for-each select="informacje/dane" >
+					<xsl:value-of select="concat(informacje/dane/name(.), .)"/>
+				</xsl:for-each>
+				
 			</xsl:element>
 		</xsl:element>
 	</xsl:template>
