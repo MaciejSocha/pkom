@@ -56,37 +56,6 @@
 			</svg:text>
 
 			<style>
-			.cogSmall,
-.cogBig {
-  animation-name: spin;
-  animation-duration: 4000ms;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  transform-origin:15.887px 29.88px;
-  animation-play-state: paused;
-}
-.cogSmall {
-  animation-duration: 3000ms;
-  transform-origin: 24.691px 35.778px;
-  animation-direction: reverse;
-}
-
-.cogBig:hover {
-  animation-play-state: running;
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-				.r
-				{
-					opacity: 1;
-				}
 				g.button:hover
 				{
 					opacity: 0.7;
@@ -101,51 +70,50 @@
 			</style>
 			
 			<xsl:for-each select="burgerMenu/burger">
-				<svg:rect class="cogBig" x="25" y='{position()*35 + 30}' width="220" height="30" fill="#ff7d38" stroke="white">
-					
-				</svg:rect>
+				<svg:rect x="25" y='{position()*35 + 30}' width="220" height="30" fill="#ff7d38" stroke="white"/>
 				<svg:text x="30" y='{position()*35 + 50}' fill="white" font-size="20" font-weight="bold"  >				
 					<xsl:apply-templates select="nazwa"/>
 				</svg:text>
 				<svg:rect class="control" cursor="pointer" x="25" y='{position()*35 + 30}' width="220" height="30" fill="#ff7d38" stroke="white" opacity="0"/>
 				<g class="info">
-					<svg:text text-anchor="middle" x="550" y="80" fill="black" font-size="30">
+					<svg:rect x="350" y="51" width="400" height="450" fill="#ff7d38" stroke="white"/>
+					<svg:text text-anchor="middle" x="550" y="80" fill="white" font-size="30">
 						Cena: <xsl:apply-templates select="cena"/>
 					</svg:text>
-					<svg:text text-anchor="middle" x="550" y="120" fill="black" font-size="30">
+					<svg:text text-anchor="middle" x="550" y="120" fill="white" font-size="30">
 						Kaloryczność: <xsl:apply-templates select="kaloryczność"/>
 					</svg:text>
-					<svg:text text-anchor="middle" x="550" y="160" fill="black" font-size="30">
+					<svg:text text-anchor="middle" x="550" y="160" fill="white" font-size="30">
 						Data wprowadzenia: <xsl:apply-templates select="data_wprowadzenia"/>
 					</svg:text>
-					<svg:text text-anchor="middle" x="550" y="200" fill="black" font-size="30">
+					<svg:text text-anchor="middle" x="550" y="200" fill="white" font-size="30">
 						Mięsność: <xsl:apply-templates select="mięsność"/>
 					</svg:text>
-					<svg:text text-anchor="middle" x="550" y="240" fill="black" font-size="30">
+					<svg:text text-anchor="middle" x="550" y="240" fill="white" font-size="30">
 						Składniki:
 					</svg:text>
-					<svg:text text-anchor="middle" x="550" y="280" fill="black" font-size="20">
+					<svg:text text-anchor="middle" x="550" y="280" fill="white" font-size="20">
 						<xsl:apply-templates select="skladnik1"/>
 					</svg:text>
-					<svg:text text-anchor="middle" x="550" y="310" fill="black" font-size="20">
+					<svg:text text-anchor="middle" x="550" y="310" fill="white" font-size="20">
 						<xsl:apply-templates select="skladnik2"/>
 					</svg:text>
-					<svg:text text-anchor="middle" x="550" y="340" fill="black" font-size="20">
+					<svg:text text-anchor="middle" x="550" y="340" fill="white" font-size="20">
 						<xsl:apply-templates select="skladnik3"/>
 					</svg:text>
-					<svg:text text-anchor="middle" x="550" y="370" fill="black" font-size="20">
+					<svg:text text-anchor="middle" x="550" y="370" fill="white" font-size="20">
 						<xsl:apply-templates select="skladnik4"/>
 					</svg:text>
-					<svg:text text-anchor="middle" x="550" y="400" fill="black" font-size="20">
+					<svg:text text-anchor="middle" x="550" y="400" fill="white" font-size="20">
 						<xsl:apply-templates select="skladnik5"/>
 					</svg:text>
-					<svg:text text-anchor="middle" x="550" y="430" fill="black" font-size="20">
+					<svg:text text-anchor="middle" x="550" y="430" fill="white" font-size="20">
 						<xsl:apply-templates select="skladnik6"/>
 					</svg:text>
-					<svg:text text-anchor="middle" x="550" y="460" fill="black" font-size="20">
+					<svg:text text-anchor="middle" x="550" y="460" fill="white" font-size="20">
 						<xsl:apply-templates select="skladnik7"/>
 					</svg:text>
-					<svg:text text-anchor="middle" x="550" y="490" fill="black" font-size="20">
+					<svg:text text-anchor="middle" x="550" y="490" fill="white" font-size="20">
 						<xsl:apply-templates select="skladnik8"/>
 					</svg:text>
 				</g>			
