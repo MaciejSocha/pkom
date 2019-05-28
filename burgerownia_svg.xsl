@@ -71,11 +71,11 @@
 
 			<g transform="translate(300 530)">
 				<svg:rect width="600" height="300" y="0" fill="#ff7d38"/>
-				<svg:text x="20" y="50" text-anchor="start" fill="white" font-size="20" font-weight="bold">
+				<svg:text x="10" y="50" text-anchor="start" fill="white" font-size="20" font-weight="bold">
 						Liczba burgerów w zależności od zawartości mięsa:
 				</svg:text>
 				<g class="bar" transform="translate(250 100)">
-					<svg:text x="-10" y="27" text-anchor="end" fill="white" font-size="25" font-weight="bold">
+					<svg:text x="-10" y="27" text-anchor="end" fill="white" font-size="24" font-weight="bold">
 						Mięsne:
 					</svg:text>
 					<xsl:variable name="liczbaMiesnych" select="burgerMenu/informacje/dane/liczbaBurgerówMięsnych"/>
@@ -85,7 +85,7 @@
 					</text>
 				</g>
 				<g class="bar" transform="translate(250 160)">
-					<svg:text x="-10" y="27" text-anchor="end" fill="white" font-size="25" font-weight="bold">
+					<svg:text x="-10" y="27" text-anchor="end" fill="white" font-size="24" font-weight="bold">
 						Wegańskie:
 					</svg:text>
 					<xsl:variable name="liczbaWeganskich" select="burgerMenu/informacje/dane/liczbaBurgerówWegańskich"/>
@@ -95,7 +95,7 @@
 					</text>
 				</g>
 				<g class="bar" transform="translate(250 220)">
-					<svg:text x="-10" y="27" text-anchor="end" fill="white" font-size="25" font-weight="bold">
+					<svg:text x="-10" y="27" text-anchor="end" fill="white" font-size="24" font-weight="bold">
 						Wegetariańskie:
 					</svg:text>
 					<xsl:variable name="liczbaWegatarianskich" select="burgerMenu/informacje/dane/liczbaBurgerówWegetariańskich"/>
