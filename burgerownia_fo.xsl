@@ -7,7 +7,7 @@
   	<xsl:template match="/">
   		<fo:root font-family="Times">
   			<fo:layout-master-set>
-  				<fo:simple-page-master master-name="Strona" page-width="297mm" page-height="210mm" margin-top="1cm" margin-bottom="1cm" margin-left="1cm" margin-right="1cm">
+  				<fo:simple-page-master master-name="Strona" page-width="210mm" page-height="297mm" margin-top="1cm" margin-bottom="1cm" margin-left="1cm" margin-right="1cm">
   					<fo:region-body margin="3cm" />
   				</fo:simple-page-master>
   			</fo:layout-master-set>
@@ -24,47 +24,62 @@
   					</fo:block>
   					
   					<fo:block>
-  						<fo:table border="solid 2pt black">
-  							<fo:table-header>
-								<fo:table-row>
-									<fo:table-cell>
-										<fo:block font-weight="bold">Nazwa:</fo:block>
-									</fo:table-cell>
-									<fo:table-cell>
-										<fo:block font-weight="bold">Cena:</fo:block>
-									</fo:table-cell>
-									<fo:table-cell>
-										<fo:block font-weight="bold">Kaloryczność:</fo:block>
-									</fo:table-cell>
-									<fo:table-cell>
-										<fo:block font-weight="bold">Mięsność:</fo:block>
-									</fo:table-cell>
-									<fo:table-cell>
-										<fo:block font-weight="bold">Składnik 1:</fo:block>
-									</fo:table-cell>
-									<fo:table-cell>
-										<fo:block font-weight="bold">Składnik 2:</fo:block>
-									</fo:table-cell>
-									<fo:table-cell>
-										<fo:block font-weight="bold">Składnik 3:</fo:block>
-									</fo:table-cell>
-									<fo:table-cell>
-										<fo:block font-weight="bold">Składnik 4:</fo:block>
-									</fo:table-cell>
-									<fo:table-cell>
-										<fo:block font-weight="bold">Składnik 5:</fo:block>
-									</fo:table-cell>
-									<fo:table-cell>
-										<fo:block font-weight="bold">Składnik 6:</fo:block>
-									</fo:table-cell>
-									<fo:table-cell>
-										<fo:block font-weight="bold">Składnik 7:</fo:block>
-									</fo:table-cell>
-									<fo:table-cell>
-										<fo:block font-weight="bold">Składnik 8:</fo:block>
-									</fo:table-cell>
-								</fo:table-row>
-							</fo:table-header>
+
+					<fo:table-and-caption>
+  						<fo:table border-style="solid">
+						<fo:table-column column-width="25mm"/>
+						<fo:table-column column-width="25mm"/>
+						<fo:table-column column-width="25mm"/>
+						<fo:table-column column-width="25mm"/>
+						<fo:table-column column-width="25mm"/>
+						<fo:table-column column-width="25mm"/>
+						<fo:table-column column-width="25mm"/>
+						<fo:table-column column-width="25mm"/>
+						<fo:table-column column-width="25mm"/>
+						<fo:table-column column-width="25mm"/>
+						<fo:table-column column-width="25mm"/>
+						<fo:table-column column-width="25mm"/>
+  							
+						<fo:table-header>
+							<fo:table-row>
+								<fo:table-cell>
+									<fo:block font-weight="bold">Nazwa:</fo:block>
+								</fo:table-cell>
+								<fo:table-cell>
+									<fo:block font-weight="bold">Cena:</fo:block>
+								</fo:table-cell>
+								<fo:table-cell>
+									<fo:block font-weight="bold">Kaloryczność:</fo:block>
+								</fo:table-cell>
+								<fo:table-cell>
+									<fo:block font-weight="bold">Mięsność:</fo:block>
+								</fo:table-cell>
+								<fo:table-cell>
+									<fo:block font-weight="bold">Składnik 1:</fo:block>
+								</fo:table-cell>
+								<fo:table-cell>
+									<fo:block font-weight="bold">Składnik 2:</fo:block>
+								</fo:table-cell>
+								<fo:table-cell>
+									<fo:block font-weight="bold">Składnik 3:</fo:block>
+								</fo:table-cell>
+								<fo:table-cell>
+									<fo:block font-weight="bold">Składnik 4:</fo:block>
+								</fo:table-cell>
+								<fo:table-cell>
+									<fo:block font-weight="bold">Składnik 5:</fo:block>
+								</fo:table-cell>
+								<fo:table-cell>
+									<fo:block font-weight="bold">Składnik 6:</fo:block>
+								</fo:table-cell>
+								<fo:table-cell>
+									<fo:block font-weight="bold">Składnik 7:</fo:block>
+								</fo:table-cell>
+								<fo:table-cell>
+									<fo:block font-weight="bold">Składnik 8:</fo:block>
+								</fo:table-cell>
+							</fo:table-row>
+						</fo:table-header>
 							<fo:table-body>
 								<xsl:for-each select="/burgerMenu/burger">
 								<fo:table-row>
@@ -122,6 +137,7 @@
 								
 							</fo:table-body>
 						</fo:table>
+						</fo:table-and-caption>
   					</fo:block>
 
   				</fo:flow>
