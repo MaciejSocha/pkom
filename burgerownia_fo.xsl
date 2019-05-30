@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xsl:stylesheet version="2.0"
+<xsl:stylesheet version="1.0"
         xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
         xmlns:fo="http://www.w3.org/1999/XSL/Format">
   	<xsl:output method="xml" indent="yes" encoding="utf-8"/>
@@ -20,33 +20,110 @@
   						<xsl:call-template name="autorzy" />
   						<xsl:value-of select="'&#xa;'"/>
   						<xsl:call-template name="statystyki" />
+  						<xsl:value-of select="'&#xa;'"/>
   					</fo:block>
-  					<!-- TESTS ONLY
+  					
   					<fo:block>
   						<fo:table border="solid 2pt black">
   							<fo:table-header>
 								<fo:table-row>
 									<fo:table-cell>
-										<fo:block font-weight="bold">Nazwisko</fo:block>
+										<fo:block font-weight="bold">Nazwa:</fo:block>
 									</fo:table-cell>
 									<fo:table-cell>
-										<fo:block font-weight="bold">Imię</fo:block>
+										<fo:block font-weight="bold">Cena:</fo:block>
+									</fo:table-cell>
+									<fo:table-cell>
+										<fo:block font-weight="bold">Kaloryczność:</fo:block>
+									</fo:table-cell>
+									<fo:table-cell>
+										<fo:block font-weight="bold">Mięsność:</fo:block>
+									</fo:table-cell>
+									<fo:table-cell>
+										<fo:block font-weight="bold">Składnik 1:</fo:block>
+									</fo:table-cell>
+									<fo:table-cell>
+										<fo:block font-weight="bold">Składnik 2:</fo:block>
+									</fo:table-cell>
+									<fo:table-cell>
+										<fo:block font-weight="bold">Składnik 3:</fo:block>
+									</fo:table-cell>
+									<fo:table-cell>
+										<fo:block font-weight="bold">Składnik 4:</fo:block>
+									</fo:table-cell>
+									<fo:table-cell>
+										<fo:block font-weight="bold">Składnik 5:</fo:block>
+									</fo:table-cell>
+									<fo:table-cell>
+										<fo:block font-weight="bold">Składnik 6:</fo:block>
+									</fo:table-cell>
+									<fo:table-cell>
+										<fo:block font-weight="bold">Składnik 7:</fo:block>
+									</fo:table-cell>
+									<fo:table-cell>
+										<fo:block font-weight="bold">Składnik 8:</fo:block>
 									</fo:table-cell>
 								</fo:table-row>
 							</fo:table-header>
 							<fo:table-body>
+								<xsl:for-each select="/burgerMenu/burger">
 								<fo:table-row>
 									<fo:table-cell>
-										<fo:block>AAA</fo:block>
+										<fo:block><xsl:value-of select=".//nazwa" /></fo:block>
 									</fo:table-cell>
 									<fo:table-cell>
-										<fo:block>BBB</fo:block>
+										<fo:block><xsl:value-of select=".//cena" /></fo:block>
 									</fo:table-cell>
+									<fo:table-cell>
+										<fo:block><xsl:value-of select=".//kaloryczność" /></fo:block>
+									</fo:table-cell>
+									<fo:table-cell>
+										<fo:block><xsl:value-of select=".//mięsność" /></fo:block>
+									</fo:table-cell>
+									<fo:table-cell>
+							
+    										<fo:block><xsl:value-of select = ".//skladnik1" /></fo:block>
+    							
+    								</fo:table-cell>
+    								<fo:table-cell>
+							
+    										<fo:block><xsl:value-of select = ".//skladnik2" /></fo:block>
+    							
+    								</fo:table-cell>
+    								<fo:table-cell>
+								
+    										<fo:block><xsl:value-of select = ".//skladnik3" /></fo:block>
+    						
+    								</fo:table-cell>
+    								<fo:table-cell>
+								
+    										<fo:block><xsl:value-of select = ".//skladnik4" /></fo:block>
+    								
+    								</fo:table-cell>
+    								<fo:table-cell>
+									
+    										<fo:block><xsl:value-of select = ".//skladnik5" /></fo:block>
+    								
+    								</fo:table-cell>
+    								<fo:table-cell>
+										
+    										<fo:block><xsl:value-of select = ".//skladnik6" /></fo:block>
+    								
+    								</fo:table-cell>
+    								<fo:table-cell>
+    										<fo:block><xsl:value-of select = ".//skladnik7" /></fo:block>
+    								</fo:table-cell>
+    								<fo:table-cell>
+    										<fo:block><xsl:value-of select = ".//skladnik8" /></fo:block>
+    								</fo:table-cell>
 								</fo:table-row>
+								</xsl:for-each>
+
+								
 							</fo:table-body>
 						</fo:table>
   					</fo:block>
-  				-->
+
   				</fo:flow>
   			</fo:page-sequence>
   		</fo:root>
