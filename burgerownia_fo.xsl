@@ -55,28 +55,7 @@
 									<fo:block font-weight="bold">Mięsność:</fo:block>
 								</fo:table-cell>
 								<fo:table-cell>
-									<fo:block font-weight="bold">Składnik 1:</fo:block>
-								</fo:table-cell>
-								<fo:table-cell>
-									<fo:block font-weight="bold">Składnik 2:</fo:block>
-								</fo:table-cell>
-								<fo:table-cell>
-									<fo:block font-weight="bold">Składnik 3:</fo:block>
-								</fo:table-cell>
-								<fo:table-cell>
-									<fo:block font-weight="bold">Składnik 4:</fo:block>
-								</fo:table-cell>
-								<fo:table-cell>
-									<fo:block font-weight="bold">Składnik 5:</fo:block>
-								</fo:table-cell>
-								<fo:table-cell>
-									<fo:block font-weight="bold">Składnik 6:</fo:block>
-								</fo:table-cell>
-								<fo:table-cell>
-									<fo:block font-weight="bold">Składnik 7:</fo:block>
-								</fo:table-cell>
-								<fo:table-cell>
-									<fo:block font-weight="bold">Składnik 8:</fo:block>
+									<fo:block font-weight="bold">Składniki:</fo:block>
 								</fo:table-cell>
 							</fo:table-row>
 						</fo:table-header>
@@ -98,39 +77,16 @@
 									<fo:table-cell>
 							
     										<fo:block><xsl:value-of select = ".//skladnik1" /></fo:block>
-    							
-    								</fo:table-cell>
-    								<fo:table-cell>
-							
     										<fo:block><xsl:value-of select = ".//skladnik2" /></fo:block>
+    										<fo:block><xsl:value-of select = ".//skladnik3" /></fo:block>
+    										<fo:block><xsl:value-of select = ".//skladnik4" /></fo:block>
+    										<fo:block><xsl:value-of select = ".//skladnik5" /></fo:block>
+    										<fo:block><xsl:value-of select = ".//skladnik6" /></fo:block>
+    										<fo:block><xsl:value-of select = ".//skladnik7" /></fo:block>
+    										<fo:block><xsl:value-of select = ".//skladnik8" /></fo:block>
     							
     								</fo:table-cell>
-    								<fo:table-cell>
-								
-    										<fo:block><xsl:value-of select = ".//skladnik3" /></fo:block>
-    						
-    								</fo:table-cell>
-    								<fo:table-cell>
-								
-    										<fo:block><xsl:value-of select = ".//skladnik4" /></fo:block>
-    								
-    								</fo:table-cell>
-    								<fo:table-cell>
-									
-    										<fo:block><xsl:value-of select = ".//skladnik5" /></fo:block>
-    								
-    								</fo:table-cell>
-    								<fo:table-cell>
-										
-    										<fo:block><xsl:value-of select = ".//skladnik6" /></fo:block>
-    								
-    								</fo:table-cell>
-    								<fo:table-cell>
-    										<fo:block><xsl:value-of select = ".//skladnik7" /></fo:block>
-    								</fo:table-cell>
-    								<fo:table-cell>
-    										<fo:block><xsl:value-of select = ".//skladnik8" /></fo:block>
-    								</fo:table-cell>
+
 								</fo:table-row>
 								</xsl:for-each>
 
