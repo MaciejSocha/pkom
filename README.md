@@ -17,3 +17,5 @@ pomocniczy XML --(xslt)--> svg
 pomocniczy XML --(xslt)--(xsl-fo)--> pdf
 
     java -jar fop.jar -xml raport.xml -xsl burgerownia_fo.xsl -pdf raport.pdf
+    
+    xmlroff -o raport.pdf raport.xml burgerownia_fo.xsl 
