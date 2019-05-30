@@ -17,7 +17,7 @@
 				  	<fo:block text-align="right">
   						<xsl:call-template name="data" />
 					</fo:block>
-  					<fo:block linefeed-treatment="preserve">
+  					<fo:block font-weight="bold" linefeed-treatment="preserve">
   						<xsl:value-of select="'&#xa;'"/>
   						<xsl:call-template name="autorzy" />
   						<xsl:value-of select="'&#xa;'"/>
@@ -115,7 +115,7 @@
 		<xsl:value-of select="/burgerMenu/informacje/dataUtworzenia" />
 	</xsl:template>
 
-	<xsl:template name="statystyki" match="/burgerMenu/informacje/dane">
+	<xsl:template name="statystyki" match="/burgerMenu/informacje/dane" font-weight="bold">
 		<xsl:value-of select="concat('Liczba składników: ', /burgerMenu/informacje/dane/liczbaSkładników, '&#xa;')"/>
 		<xsl:value-of select="concat('Liczba alergenów: ', /burgerMenu/informacje/dane/liczbaAlergenów, '&#xa;')"/>
 		<xsl:value-of select="concat('Liczba burgerów: ', /burgerMenu/informacje/dane/liczbaBurgerów, '&#xa;')"/>
