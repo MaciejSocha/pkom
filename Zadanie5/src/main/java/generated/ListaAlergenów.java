@@ -40,7 +40,7 @@ import javax.xml.bind.annotation.XmlType;
     "alergen"
 })
 @XmlRootElement(name = "lista_alergen\u00f3w")
-public class ListaAlergenów {
+public class ListaAlergenÃ³w {
 
     protected List<Alergen> alergen;
 

@@ -21,9 +21,9 @@ import javax.xml.bind.annotation.XmlType;
  * <pre>
  * &lt;simpleType name="miesnoscBase">
  *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
- *     &lt;enumeration value="miÍsny"/>
- *     &lt;enumeration value="wegetariaÒski"/>
- *     &lt;enumeration value="wegaÒski"/>
+ *     &lt;enumeration value="miÔøΩsny"/>
+ *     &lt;enumeration value="wegetariaÔøΩski"/>
+ *     &lt;enumeration value="wegaÔøΩski"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
@@ -33,12 +33,12 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum MiesnoscBase {
 
-    @XmlEnumValue("mi\u0119sny")
-    MI SNY("mi\u0119sny"),
-    @XmlEnumValue("wegetaria\u0144ski")
-    WEGETARIA—SKI("wegetaria\u0144ski"),
-    @XmlEnumValue("wega\u0144ski")
-    WEGA—SKI("wega\u0144ski");
+    @XmlEnumValue("miƒôsny")
+    MIƒòSNY("miƒôsny"),
+    @XmlEnumValue("wegetaria≈Ñski")
+    WEGETARIA≈ÉSKI("wegetaria≈Ñski"),
+    @XmlEnumValue("wega≈Ñski")
+    WEGA≈ÉSKI("wega≈Ñski");
     private final String value;
 
     MiesnoscBase(String v) {

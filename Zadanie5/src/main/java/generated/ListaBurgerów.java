@@ -41,7 +41,7 @@ import javax.xml.bind.annotation.XmlType;
     "burger"
 })
 @XmlRootElement(name = "lista_burger\u00f3w")
-public class ListaBurgerów {
+public class ListaBurgerÃ³w {
 
     @XmlElement(required = true)
     protected List<Burger> burger;

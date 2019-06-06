@@ -27,7 +27,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element ref="{}sk�adnik" maxOccurs="unbounded"/>
+ *         &lt;element ref="{}składnik" maxOccurs="unbounded"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -38,41 +38,41 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "sk\u0142adnik"
+    "składnik"
 })
 @XmlRootElement(name = "lista_sk\u0142adnik\u00f3w")
-public class ListaSk�adnik�w {
+public class ListaSkładników {
 
     @XmlElement(required = true)
-    protected List<Sk�adnik> sk�adnik;
+    protected List<Składnik> składnik;
 
     /**
-     * Gets the value of the sk�adnik property.
+     * Gets the value of the składnik property.
      * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the sk�adnik property.
+     * This is why there is not a <CODE>set</CODE> method for the składnik property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
-     *    getSk�adnik().add(newItem);
+     *    getSkładnik().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link Sk�adnik }
+     * {@link Składnik }
      * 
      * 
      */
-    public List<Sk�adnik> getSk�adnik() {
-        if (sk�adnik == null) {
-            sk�adnik = new ArrayList<Sk�adnik>();
+    public List<Składnik> getSkładnik() {
+        if (składnik == null) {
+            składnik = new ArrayList<Składnik>();
         }
-        return this.sk�adnik;
+        return this.składnik;
     }
 
 }
