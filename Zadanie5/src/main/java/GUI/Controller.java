@@ -107,105 +107,37 @@ public class Controller implements Initializable {
 
     public void select() {
         System.out.println("Wybrano");
-        for (Burger burger :
-                burgerownia.getListaBurgerów().getBurger()) {
-            if (burger.getNazwa().equals(listView.getSelectionModel().getSelectedItem())) {
-                nazwa.setText(burger.getNazwa());
-                cena.setText(String.valueOf(burger.getCena().getValue()));
-                kalorycznosc.setText(String.valueOf(burger.getKaloryczność().getValue()));
+        Burger burger = burgerownia.getListaBurgerów().getBurger().stream().filter(b -> b.getNazwa().equals(listView.getSelectionModel().getSelectedItem())).findFirst().get();
 
+        nazwa.setText(burger.getNazwa());
+        cena.setText(String.valueOf(burger.getCena().getValue()));
+        kalorycznosc.setText(String.valueOf(burger.getKaloryczność().getValue()));
 
-            }
+        Optional<Składnik> skladnik = burgerownia.getListaSkładników().getSkładnik().stream().filter(s -> s.getIdSkładnika().equals(burger.getSkladnik1())).findFirst();
+        skladnik.ifPresent(składnik -> skladnik1.getSelectionModel().select(składnik.getValue()));
+        skladnik = burgerownia.getListaSkładników().getSkładnik().stream().filter(s -> s.getIdSkładnika().equals(burger.getSkladnik2())).findFirst();
+        skladnik.ifPresent(składnik -> skladnik2.getSelectionModel().select(składnik.getValue()));
+        skladnik = burgerownia.getListaSkładników().getSkładnik().stream().filter(s -> s.getIdSkładnika().equals(burger.getSkladnik3())).findFirst();
+        skladnik.ifPresent(składnik -> skladnik3.getSelectionModel().select(składnik.getValue()));
+        skladnik = burgerownia.getListaSkładników().getSkładnik().stream().filter(s -> s.getIdSkładnika().equals(burger.getSkladnik4())).findFirst();
+        skladnik.ifPresent(składnik -> skladnik4.getSelectionModel().select(składnik.getValue()));
+        skladnik = burgerownia.getListaSkładników().getSkładnik().stream().filter(s -> s.getIdSkładnika().equals(burger.getSkladnik5())).findFirst();
+        skladnik.ifPresent(składnik -> skladnik5.getSelectionModel().select(składnik.getValue()));
+        skladnik = burgerownia.getListaSkładników().getSkładnik().stream().filter(s -> s.getIdSkładnika().equals(burger.getSkladnik6())).findFirst();
+        skladnik.ifPresent(składnik -> skladnik6.getSelectionModel().select(składnik.getValue()));
+        skladnik = burgerownia.getListaSkładników().getSkładnik().stream().filter(s -> s.getIdSkładnika().equals(burger.getSkladnik7())).findFirst();
+        skladnik.ifPresent(składnik -> skladnik7.getSelectionModel().select(składnik.getValue()));
+        skladnik = burgerownia.getListaSkładników().getSkładnik().stream().filter(s -> s.getIdSkładnika().equals(burger.getSkladnik8())).findFirst();
+        skladnik.ifPresent(składnik -> skladnik8.getSelectionModel().select(składnik.getValue()));         
 
-            switch (burger.getSkladnik1()) {
-                case "ser":
-                    skladnik1.getSelectionModel().select(0);
-                    break;
-                case "mieso_wieprzowe":
-                    skladnik1.getSelectionModel().select(1);
-                    break;
-                case "mieso_wolowe":
-                    skladnik1.getSelectionModel().select(2);
-                    break;
-                case "mieso_drobiowe":
-                    skladnik1.getSelectionModel().select(3);
-                    break;
-                case "boczek":
-                    skladnik1.getSelectionModel().select(4);
-                    break;
-                case "bulka_pszenna_sezam":
-                    skladnik1.getSelectionModel().select(5);
-                    break;
-                case "bulka_pszenna":
-                    skladnik1.getSelectionModel().select(6);
-                    break;
-                case "bulka_zytnia":
-                    skladnik1.getSelectionModel().select(7);
-                    break;
-                case "salata":
-                    skladnik1.getSelectionModel().select(8);
-                    break;
-                case "pomidor":
-                    skladnik1.getSelectionModel().select(9);
-                    break;
-                case "ogorek":
-                    skladnik1.getSelectionModel().select(10);
-                    break;
-                case "ketchup":
-                    skladnik1.getSelectionModel().select(11);
-                    break;
-                case "losos":
-                    skladnik1.getSelectionModel().select(12);
-                    break;
-                case "cebula":
-                    skladnik1.getSelectionModel().select(13);
-                    break;
-                case "papryka":
-                    skladnik1.getSelectionModel().select(14);
-                    break;
-                case "falafel":
-                    skladnik1.getSelectionModel().select(15);
-                    break;
-                case "piri_piri":
-                    skladnik1.getSelectionModel().select(16);
-                    break;
-                case "majonez":
-                    skladnik1.getSelectionModel().select(17);
-                    break;
-                case "rukola":
-                    skladnik1.getSelectionModel().select(18);
-                    break;
-                case "jajko":
-                    skladnik1.getSelectionModel().select(19);
-                    break;
-                case "prazone_orzechy":
-                    skladnik1.getSelectionModel().select(20);
-                    break;
-                case "krewetki":
-                    skladnik1.getSelectionModel().select(21);
-                    break;
-                case "musztarda":
-                    skladnik1.getSelectionModel().select(22);
-                    break;
-                case "sos_sojowy":
-                    skladnik1.getSelectionModel().select(23);
-                    break;
-                case "sos_serowy_chili":
-                    skladnik1.getSelectionModel().select(24);
-                    break;
-                case "chili":
-                    skladnik1.getSelectionModel().select(25);
-                    break;
-            }
+        if (burger.getMięsność().name().equals("MIĘSNY"))
+            miesnosc.getSelectionModel().select(0);
+        if (burger.getMięsność().name().equals("WEGETARIAŃSKI"))
+            miesnosc.getSelectionModel().select(1);
+        if (burger.getMięsność().name().equals("WEGAŃSKI"))
+            miesnosc.getSelectionModel().select(2);
+        data.setValue(LocalDate.parse(String.valueOf(burger.getDataWprowadzenia())));
 
-            if (burger.getMięsność().name().equals("MIĘSNY"))
-                miesnosc.getSelectionModel().select(0);
-            if (burger.getMięsność().name().equals("WEGETARIAŃSKI"))
-                miesnosc.getSelectionModel().select(1);
-            if (burger.getMięsność().name().equals("WEGAŃSKI"))
-                miesnosc.getSelectionModel().select(2);
-            data.setValue(LocalDate.parse(String.valueOf(burger.getDataWprowadzenia())));
-        }
     }
 
 
