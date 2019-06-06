@@ -1,0 +1,34 @@
+<!-- Main part -->
+
+<!ELEMENT burgerownia (metadane, lista_alergenów, lista_składników, burger*)>
+
+<!ELEMENT lista_alergenów (alergen*)>
+<!ELEMENT alergen (#PCDATA)>
+<!ATTLIST alergen idAlergenu ID #REQUIRED>
+
+<!ELEMENT lista_składników (składnik*)>
+<!ELEMENT składnik (#PCDATA)>
+<!ATTLIST składnik alergeny IDREFS #IMPLIED>
+<!ATTLIST składnik idSkładnika ID #REQUIRED>
+
+<!ELEMENT burger (nazwa, cena, kaloryczność)>
+<!ATTLIST burger mięsność (mięsny | wegetariański | wegański) "mięsny">
+<!ATTLIST burger data_wprowadzenia CDATA #IMPLIED>
+<!ATTLIST burger składniki IDREFS #REQUIRED>
+<!ELEMENT nazwa (#PCDATA)>
+
+<!ELEMENT cena (#PCDATA)>
+<!ATTLIST cena waluta CDATA "zł">
+
+<!ELEMENT kaloryczność (#PCDATA)>
+<!ATTLIST kaloryczność jednostka CDATA "kcal">
+
+<!-- Extra information -->
+
+<!ELEMENT metadane (autor+, korektor*, data_modyfikacji, nazwa_projektu)>
+<!ELEMENT autor (imie, nazwisko)>
+<!ELEMENT korektor (imie, nazwisko)>
+<!ELEMENT imie (#PCDATA)>
+<!ELEMENT nazwisko (#PCDATA)>
+<!ELEMENT data_modyfikacji (#PCDATA)>
+<!ELEMENT nazwa_projektu (#PCDATA)>
