@@ -12,7 +12,7 @@ import javax.xml.bind.Unmarshaller;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 
-import model.Burgerownia;
+import generated.Burgerownia;
 import org.xml.sax.SAXException;
 
 public class XMLOperations {
