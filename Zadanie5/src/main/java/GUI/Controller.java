@@ -127,4 +127,25 @@ public class Controller implements Initializable {
             }
         }
     }
+
+    public void saveXMLFile() {
+        try {
+            XMLOperations.saveToXML("textarea.getText()");
+        } catch (JAXBException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void openDifferentXMLFile() {
+        XMLOperations.setXmlFilePath("textarea.gettext()");
+        try {
+            XMLOperations.readFromXML();
+        } catch (JAXBException | FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void transformToXHTML() {
+        XMLOperations.transformXML("textarea.gettext()");
+    }
 }
