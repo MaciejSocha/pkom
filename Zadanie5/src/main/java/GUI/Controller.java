@@ -2,10 +2,10 @@ package GUI;
 
 import generated.MiesnoscBase;
 import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 
@@ -39,6 +39,8 @@ public class Controller implements Initializable {
     public TextField skladnik7 = new TextField();
     @FXML
     public TextField skladnik8 = new TextField();
+    @FXML
+    public DatePicker data = new DatePicker();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -59,5 +61,21 @@ public class Controller implements Initializable {
         skladnik7.clear();
         skladnik8.clear();
         System.out.println("clear");
+    }
+
+    public void delete(){
+        System.out.println("Usuń");
+    }
+
+    public void add(){
+        System.out.println("dodaj");
+    }
+
+    public void save(){
+        System.out.println("Zapisz");
+    }
+
+    public void toTXT(){
+        System.out.println("robie txt");
     }
 }
