@@ -55,7 +55,7 @@ public class XMLOperations {
     }
 
     public static void saveToXML(String newFile) throws JAXBException {
-        marshaller.marshal(burgerownia, new File(xmlFilePath));
+        marshaller.marshal(burgerownia, new File(xmlFilePath + ".xml"));
     }
 
     public static void readFromXML() throws JAXBException, FileNotFoundException {
@@ -74,7 +74,7 @@ public class XMLOperations {
     }
 
     public static void setXmlFilePath(String xmlFilePath) {
-        XMLOperations.xmlFilePath = xmlFilePath;
+        XMLOperations.xmlFilePath = xmlFilePath + ".xml";
     }
 
 }
