@@ -1,9 +1,6 @@
 package GUI;
 
-import generated.Burger;
-import generated.Burgerownia;
-import generated.MiesnoscBase;
-import generated.Składnik;
+import generated.*;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -14,6 +11,7 @@ import javafx.scene.control.TextField;
 import logic.XMLOperations;
 
 import javax.xml.bind.JAXBException;
+import java.awt.List;
 import java.io.FileNotFoundException;
 import java.net.URL;
 import java.time.LocalDate;
@@ -60,6 +58,10 @@ public class Controller implements Initializable {
     public TextField projekt = new TextField();
     @FXML
     public DatePicker modyfikacja = new DatePicker();
+    @FXML
+    public TextField path_save = new TextField();
+    @FXML
+    public TextField path_read = new TextField();
 
     private Burgerownia burgerownia;
 
@@ -103,6 +105,13 @@ public class Controller implements Initializable {
 
     public void delete() {
         System.out.println("Usuń");
+        String name = listView.getSelectionModel().getSelectedItem();
+        for (Burger b : burgerownia.getListaBurgerów().getBurger()) {
+            if (b.getNazwa().equals(name)) {
+                burgerownia.getListaBurgerów().getBurger().remove(b);
+            }
+        }
+
     }
 
     public void add() {
@@ -115,6 +124,8 @@ public class Controller implements Initializable {
 
     public void toTXT() {
         System.out.println("robie txt");
+        String path = path_save.getText();
+        transformToXHTML(path);
     }
 
     public void select() {
@@ -162,7 +173,8 @@ public class Controller implements Initializable {
     }
 
     public void openDifferentXMLFile() {
-        XMLOperations.setXmlFilePath("textarea.gettext()");
+        String name = path_read.getText();
+        XMLOperations.setXmlFilePath(name);
         try {
             XMLOperations.readFromXML();
         } catch (JAXBException | FileNotFoundException e) {
@@ -170,8 +182,8 @@ public class Controller implements Initializable {
         }
     }
 
-    public void transformToXHTML() {
-        XMLOperations.transformXML("textarea.gettext()");
+    private void transformToXHTML(String path) {
+        XMLOperations.transformXML(path);
     }
 
     public void metadane(){
