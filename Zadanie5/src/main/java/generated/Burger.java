@@ -30,7 +30,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *       &lt;sequence>
  *         &lt;element ref="{}nazwa"/>
  *         &lt;element ref="{}cena"/>
- *         &lt;element ref="{}kalorycznoœæ"/>
+ *         &lt;element ref="{}kalorycznoÅ›Ä‡"/>
  *       &lt;/sequence>
  *       &lt;attGroup ref="{}burgerArrtibuteGroup"/>
  *     &lt;/restriction>
@@ -44,7 +44,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
 @XmlType(name = "", propOrder = {
     "nazwa",
     "cena",
-    "kaloryczno\u015b\u0107"
+    "kalorycznoÅ›Ä‡"
 })
 @XmlRootElement(name = "burger")
 public class Burger {
@@ -54,9 +54,9 @@ public class Burger {
     @XmlElement(required = true)
     protected Cena cena;
     @XmlElement(required = true)
-    protected Kalorycznoœæ kalorycznoœæ;
-    @XmlAttribute(name = "mi\u0119sno\u015b\u0107")
-    protected MiesnoscBase miêsnoœæ;
+    protected KalorycznoÅ›Ä‡ kalorycznoÅ›Ä‡;
+    @XmlAttribute(name = "miÄ™snoÅ›Ä‡")
+    protected MiesnoscBase miÄ™snoÅ›Ä‡;
     @XmlAttribute(name = "data_wprowadzenia")
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar dataWprowadzenia;
@@ -126,55 +126,55 @@ public class Burger {
     }
 
     /**
-     * Gets the value of the kalorycznoœæ property.
+     * Gets the value of the kalorycznoÅ›Ä‡ property.
      * 
      * @return
      *     possible object is
-     *     {@link Kalorycznoœæ }
+     *     {@link KalorycznoÅ›Ä‡ }
      *     
      */
-    public Kalorycznoœæ getKalorycznoœæ() {
-        return kalorycznoœæ;
+    public KalorycznoÅ›Ä‡ getKalorycznoÅ›Ä‡() {
+        return kalorycznoÅ›Ä‡;
     }
 
     /**
-     * Sets the value of the kalorycznoœæ property.
+     * Sets the value of the kalorycznoÅ›Ä‡ property.
      * 
      * @param value
      *     allowed object is
-     *     {@link Kalorycznoœæ }
+     *     {@link KalorycznoÅ›Ä‡ }
      *     
      */
-    public void setKalorycznoœæ(Kalorycznoœæ value) {
-        this.kalorycznoœæ = value;
+    public void setKalorycznoÅ›Ä‡(KalorycznoÅ›Ä‡ value) {
+        this.kalorycznoÅ›Ä‡ = value;
     }
 
     /**
-     * Gets the value of the miêsnoœæ property.
+     * Gets the value of the miÄ™snoÅ›Ä‡ property.
      * 
      * @return
      *     possible object is
      *     {@link MiesnoscBase }
      *     
      */
-    public MiesnoscBase getMiêsnoœæ() {
-        if (miêsnoœæ == null) {
-            return MiesnoscBase.MIÊSNY;
+    public MiesnoscBase getMiÄ™snoÅ›Ä‡() {
+        if (miÄ™snoÅ›Ä‡ == null) {
+            return MiesnoscBase.MIÄ˜SNY;
         } else {
-            return miêsnoœæ;
+            return miÄ™snoÅ›Ä‡;
         }
     }
 
     /**
-     * Sets the value of the miêsnoœæ property.
+     * Sets the value of the miÄ™snoÅ›Ä‡ property.
      * 
      * @param value
      *     allowed object is
      *     {@link MiesnoscBase }
      *     
      */
-    public void setMiêsnoœæ(MiesnoscBase value) {
-        this.miêsnoœæ = value;
+    public void setMiÄ™snoÅ›Ä‡(MiesnoscBase value) {
+        this.miÄ™snoÅ›Ä‡ = value;
     }
 
     /**

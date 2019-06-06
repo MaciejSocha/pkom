@@ -44,19 +44,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Sk砤dnik }
+     * Create an instance of {@link Sk艂adnik }
      * 
      */
-    public Sk砤dnik createSk砤dnik() {
-        return new Sk砤dnik();
+    public Sk艂adnik createSk艂adnik() {
+        return new Sk艂adnik();
     }
 
     /**
-     * Create an instance of {@link Kaloryczno滄 }
+     * Create an instance of {@link Kaloryczno艣膰 }
      * 
      */
-    public Kaloryczno滄 createKaloryczno滄() {
-        return new Kaloryczno滄();
+    public Kaloryczno艣膰 createKaloryczno艣膰() {
+        return new Kaloryczno艣膰();
     }
 
     /**
@@ -84,11 +84,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ListaAlergen體 }
+     * Create an instance of {@link ListaAlergen贸w }
      * 
      */
-    public ListaAlergen體 createListaAlergen體() {
-        return new ListaAlergen體();
+    public ListaAlergen贸w createListaAlergen贸w() {
+        return new ListaAlergen贸w();
     }
 
     /**
@@ -100,19 +100,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ListaSk砤dnik體 }
+     * Create an instance of {@link ListaSk艂adnik贸w }
      * 
      */
-    public ListaSk砤dnik體 createListaSk砤dnik體() {
-        return new ListaSk砤dnik體();
+    public ListaSk艂adnik贸w createListaSk艂adnik贸w() {
+        return new ListaSk艂adnik贸w();
     }
 
     /**
-     * Create an instance of {@link ListaBurger體 }
+     * Create an instance of {@link ListaBurger贸w }
      * 
      */
-    public ListaBurger體 createListaBurger體() {
-        return new ListaBurger體();
+    public ListaBurger贸w createListaBurger贸w() {
+        return new ListaBurger贸w();
     }
 
     /**

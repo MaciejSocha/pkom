@@ -26,9 +26,9 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element ref="{}metadane"/>
- *         &lt;element ref="{}lista_alergen體"/>
- *         &lt;element ref="{}lista_sk砤dnik體"/>
- *         &lt;element ref="{}lista_burger體"/>
+ *         &lt;element ref="{}lista_alergen贸w"/>
+ *         &lt;element ref="{}lista_sk艂adnik贸w"/>
+ *         &lt;element ref="{}lista_burger贸w"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -40,21 +40,21 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
     "metadane",
-    "listaAlergen\u00f3w",
-    "listaSk\u0142adnik\u00f3w",
-    "listaBurger\u00f3w"
+    "listaAlergen贸w",
+    "listaSk艂adnik贸w",
+    "listaBurger贸w"
 })
 @XmlRootElement(name = "burgerownia")
 public class Burgerownia {
 
     @XmlElement(required = true)
     protected Metadane metadane;
-    @XmlElement(name = "lista_alergen\u00f3w", required = true)
-    protected ListaAlergen體 listaAlergen體;
+    @XmlElement(name = "lista_alergen贸w", required = true)
+    protected ListaAlergen贸w listaAlergen贸w;
     @XmlElement(name = "lista_sk\u0142adnik\u00f3w", required = true)
-    protected ListaSk砤dnik體 listaSk砤dnik體;
+    protected ListaSk艂adnik贸w listaSk艂adnik贸w;
     @XmlElement(name = "lista_burger\u00f3w", required = true)
-    protected ListaBurger體 listaBurger體;
+    protected ListaBurger贸w listaBurger贸w;
 
     /**
      * Gets the value of the metadane property.
@@ -81,75 +81,75 @@ public class Burgerownia {
     }
 
     /**
-     * Gets the value of the listaAlergen體 property.
+     * Gets the value of the listaAlergen贸w property.
      * 
      * @return
      *     possible object is
-     *     {@link ListaAlergen體 }
+     *     {@link ListaAlergen贸w }
      *     
      */
-    public ListaAlergen體 getListaAlergen體() {
-        return listaAlergen體;
+    public ListaAlergen贸w getListaAlergen贸w() {
+        return listaAlergen贸w;
     }
 
     /**
-     * Sets the value of the listaAlergen體 property.
+     * Sets the value of the listaAlergen贸w property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ListaAlergen體 }
+     *     {@link ListaAlergen贸w }
      *     
      */
-    public void setListaAlergen體(ListaAlergen體 value) {
-        this.listaAlergen體 = value;
+    public void setListaAlergen贸w(ListaAlergen贸w value) {
+        this.listaAlergen贸w = value;
     }
 
     /**
-     * Gets the value of the listaSk砤dnik體 property.
+     * Gets the value of the listaSk贸adnik贸w property.
      * 
      * @return
      *     possible object is
-     *     {@link ListaSk砤dnik體 }
+     *     {@link ListaSk艂adnik贸w }
      *     
      */
-    public ListaSk砤dnik體 getListaSk砤dnik體() {
-        return listaSk砤dnik體;
+    public ListaSk艂adnik贸w getListaSk艂adnik贸w() {
+        return listaSk艂adnik贸w;
     }
 
     /**
-     * Sets the value of the listaSk砤dnik體 property.
+     * Sets the value of the listaSk艂adnik贸w property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ListaSk砤dnik體 }
+     *     {@link ListaSk艂adnik贸w }
      *     
      */
-    public void setListaSk砤dnik體(ListaSk砤dnik體 value) {
-        this.listaSk砤dnik體 = value;
+    public void setListaSk艂adnik贸w(ListaSk艂adnik贸w value) {
+        this.listaSk艂adnik贸w = value;
     }
 
     /**
-     * Gets the value of the listaBurger體 property.
+     * Gets the value of the listaBurger锟絯 property.
      * 
      * @return
      *     possible object is
-     *     {@link ListaBurger體 }
+     *     {@link ListaBurger贸w }
      *     
      */
-    public ListaBurger體 getListaBurger體() {
-        return listaBurger體;
+    public ListaBurger贸w getListaBurger贸w() {
+        return listaBurger贸w;
     }
 
     /**
-     * Sets the value of the listaBurger體 property.
+     * Sets the value of the listaBurger贸w property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ListaBurger體 }
+     *     {@link ListaBurger贸w }
      *     
      */
-    public void setListaBurger體(ListaBurger體 value) {
-        this.listaBurger體 = value;
+    public void setListaBurger贸w(ListaBurger贸w value) {
+        this.listaBurger贸w = value;
     }
 
 }

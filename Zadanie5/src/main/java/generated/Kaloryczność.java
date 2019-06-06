@@ -39,7 +39,7 @@ import javax.xml.bind.annotation.XmlValue;
     "value"
 })
 @XmlRootElement(name = "kaloryczno\u015b\u0107")
-public class Kalorycznoœæ {
+public class KalorycznoÅ›Ä‡ {
 
     @XmlValue
     protected BigInteger value;

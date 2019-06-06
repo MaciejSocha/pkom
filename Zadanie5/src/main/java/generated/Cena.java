@@ -26,7 +26,7 @@ import javax.xml.bind.annotation.XmlValue;
  * &lt;complexType>
  *   &lt;simpleContent>
  *     &lt;extension base="&lt;>cenaBase">
- *       &lt;attribute name="waluta" type="{http://www.w3.org/2001/XMLSchema}string" default="z³" />
+ *       &lt;attribute name="waluta" type="{http://www.w3.org/2001/XMLSchema}string" default="zÅ‚" />
  *     &lt;/extension>
  *   &lt;/simpleContent>
  * &lt;/complexType>

@@ -25,7 +25,7 @@ import javax.xml.bind.annotation.XmlValue;
  * &lt;complexType>
  *   &lt;simpleContent>
  *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>string">
- *       &lt;attGroup ref="{}sk³adnikGroup"/>
+ *       &lt;attGroup ref="{}skÅ‚adnikGroup"/>
  *     &lt;/extension>
  *   &lt;/simpleContent>
  * &lt;/complexType>
@@ -38,14 +38,14 @@ import javax.xml.bind.annotation.XmlValue;
     "value"
 })
 @XmlRootElement(name = "sk\u0142adnik")
-public class Sk³adnik {
+public class SkÅ‚adnik {
 
     @XmlValue
     protected String value;
     @XmlAttribute(name = "alergen")
     protected String alergen;
     @XmlAttribute(name = "idSk\u0142adnika", required = true)
-    protected String idSk³adnika;
+    protected String idSkÅ‚adnika;
 
     /**
      * Gets the value of the value property.
@@ -96,27 +96,27 @@ public class Sk³adnik {
     }
 
     /**
-     * Gets the value of the idSk³adnika property.
+     * Gets the value of the idSkÅ‚adnika property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getIdSk³adnika() {
-        return idSk³adnika;
+    public String getIdSkÅ‚adnika() {
+        return idSkÅ‚adnika;
     }
 
     /**
-     * Sets the value of the idSk³adnika property.
+     * Sets the value of the idSkÅ‚adnika property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setIdSk³adnika(String value) {
-        this.idSk³adnika = value;
+    public void setIdSkÅ‚adnika(String value) {
+        this.idSkÅ‚adnika = value;
     }
 
 }
