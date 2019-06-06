@@ -1,22 +1,31 @@
-package main.java.model;
+package model;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Date;
 
+@XmlRootElement(name = "burger")
+@XmlAccessorType (XmlAccessType.FIELD)
 public class Burger {
     private String nazwa;
-    private Miesnosc miesnosc;
-    private Date dataWprowadzenia;
     private float cena;
-    private Waluta waluta;
-    private int kalorycznosc;
+    private int kaloryczność;
 
-    public Burger(String nazwa, Miesnosc miesnosc, Date dataWprowadzenia, float cena, Waluta waluta, int kalorycznosc) {
+    @XmlAttribute
+    private String data_wprowadzenia;
+    @XmlAttribute
+    private String miesnosc;
+
+    public Burger(){};
+
+    public Burger(String nazwa, String miesnosc, String data_wprowadzenia, float cena, int kaloryczność) {
         this.nazwa = nazwa;
         this.miesnosc = miesnosc;
-        this.dataWprowadzenia = dataWprowadzenia;
+        this.data_wprowadzenia = data_wprowadzenia;
         this.cena = cena;
-        this.waluta = waluta;
-        this.kalorycznosc = kalorycznosc;
+        this.kaloryczność = kaloryczność;
     }
 
     public String getNazwa() {
@@ -27,20 +36,20 @@ public class Burger {
         this.nazwa = nazwa;
     }
 
-    public Miesnosc getMiesnosc() {
+    public String getMiesnosc() {
         return miesnosc;
     }
 
-    public void setMiesnosc(Miesnosc miesnosc) {
+    public void setMiesnosc(String miesnosc) {
         this.miesnosc = miesnosc;
     }
 
-    public Date getDataWprowadzenia() {
-        return dataWprowadzenia;
+    public String getData_wprowadzenia() {
+        return data_wprowadzenia;
     }
 
-    public void setDataWprowadzenia(Date dataWprowadzenia) {
-        this.dataWprowadzenia = dataWprowadzenia;
+    public void setData_wprowadzenia(String dataWprowadzenia) {
+        this.data_wprowadzenia = dataWprowadzenia;
     }
 
     public float getCena() {
@@ -51,19 +60,11 @@ public class Burger {
         this.cena = cena;
     }
 
-    public Waluta getWaluta() {
-        return waluta;
-    }
-
-    public void setWaluta(Waluta waluta) {
-        this.waluta = waluta;
-    }
-
     public int getKalorycznosc() {
-        return kalorycznosc;
+        return kaloryczność;
     }
 
-    public void setKalorycznosc(int kalorycznosc) {
-        this.kalorycznosc = kalorycznosc;
+    public void setKalorycznosc(int kaloryczność) {
+        this.kaloryczność = kaloryczność;
     }
 }
