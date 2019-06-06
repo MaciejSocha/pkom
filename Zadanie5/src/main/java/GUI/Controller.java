@@ -48,6 +48,18 @@ public class Controller implements Initializable {
     public ComboBox skladnik8 = new ComboBox();
     @FXML
     public DatePicker data = new DatePicker();
+    @FXML
+    public TextField imie1 = new TextField();
+    @FXML
+    public TextField imie2 = new TextField();
+    @FXML
+    public TextField nazwisko1 = new TextField();
+    @FXML
+    public TextField nazwisko2 = new TextField();
+    @FXML
+    public TextField projekt = new TextField();
+    @FXML
+    public DatePicker modyfikacja = new DatePicker();
 
     private Burgerownia burgerownia;
 
@@ -160,6 +172,15 @@ public class Controller implements Initializable {
 
     public void transformToXHTML() {
         XMLOperations.transformXML("textarea.gettext()");
+    }
+
+    public void metadane(){
+        imie1.setText(burgerownia.getMetadane().getAutor().get(0).getImie());
+        imie2.setText(burgerownia.getMetadane().getAutor().get(1).getImie());
+        nazwisko1.setText(burgerownia.getMetadane().getAutor().get(0).getNazwisko());
+        nazwisko2.setText(burgerownia.getMetadane().getAutor().get(1).getNazwisko());
+        projekt.setText(burgerownia.getMetadane().getNazwaProjektu());
+        modyfikacja.setValue(LocalDate.parse(String.valueOf((burgerownia.getMetadane().getDataModyfikacji()))));
     }
 
 
