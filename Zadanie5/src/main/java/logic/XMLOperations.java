@@ -3,16 +3,23 @@ package logic;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.net.URISyntaxException;
 
 import javax.xml.XMLConstants;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
+import javax.xml.transform.*;
+import javax.xml.transform.stream.StreamResult;
+import javax.xml.transform.stream.StreamSource;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 
 import generated.Burgerownia;
+import net.sf.saxon.Transform;
+import net.sf.saxon.TransformerFactoryImpl;
 import org.xml.sax.SAXException;
 
 public class XMLOperations {
@@ -53,6 +60,13 @@ public class XMLOperations {
 
     public static void readFromXML() throws JAXBException, FileNotFoundException {
         burgerownia = (Burgerownia) unmarshaller.unmarshal(new FileInputStream(new File(xmlFilePath)));
+    }
+
+    public static void transformXML()  {
+        String[] arglist1 = {"-o:raport.xml","burgerownia.xml", "burgerownia_raport.xsl"};
+        Transform.main(arglist1);
+        String[] arglist2 = {"-o:raport.xhtml","raport.xml", "burgerownia_xhtml.xsl"};
+        Transform.main(arglist2);
     }
 
     public static String getXmlFilePath() {
