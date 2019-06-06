@@ -3,6 +3,7 @@ package GUI;
 import generated.Burger;
 import generated.Burgerownia;
 import generated.MiesnoscBase;
+import generated.Składnik;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -16,8 +17,7 @@ import javax.xml.bind.JAXBException;
 import java.io.FileNotFoundException;
 import java.net.URL;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class Controller implements Initializable {
     @FXML
@@ -31,21 +31,21 @@ public class Controller implements Initializable {
     @FXML
     public TextField kalorycznosc = new TextField();
     @FXML
-    public TextField skladnik1 = new TextField();
+    public ComboBox skladnik1 = new ComboBox();
     @FXML
-    public TextField skladnik2 = new TextField();
+    public ComboBox skladnik2 = new ComboBox();
     @FXML
-    public TextField skladnik3 = new TextField();
+    public ComboBox skladnik3 = new ComboBox();
     @FXML
-    public TextField skladnik4 = new TextField();
+    public ComboBox skladnik4 = new ComboBox();
     @FXML
-    public TextField skladnik5 = new TextField();
+    public ComboBox skladnik5 = new ComboBox();
     @FXML
-    public TextField skladnik6 = new TextField();
+    public ComboBox skladnik6 = new ComboBox();
     @FXML
-    public TextField skladnik7 = new TextField();
+    public ComboBox skladnik7 = new ComboBox();
     @FXML
-    public TextField skladnik8 = new TextField();
+    public ComboBox skladnik8 = new ComboBox();
     @FXML
     public DatePicker data = new DatePicker();
 
@@ -63,70 +63,151 @@ public class Controller implements Initializable {
         }
         burgerownia = XMLOperations.burgerownia;
         ArrayList<String> nazwy = new ArrayList<>();
-        for (Burger burger:
-             burgerownia.getListaBurgerów().getBurger()) {
+        for (Burger burger :
+                burgerownia.getListaBurgerów().getBurger()) {
             nazwy.add(burger.getNazwa());
         }
         listView.setItems(FXCollections.observableArrayList(nazwy));
+        ArrayList<String> skl = new ArrayList<>();
+        for (Składnik sk : burgerownia.getListaSkładników().getSkładnik()) {
+            skl.add(sk.getValue());
+        }
+        skladnik1.setItems(FXCollections.observableArrayList(skl));
+        skladnik2.setItems(FXCollections.observableArrayList(skl));
+        skladnik3.setItems(FXCollections.observableArrayList(skl));
+        skladnik4.setItems(FXCollections.observableArrayList(skl));
+        skladnik5.setItems(FXCollections.observableArrayList(skl));
+        skladnik6.setItems(FXCollections.observableArrayList(skl));
+        skladnik7.setItems(FXCollections.observableArrayList(skl));
+        skladnik8.setItems(FXCollections.observableArrayList(skl));
     }
 
-    public void clear(){
+    public void clear() {
         nazwa.clear();
         cena.clear();
         kalorycznosc.clear();
-        skladnik1.clear();
-        skladnik2.clear();
-        skladnik3.clear();
-        skladnik4.clear();
-        skladnik5.clear();
-        skladnik6.clear();
-        skladnik7.clear();
-        skladnik8.clear();
         System.out.println("clear");
     }
 
-    public void delete(){
+    public void delete() {
         System.out.println("Usuń");
     }
 
-    public void add(){
+    public void add() {
         System.out.println("dodaj");
     }
 
-    public void save(){
+    public void save() {
         System.out.println("Zapisz");
     }
 
-    public void toTXT(){
+    public void toTXT() {
         System.out.println("robie txt");
     }
 
-    public void select(){
+    public void select() {
         System.out.println("Wybrano");
-        for (Burger burger:
+        for (Burger burger :
                 burgerownia.getListaBurgerów().getBurger()) {
-            if (burger.getNazwa().equals(listView.getSelectionModel().getSelectedItem())){
+            if (burger.getNazwa().equals(listView.getSelectionModel().getSelectedItem())) {
                 nazwa.setText(burger.getNazwa());
                 cena.setText(String.valueOf(burger.getCena().getValue()));
                 kalorycznosc.setText(String.valueOf(burger.getKaloryczność().getValue()));
-                skladnik1.setText(burger.getSkladnik1());
-                skladnik2.setText(burger.getSkladnik2());
-                skladnik3.setText(burger.getSkladnik3());
-                skladnik4.setText(burger.getSkladnik4());
-                skladnik5.setText(burger.getSkladnik5());
-                skladnik6.setText(burger.getSkladnik6());
-                skladnik7.setText(burger.getSkladnik7());
-                skladnik8.setText(burger.getSkladnik8());
-                if (burger.getMięsność().name().equals("MIĘSNY"))
-                    miesnosc.getSelectionModel().select(0);
-                if (burger.getMięsność().name().equals("WEGETARIAŃSKI"))
-                    miesnosc.getSelectionModel().select(1);
-                if (burger.getMięsność().name().equals("WEGAŃSKI"))
-                    miesnosc.getSelectionModel().select(2);
-                data.setValue(LocalDate.parse(String.valueOf(burger.getDataWprowadzenia())));
+
+
             }
+
+            switch (burger.getSkladnik1()) {
+                case "ser":
+                    skladnik1.getSelectionModel().select(0);
+                    break;
+                case "mieso_wieprzowe":
+                    skladnik1.getSelectionModel().select(1);
+                    break;
+                case "mieso_wolowe":
+                    skladnik1.getSelectionModel().select(2);
+                    break;
+                case "mieso_drobiowe":
+                    skladnik1.getSelectionModel().select(3);
+                    break;
+                case "boczek":
+                    skladnik1.getSelectionModel().select(4);
+                    break;
+                case "bulka_pszenna_sezam":
+                    skladnik1.getSelectionModel().select(5);
+                    break;
+                case "bulka_pszenna":
+                    skladnik1.getSelectionModel().select(6);
+                    break;
+                case "bulka_zytnia":
+                    skladnik1.getSelectionModel().select(7);
+                    break;
+                case "salata":
+                    skladnik1.getSelectionModel().select(8);
+                    break;
+                case "pomidor":
+                    skladnik1.getSelectionModel().select(9);
+                    break;
+                case "ogorek":
+                    skladnik1.getSelectionModel().select(10);
+                    break;
+                case "ketchup":
+                    skladnik1.getSelectionModel().select(11);
+                    break;
+                case "losos":
+                    skladnik1.getSelectionModel().select(12);
+                    break;
+                case "cebula":
+                    skladnik1.getSelectionModel().select(13);
+                    break;
+                case "papryka":
+                    skladnik1.getSelectionModel().select(14);
+                    break;
+                case "falafel":
+                    skladnik1.getSelectionModel().select(15);
+                    break;
+                case "piri_piri":
+                    skladnik1.getSelectionModel().select(16);
+                    break;
+                case "majonez":
+                    skladnik1.getSelectionModel().select(17);
+                    break;
+                case "rukola":
+                    skladnik1.getSelectionModel().select(18);
+                    break;
+                case "jajko":
+                    skladnik1.getSelectionModel().select(19);
+                    break;
+                case "prazone_orzechy":
+                    skladnik1.getSelectionModel().select(20);
+                    break;
+                case "krewetki":
+                    skladnik1.getSelectionModel().select(21);
+                    break;
+                case "musztarda":
+                    skladnik1.getSelectionModel().select(22);
+                    break;
+                case "sos_sojowy":
+                    skladnik1.getSelectionModel().select(23);
+                    break;
+                case "sos_serowy_chili":
+                    skladnik1.getSelectionModel().select(24);
+                    break;
+                case "chili":
+                    skladnik1.getSelectionModel().select(25);
+                    break;
+            }
+
+            if (burger.getMięsność().name().equals("MIĘSNY"))
+                miesnosc.getSelectionModel().select(0);
+            if (burger.getMięsność().name().equals("WEGETARIAŃSKI"))
+                miesnosc.getSelectionModel().select(1);
+            if (burger.getMięsność().name().equals("WEGAŃSKI"))
+                miesnosc.getSelectionModel().select(2);
+            data.setValue(LocalDate.parse(String.valueOf(burger.getDataWprowadzenia())));
         }
     }
+
 
     public void saveXMLFile() {
         try {
@@ -148,4 +229,6 @@ public class Controller implements Initializable {
     public void transformToXHTML() {
         XMLOperations.transformXML("textarea.gettext()");
     }
+
+
 }
