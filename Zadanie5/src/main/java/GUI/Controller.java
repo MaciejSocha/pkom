@@ -67,8 +67,14 @@ public class Controller implements Initializable {
     public TextField path_save = new TextField();
     @FXML
     public TextField path_read = new TextField();
+    @FXML
+    public TextField skladnik_nazwa = new TextField();
+    @FXML
+    public TextField skladnik_id = new TextField();
+    @FXML
+    public ListView<String> skladnik_list = new ListView<>();
 
-    private Burgerownia burgerownia;
+    private static Burgerownia burgerownia = XMLOperations.burgerownia;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -82,6 +88,10 @@ public class Controller implements Initializable {
         }
         burgerownia = XMLOperations.burgerownia;
         lista();
+        mainTab();
+    }
+
+    public void mainTab() {
         ArrayList<String> skl = new ArrayList<>();
         skl.add("");
         for (Składnik sk : burgerownia.getListaSkładników().getSkładnik()) {
@@ -333,4 +343,55 @@ public class Controller implements Initializable {
         saveXMLFile();
     }
 
+    /*
+    skladnik_nazwa
+    skladnik_id
+    skladnik_list
+     */
+    public void init_sk() {
+        ArrayList<String> skl = new ArrayList<>();
+        for (Składnik sk : burgerownia.getListaSkładników().getSkładnik()) {
+            skl.add(sk.getValue());
+        }
+        skladnik_list.setItems(FXCollections.observableArrayList(skl));
+
+    }
+
+    public void zaktualizuj_sk() {
+        Składnik składnik = burgerownia.getListaSkładników().getSkładnik().stream().filter(s -> s.getValue().equals(skladnik_list.getSelectionModel().getSelectedItem())).findFirst().get();
+        Składnik nowy = new Składnik();
+        nowy.setIdSkładnika(skladnik_id.getText());
+        nowy.setValue(skladnik_nazwa.getText());
+        burgerownia.getListaSkładników().getSkładnik().remove(składnik);
+        burgerownia.getListaSkładników().getSkładnik().add(nowy);
+        init_sk();
+        saveXMLFile();
+        mainTab();
+    }
+
+    public void list_select() {
+        //Burger burger = burgerownia.getListaBurgerów().getBurger().stream().filter(b -> b.getNazwa().equals(listView.getSelectionModel().getSelectedItem())).findFirst().get();
+        Składnik składnik = burgerownia.getListaSkładników().getSkładnik().stream().filter(s -> s.getValue().equals(skladnik_list.getSelectionModel().getSelectedItem())).findFirst().get();
+        skladnik_nazwa.setText(składnik.getValue());
+        skladnik_id.setText(składnik.getIdSkładnika());
+    }
+
+    public void create_sk() {
+        Składnik składnik = new Składnik();
+        składnik.setValue(skladnik_nazwa.getText());
+        składnik.setIdSkładnika(skladnik_id.getText());
+        burgerownia.getListaSkładników().getSkładnik().add(składnik);
+        init_sk();
+        saveXMLFile();
+        mainTab();
+    }
+
+    public void sk_usun() {
+        Składnik składnik = burgerownia.getListaSkładników().getSkładnik().stream().filter(s -> s.getValue().equals(skladnik_list.getSelectionModel().getSelectedItem())).findFirst().get();
+        burgerownia.getListaSkładników().getSkładnik().remove(składnik);
+        init_sk();
+        saveXMLFile();
+        mainTab();
+    }
 }
+
