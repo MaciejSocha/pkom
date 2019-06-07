@@ -319,4 +319,18 @@ public class Controller implements Initializable {
         listView.setItems(FXCollections.observableArrayList(nazwy));
     }
 
+    public void saveMeta(){
+        burgerownia.getMetadane().setNazwaProjektu(projekt.getText());
+        burgerownia.getMetadane().getAutor().get(0).setImie(imie1.getText());
+        burgerownia.getMetadane().getAutor().get(1).setImie(imie2.getText());
+        burgerownia.getMetadane().getAutor().get(0).setNazwisko(nazwisko1.getText());
+        burgerownia.getMetadane().getAutor().get(1).setNazwisko(nazwisko2.getText());
+        try {
+            burgerownia.getMetadane().setDataModyfikacji(DatatypeFactory.newInstance().newXMLGregorianCalendar(modyfikacja.getValue().toString()));
+        } catch (DatatypeConfigurationException e) {
+            e.printStackTrace();
+        }
+        saveXMLFile();
+    }
+
 }
