@@ -55,17 +55,17 @@ public class XMLOperations {
     }
 
     public static void saveToXML(String newFile) throws JAXBException {
-        marshaller.marshal(burgerownia, new File(xmlFilePath + ".xml"));
+        marshaller.marshal(burgerownia, new File(newFile + ".xml"));
     }
 
     public static void readFromXML() throws JAXBException, FileNotFoundException {
         burgerownia = (Burgerownia) unmarshaller.unmarshal(new FileInputStream(new File(xmlFilePath)));
     }
 
-    public static void transformXML(String transformedName)  {
-        String[] arglist1 = {"-o:raport.xml","burgerownia.xml", "burgerownia_raport.xsl"};
+    public static void transformXML(String transformedName) {
+        String[] arglist1 = {"-o:raport.xml", xmlFilePath, "burgerownia_raport.xsl"};
         Transform.main(arglist1);
-        String[] arglist2 = {"-o:" + transformedName + ".xhtml","raport.xml", "burgerownia_xhtml.xsl"};
+        String[] arglist2 = {"-o:" + transformedName + ".xhtml", "raport.xml", "burgerownia_xhtml.xsl"};
         Transform.main(arglist2);
     }
 

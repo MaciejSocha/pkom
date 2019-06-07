@@ -11,8 +11,13 @@ import javafx.scene.control.TextField;
 import logic.XMLOperations;
 
 import javax.xml.bind.JAXBException;
+import javax.xml.datatype.DatatypeConfigurationException;
+import javax.xml.datatype.DatatypeFactory;
+import javax.xml.datatype.XMLGregorianCalendar;
 import java.awt.List;
 import java.io.FileNotFoundException;
+import java.math.BigDecimal;
+import java.math.BigInteger;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.*;
@@ -76,16 +81,13 @@ public class Controller implements Initializable {
             e.printStackTrace();
         }
         burgerownia = XMLOperations.burgerownia;
-        ArrayList<String> nazwy = new ArrayList<>();
-        for (Burger burger :
-                burgerownia.getListaBurgerów().getBurger()) {
-            nazwy.add(burger.getNazwa());
-        }
-        listView.setItems(FXCollections.observableArrayList(nazwy));
+        lista();
         ArrayList<String> skl = new ArrayList<>();
+        skl.add("");
         for (Składnik sk : burgerownia.getListaSkładników().getSkładnik()) {
             skl.add(sk.getValue());
         }
+
         skladnik1.setItems(FXCollections.observableArrayList(skl));
         skladnik2.setItems(FXCollections.observableArrayList(skl));
         skladnik3.setItems(FXCollections.observableArrayList(skl));
@@ -100,26 +102,90 @@ public class Controller implements Initializable {
         nazwa.clear();
         cena.clear();
         kalorycznosc.clear();
+        clearSKL();
         System.out.println("clear");
+    }
+
+    private void clearSKL() {
+        skladnik1.getSelectionModel().select(0);
+        skladnik2.getSelectionModel().select(0);
+        skladnik3.getSelectionModel().select(0);
+        skladnik4.getSelectionModel().select(0);
+        skladnik5.getSelectionModel().select(0);
+        skladnik6.getSelectionModel().select(0);
+        skladnik7.getSelectionModel().select(0);
+        skladnik8.getSelectionModel().select(0);
     }
 
     public void delete() {
         System.out.println("Usuń");
+        ArrayList<Burger> remove = new ArrayList<>();
         String name = listView.getSelectionModel().getSelectedItem();
         for (Burger b : burgerownia.getListaBurgerów().getBurger()) {
             if (b.getNazwa().equals(name)) {
-                burgerownia.getListaBurgerów().getBurger().remove(b);
+                remove.add(b);
             }
         }
+        burgerownia.getListaBurgerów().getBurger().removeAll(remove);
+        lista();
 
     }
 
     public void add() {
         System.out.println("dodaj");
+
+        Kaloryczność k = new Kaloryczność();
+        int kal = Integer.parseInt(kalorycznosc.getText());
+        k.setValue(BigInteger.valueOf(kal));
+        k.setJednostka("kcal");
+
+        Cena c = new Cena();
+        c.setValue(BigDecimal.valueOf(Double.parseDouble(cena.getText())));
+        c.setWaluta("zł");
+
+        Burger b = new Burger();
+        b.setNazwa(nazwa.getText());
+        b.setMięsność(miesnosc.getValue());
+        LocalDate d = data.getValue();
+
+        XMLGregorianCalendar cal = null;
+        try {
+            cal = DatatypeFactory.newInstance().newXMLGregorianCalendar(d.toString());
+        } catch (DatatypeConfigurationException e) {
+            e.printStackTrace();
+        }
+
+        b.setDataWprowadzenia(cal);
+
+        b.setKaloryczność(k);
+        b.setCena(c);
+
+
+        b.setSkladnik1(convertToID((String)skladnik1.getSelectionModel().getSelectedItem()));
+        b.setSkladnik2(convertToID((String)skladnik2.getSelectionModel().getSelectedItem()));
+        b.setSkladnik3(convertToID((String)skladnik3.getSelectionModel().getSelectedItem()));
+        b.setSkladnik4(convertToID((String)skladnik4.getSelectionModel().getSelectedItem()));
+        b.setSkladnik5(convertToID((String)skladnik5.getSelectionModel().getSelectedItem()));
+        b.setSkladnik6(convertToID((String)skladnik6.getSelectionModel().getSelectedItem()));
+        b.setSkladnik7(convertToID((String)skladnik7.getSelectionModel().getSelectedItem()));
+        b.setSkladnik8(convertToID((String)skladnik8.getSelectionModel().getSelectedItem()));
+
+        burgerownia.getListaBurgerów().getBurger().add(b);
+
+        lista();
+    }
+
+    private String convertToID(String nazwa) {
+        if (nazwa != null)
+            return burgerownia.getListaSkładników().getSkładnik().stream().filter(s -> s.getValue().equals(nazwa)).findFirst().get().getIdSkładnika();
+        else return "";
     }
 
     public void save() {
         System.out.println("Zapisz");
+
+
+        saveXMLFile();
     }
 
     public void toTXT() {
@@ -130,6 +196,7 @@ public class Controller implements Initializable {
 
     public void select() {
         System.out.println("Wybrano");
+        clearSKL();
         Burger burger = burgerownia.getListaBurgerów().getBurger().stream().filter(b -> b.getNazwa().equals(listView.getSelectionModel().getSelectedItem())).findFirst().get();
 
         nazwa.setText(burger.getNazwa());
@@ -164,9 +231,9 @@ public class Controller implements Initializable {
     }
 
 
-    public void saveXMLFile() {
+    private void saveXMLFile() {
         try {
-            XMLOperations.saveToXML("textarea.getText()");
+            XMLOperations.saveToXML("burgerownia");
         } catch (JAXBException e) {
             e.printStackTrace();
         }
@@ -195,5 +262,13 @@ public class Controller implements Initializable {
         modyfikacja.setValue(LocalDate.parse(String.valueOf((burgerownia.getMetadane().getDataModyfikacji()))));
     }
 
+    private void lista() {
+        ArrayList<String> nazwy = new ArrayList<>();
+        for (Burger burger :
+                burgerownia.getListaBurgerów().getBurger()) {
+            nazwy.add(burger.getNazwa());
+        }
+        listView.setItems(FXCollections.observableArrayList(nazwy));
+    }
 
 }
