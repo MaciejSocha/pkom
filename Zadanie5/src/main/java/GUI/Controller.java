@@ -134,7 +134,6 @@ public class Controller implements Initializable {
     public void add() {
         System.out.println("dodaj");
 
-
         Kaloryczność k = new Kaloryczność();
         int kal = Integer.parseInt(kalorycznosc.getText());
         k.setValue(BigInteger.valueOf(kal));
@@ -144,17 +143,7 @@ public class Controller implements Initializable {
         c.setValue(BigDecimal.valueOf(Double.parseDouble(cena.getText())));
         c.setWaluta("zł");
 
-        Burger b = null;
-
-        for (Burger burger : burgerownia.getListaBurgerów().getBurger()) {
-            if (burger.getNazwa().equals(nazwa.getText())) {
-                b = burger;
-            }
-            else {
-                b = new Burger();
-            }
-        }
-
+        Burger b = new Burger();
         b.setNazwa(nazwa.getText());
         b.setMięsność(miesnosc.getValue());
         LocalDate d = data.getValue();
@@ -181,25 +170,15 @@ public class Controller implements Initializable {
         b.setSkladnik7(convertToID((String)skladnik7.getSelectionModel().getSelectedItem()));
         b.setSkladnik8(convertToID((String)skladnik8.getSelectionModel().getSelectedItem()));
 
-        ArrayList<Burger> remove= new ArrayList<>();
-
-        for (Burger burger : burgerownia.getListaBurgerów().getBurger()) {
-            if (burger.getNazwa().equals(nazwa.getText())) {
-                remove.add(burger);
-
-            }
-
-        }
-        burgerownia.getListaBurgerów().getBurger().removeAll(remove);
         burgerownia.getListaBurgerów().getBurger().add(b);
 
         lista();
     }
 
     private String convertToID(String nazwa) {
-        if (nazwa != null && nazwa.length() > 2)
+        if (nazwa != null && nazwa != "")
             return burgerownia.getListaSkładników().getSkładnik().stream().filter(s -> s.getValue().equals(nazwa)).findFirst().get().getIdSkładnika();
-        else return "";
+        else return null;
     }
 
     public void save() {
@@ -239,7 +218,7 @@ public class Controller implements Initializable {
         skladnik = burgerownia.getListaSkładników().getSkładnik().stream().filter(s -> s.getIdSkładnika().equals(burger.getSkladnik7())).findFirst();
         skladnik.ifPresent(składnik -> skladnik7.getSelectionModel().select(składnik.getValue()));
         skladnik = burgerownia.getListaSkładników().getSkładnik().stream().filter(s -> s.getIdSkładnika().equals(burger.getSkladnik8())).findFirst();
-        skladnik.ifPresent(składnik -> skladnik8.getSelectionModel().select(składnik.getValue()));         
+        skladnik.ifPresent(składnik -> skladnik8.getSelectionModel().select(składnik.getValue()));
 
         if (burger.getMięsność().name().equals("MIĘSNY"))
             miesnosc.getSelectionModel().select(0);
