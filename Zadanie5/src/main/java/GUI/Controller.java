@@ -140,7 +140,7 @@ public class Controller implements Initializable {
         k.setJednostka("kcal");
 
         Cena c = new Cena();
-        c.setValue(BigDecimal.valueOf(Double.parseDouble(cena.getText())));
+        c.setValue(BigDecimal.valueOf(Double.parseDouble(cena.getText())).setScale(2));
         c.setWaluta("zł");
 
         Burger b = new Burger();
@@ -173,6 +173,54 @@ public class Controller implements Initializable {
         burgerownia.getListaBurgerów().getBurger().add(b);
 
         lista();
+    }
+
+    public void updateBurger() {
+        String name = listView.getSelectionModel().getSelectedItem();
+        Burger burger = burgerownia.getListaBurgerów().getBurger().stream().filter(b -> b.getNazwa().equals(name)).findFirst().get();
+        int id = burgerownia.getListaBurgerów().getBurger().indexOf(burger);
+        Burger newBurger = new Burger();
+
+        Kaloryczność kaloryczność = new Kaloryczność();
+        int kal = Integer.parseInt(kalorycznosc.getText());
+        kaloryczność.setJednostka("kcal");
+        kaloryczność.setValue(BigInteger.valueOf(kal));
+
+
+        Cena cen = new Cena();
+        cen.setWaluta("zł");
+        cen.setValue(BigDecimal.valueOf(Double.parseDouble(cena.getText())).setScale(2));
+
+
+        newBurger.setMięsność(miesnosc.getValue());
+        newBurger.setNazwa(nazwa.getText());
+        LocalDate dat = data.getValue();
+
+        newBurger.setSkladnik1(convertToID((String)skladnik1.getSelectionModel().getSelectedItem()));
+        newBurger.setSkladnik2(convertToID((String)skladnik2.getSelectionModel().getSelectedItem()));
+        newBurger.setSkladnik3(convertToID((String)skladnik3.getSelectionModel().getSelectedItem()));
+        newBurger.setSkladnik4(convertToID((String)skladnik4.getSelectionModel().getSelectedItem()));
+        newBurger.setSkladnik5(convertToID((String)skladnik5.getSelectionModel().getSelectedItem()));
+        newBurger.setSkladnik6(convertToID((String)skladnik6.getSelectionModel().getSelectedItem()));
+        newBurger.setSkladnik7(convertToID((String)skladnik7.getSelectionModel().getSelectedItem()));
+        newBurger.setSkladnik8(convertToID((String)skladnik8.getSelectionModel().getSelectedItem()));
+
+        XMLGregorianCalendar cal = null;
+        try {
+            cal = DatatypeFactory.newInstance().newXMLGregorianCalendar(dat.toString());
+        } catch (DatatypeConfigurationException e) {
+            e.printStackTrace();
+        }
+
+        newBurger.setDataWprowadzenia(cal);
+
+        newBurger.setKaloryczność(kaloryczność);
+        newBurger.setCena(cen);
+
+        burgerownia.getListaBurgerów().getBurger().set(id, newBurger);
+
+
+
     }
 
     private String convertToID(String nazwa) {
